@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Quote" representedClassName="Quote" syncable="YES" codeGenerationType="class">
+        <attribute name="createdAt" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ToDo" representedClassName="ToDo" syncable="YES" codeGenerationType="class">
+        <attribute name="appreciate" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="doitem" optional="YES" attributeType="String"/>
+        <attribute name="feel" optional="YES" attributeType="String"/>
+        <attribute name="obstacle" optional="YES" attributeType="String"/>
+        <attribute name="remember" optional="YES" attributeType="String"/>
+        <attribute name="them" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="value" optional="YES" attributeType="String"/>
+        <attribute name="you" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="ToDo" positionX="-54" positionY="0" width="128" height="193"/>
+        <element name="Quote" positionX="-45" positionY="81" width="128" height="73"/>
+    </elements>
+</model>
