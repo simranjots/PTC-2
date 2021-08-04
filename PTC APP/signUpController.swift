@@ -19,14 +19,19 @@ class signUpController: UIViewController {
     
     
     
+    @IBOutlet var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passWordTextField: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet var signUpButtonOutlet: UIButton!
+    var isIconClicked = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         refusers = Database.database().reference().child("users")
+        styleElements()
         
     }
     
@@ -45,6 +50,79 @@ class signUpController: UIViewController {
         
         return nil
     
+    }
+    
+    func styleElements() {
+        
+        //Style textFields
+        Utilities.styleTextField(nameTextField)
+        Utilities.styleTextField(emailTextField)
+        Utilities.styleTextField(passWordTextField)
+        
+        //Style button
+        Utilities.styleButton(signUpButtonOutlet)
+        Utilities.addShadowToButton(signUpButtonOutlet)
+        
+        //Disappear error label
+        errorMessage.alpha = 0
+        
+        //Add textfields icons
+        guard let profileIcon = UIImage(named: "profile") else { return }
+        guard let emailIcon = UIImage(named: "email") else { return }
+        guard let passwordLeftIcon = UIImage(named: "password") else { return }
+        guard let passwordRightIcon = UIImage(named: "openEye") else { return }
+        
+        Utilities.addTextFieldImage(textField: nameTextField, andImage: profileIcon)
+        Utilities.addTextFieldImage(textField: emailTextField, andImage: emailIcon)
+        Utilities.addTextFieldImage(textField: passWordTextField, andImage: passwordLeftIcon)
+        addPasswordEyeIcon(textField: passWordTextField, andImage: passwordRightIcon)
+        
+    }
+    
+    
+    func addPasswordEyeIcon(textField: UITextField, andImage image: UIImage) {
+        
+        //Create textField view
+        let textFieldRightView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        
+        //Create textField subview and add image
+        let textFieldImageView = UIImageView(image: image)
+        
+        //Set subview frame
+        textFieldImageView.frame = CGRect(x: 0, y: 8, width: 25, height: 25)
+        
+        //Add subview
+        textFieldRightView.addSubview(textFieldImageView)
+        
+        //Set leftside textField properties
+        textField.rightView = textFieldRightView
+        textField.rightViewMode = .always
+        
+        
+        //Add color to textField Image
+        textFieldImageView.tintColor = Utilities.primaryTextColor
+        
+        //Add Tap Gesture
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(eyeImageTapped(tapGestureRecognizer: )))
+        textFieldImageView.isUserInteractionEnabled = true
+        textFieldImageView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func eyeImageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        
+        if isIconClicked {
+            isIconClicked = false
+            tappedImage.image = UIImage(named: "closedEye")
+            passWordTextField.isSecureTextEntry = false
+            
+        } else {
+            isIconClicked = true
+            tappedImage.image = UIImage(named: "openEye")
+            passWordTextField.isSecureTextEntry = true
+        }
+        
     }
     
 
