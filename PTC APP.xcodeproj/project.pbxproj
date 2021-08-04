@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		263C866826BA453300012F55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C866726BA453300012F55 /* Constants.swift */; };
 		DC87FAA1319C6B01861197AD /* Pods_PTC_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7E7A87D71B12D56F58F219 /* Pods_PTC_APP.framework */; };
 		E156D86624106E3D00AB52CB /* testTableVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156D86524106E3D00AB52CB /* testTableVIew.swift */; };
 		E159DD272418370800C4433F /* TaresaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E159DD262418370800C4433F /* TaresaViewController.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		035C471E8BC5E8721724FA53 /* Pods-PTC APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTC APP.release.xcconfig"; path = "Target Support Files/Pods-PTC APP/Pods-PTC APP.release.xcconfig"; sourceTree = "<group>"; };
+		263C866726BA453300012F55 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8A7E7A87D71B12D56F58F219 /* Pods_PTC_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PTC_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E156D86524106E3D00AB52CB /* testTableVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTableVIew.swift; sourceTree = "<group>"; };
 		E159DD262418370800C4433F /* TaresaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaresaViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				E15B0BB123E9FCEF0014DBA1 /* Utilities.swift */,
+				263C866726BA453300012F55 /* Constants.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -176,7 +179,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Gurlagan Bhullar";
 				TargetAttributes = {
 					E162573923E3304B00E84948 = {
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E162574223E3304B00E84948 /* ViewController.swift in Sources */,
+				263C866826BA453300012F55 /* Constants.swift in Sources */,
 				E159DD3F24185C2E00C4433F /* video.swift in Sources */,
 				E159DD3D24185B5600C4433F /* videoCell.swift in Sources */,
 				E162573E23E3304B00E84948 /* AppDelegate.swift in Sources */,
@@ -332,6 +336,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -392,6 +397,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
