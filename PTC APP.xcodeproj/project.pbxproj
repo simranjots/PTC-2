@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2639EB1426BAE9B3006C1CF2 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */; };
+		2639EB1726BB18B4006C1CF2 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2639EB1626BB18B4006C1CF2 /* IQKeyboardManagerSwift */; };
 		263C866826BA453300012F55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C866726BA453300012F55 /* Constants.swift */; };
 		DC87FAA1319C6B01861197AD /* Pods_PTC_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7E7A87D71B12D56F58F219 /* Pods_PTC_APP.framework */; };
 		E156D86624106E3D00AB52CB /* testTableVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156D86524106E3D00AB52CB /* testTableVIew.swift */; };
@@ -17,11 +18,11 @@
 		E159DD3F24185C2E00C4433F /* video.swift in Sources */ = {isa = PBXBuildFile; fileRef = E159DD3E24185C2E00C4433F /* video.swift */; };
 		E159DD412418691200C4433F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E159DD402418691200C4433F /* DetailViewController.swift */; };
 		E15B0BAE23E9F67C0014DBA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E15B0BAD23E9F67C0014DBA1 /* GoogleService-Info.plist */; };
-		E15B0BB023E9FA2B0014DBA1 /* signUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B0BAF23E9FA2B0014DBA1 /* signUpController.swift */; };
+		E15B0BB023E9FA2B0014DBA1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B0BAF23E9FA2B0014DBA1 /* SignUpViewController.swift */; };
 		E15B0BB223E9FCEF0014DBA1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B0BB123E9FCEF0014DBA1 /* Utilities.swift */; };
 		E162573E23E3304B00E84948 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162573D23E3304B00E84948 /* AppDelegate.swift */; };
 		E162574023E3304B00E84948 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162573F23E3304B00E84948 /* SceneDelegate.swift */; };
-		E162574223E3304B00E84948 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162574123E3304B00E84948 /* ViewController.swift */; };
+		E162574223E3304B00E84948 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162574123E3304B00E84948 /* LoginViewController.swift */; };
 		E162574523E3304B00E84948 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E162574323E3304B00E84948 /* Main.storyboard */; };
 		E162574823E3304C00E84948 /* PTC_APP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E162574623E3304C00E84948 /* PTC_APP.xcdatamodeld */; };
 		E162574D23E3304D00E84948 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E162574B23E3304D00E84948 /* LaunchScreen.storyboard */; };
@@ -46,12 +47,12 @@
 		E159DD3E24185C2E00C4433F /* video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = video.swift; sourceTree = "<group>"; };
 		E159DD402418691200C4433F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E15B0BAD23E9F67C0014DBA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E15B0BAF23E9FA2B0014DBA1 /* signUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpController.swift; sourceTree = "<group>"; };
+		E15B0BAF23E9FA2B0014DBA1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E15B0BB123E9FCEF0014DBA1 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		E162573A23E3304B00E84948 /* PTC APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PTC APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E162573D23E3304B00E84948 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E162573F23E3304B00E84948 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E162574123E3304B00E84948 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E162574123E3304B00E84948 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E162574423E3304B00E84948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E162574723E3304C00E84948 /* PTC_APP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PTC_APP.xcdatamodel; sourceTree = "<group>"; };
 		E162574C23E3304D00E84948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC87FAA1319C6B01861197AD /* Pods_PTC_APP.framework in Frameworks */,
+				2639EB1726BB18B4006C1CF2 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,10 +121,12 @@
 				E15B0BB323E9FD100014DBA1 /* helpers */,
 				E162573D23E3304B00E84948 /* AppDelegate.swift */,
 				E162573F23E3304B00E84948 /* SceneDelegate.swift */,
-				E162574123E3304B00E84948 /* ViewController.swift */,
+				E162574323E3304B00E84948 /* Main.storyboard */,
+				E162574123E3304B00E84948 /* LoginViewController.swift */,
+				2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */,
+				E15B0BAF23E9FA2B0014DBA1 /* SignUpViewController.swift */,
 				E19F7A8B23FCC21B00E718B8 /* ToDoItemCell.swift */,
 				E19F7A8923FC7AC400E718B8 /* ToDoParent.swift */,
-				E162574323E3304B00E84948 /* Main.storyboard */,
 				E159DD3A2418597A00C4433F /* historyViewController.swift */,
 				E159DD402418691200C4433F /* DetailViewController.swift */,
 				E159DD3C24185B5600C4433F /* videoCell.swift */,
@@ -133,13 +137,11 @@
 				E1A022F223F3652C0093FED2 /* saveFileController.swift */,
 				E19F7A8D23FCDC3700E718B8 /* Assets.xcassets */,
 				E1A022F023F31F4E0093FED2 /* homePage.swift */,
-				E15B0BAF23E9FA2B0014DBA1 /* signUpController.swift */,
 				E162574B23E3304D00E84948 /* LaunchScreen.storyboard */,
 				E159DD262418370800C4433F /* TaresaViewController.swift */,
 				E162574E23E3304D00E84948 /* Info.plist */,
 				E162574623E3304C00E84948 /* PTC_APP.xcdatamodeld */,
 				E15B0BAD23E9F67C0014DBA1 /* GoogleService-Info.plist */,
-				2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */,
 			);
 			path = "PTC APP";
 			sourceTree = "<group>";
@@ -171,6 +173,9 @@
 			dependencies = (
 			);
 			name = "PTC APP";
+			packageProductDependencies = (
+				2639EB1626BB18B4006C1CF2 /* IQKeyboardManagerSwift */,
+			);
 			productName = "PTC APP";
 			productReference = E162573A23E3304B00E84948 /* PTC APP.app */;
 			productType = "com.apple.product-type.application";
@@ -199,6 +204,9 @@
 				Base,
 			);
 			mainGroup = E162573123E3304B00E84948;
+			packageReferences = (
+				2639EB1526BB18B4006C1CF2 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = E162573B23E3304B00E84948 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,7 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E162574223E3304B00E84948 /* ViewController.swift in Sources */,
+				E162574223E3304B00E84948 /* LoginViewController.swift in Sources */,
 				263C866826BA453300012F55 /* Constants.swift in Sources */,
 				E159DD3F24185C2E00C4433F /* video.swift in Sources */,
 				E159DD3D24185B5600C4433F /* videoCell.swift in Sources */,
@@ -283,7 +291,7 @@
 				E159DD412418691200C4433F /* DetailViewController.swift in Sources */,
 				E162574023E3304B00E84948 /* SceneDelegate.swift in Sources */,
 				E162574823E3304C00E84948 /* PTC_APP.xcdatamodeld in Sources */,
-				E15B0BB023E9FA2B0014DBA1 /* signUpController.swift in Sources */,
+				E15B0BB023E9FA2B0014DBA1 /* SignUpViewController.swift in Sources */,
 				E156D86624106E3D00AB52CB /* testTableVIew.swift in Sources */,
 				E1A022F123F31F4E0093FED2 /* homePage.swift in Sources */,
 				E1A022F323F3652C0093FED2 /* saveFileController.swift in Sources */,
@@ -490,6 +498,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2639EB1526BB18B4006C1CF2 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2639EB1626BB18B4006C1CF2 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2639EB1526BB18B4006C1CF2 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E162574623E3304C00E84948 /* PTC_APP.xcdatamodeld */ = {

@@ -11,12 +11,13 @@ import Foundation
 import FirebaseAuth
 import Firebase
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passWordTextField: UITextField!
     @IBOutlet var signInButtonOutlet: UIButton!
-    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet var tagLineLabel: UILabel!
+    //@IBOutlet weak var errorLabel: UILabel!
     var isIconClicked = true
     
     
@@ -36,8 +37,8 @@ class ViewController: UIViewController {
             
             if error != nil {
                 // Couldn't sign in
-                self.errorLabel.text = error!.localizedDescription
-                self.errorLabel.alpha = 1
+                //self.errorLabel.text = error!.localizedDescription
+                //self.errorLabel.alpha = 1
             }
             else {
                 
@@ -57,7 +58,7 @@ class ViewController: UIViewController {
         Utilities.addShadowToButton(signInButtonOutlet)
         
         //Disappear error label
-        errorLabel.alpha = 0
+        //errorLabel.alpha = 0
         
         //Add textfields icons
         guard let emailIcon = UIImage(named: "email") else { return }
@@ -68,6 +69,18 @@ class ViewController: UIViewController {
         Utilities.addTextFieldImage(textField: passWordTextField, andImage: passwordLeftIcon)
         addPasswordEyeIcon(textField: passWordTextField, andImage: passwordRightIcon)
         
+        //Animate Tagline text
+        tagLineLabel.text = ""
+        var charIndex = 0.0
+        let taglineText = "Creating Communication That Gets Results"
+        
+        for letters in taglineText {
+            
+            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { timer in
+                self.tagLineLabel.text?.append(letters)
+            }
+            charIndex += 1
+        }
     }
     
     func addPasswordEyeIcon(textField: UITextField, andImage image: UIImage) {

@@ -12,7 +12,7 @@ import Firebase
 import FirebaseDatabase
 import UIKit
 
-class signUpController: UIViewController {
+class SignUpViewController: UIViewController {
     
     var refusers : DatabaseReference!
   // var ref : DatabaseReference!
@@ -22,7 +22,7 @@ class signUpController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passWordTextField: UITextField!
-    @IBOutlet weak var errorMessage: UILabel!
+    //@IBOutlet weak var errorMessage: UILabel!
     @IBOutlet var signUpButtonOutlet: UIButton!
     var isIconClicked = true
     
@@ -64,7 +64,7 @@ class signUpController: UIViewController {
         Utilities.addShadowToButton(signUpButtonOutlet)
         
         //Disappear error label
-        errorMessage.alpha = 0
+        //errorMessage.alpha = 0
         
         //Add textfields icons
         guard let profileIcon = UIImage(named: "profile") else { return }
@@ -184,7 +184,7 @@ class signUpController: UIViewController {
     }
     func showError(_ message:String) {
         
-        errorMessage.text = message
-        errorMessage.alpha = 1
+        //errorMessage.text = message
+        //errorMessage.alpha = 1
     }
 }
