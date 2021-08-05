@@ -13,9 +13,14 @@ class SideMenuTableViewCell: UITableViewCell {
     @IBOutlet var containerView: UIView!
     @IBOutlet var menuIconImageView: UIImageView!
     @IBOutlet var menuLabel: UILabel!
+    @IBOutlet var menuIconView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        menuIconView.layer.borderWidth = 1
+        menuIconView.layer.cornerRadius = 25
+        menuIconView.layer.borderColor = Utilities.secondaryTextColor.cgColor
         
     }
 

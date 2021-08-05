@@ -14,6 +14,11 @@ class HomeViewController: UIViewController {
     
     @IBOutlet var mainTableView: UITableView!
     @IBOutlet var mainView: UIView!
+    @IBOutlet var profileView: UIView!
+    @IBOutlet var profileImageView: UIImageView!
+    @IBOutlet var emailLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var profileEditButtonOutlet: UIButton!
     
     //MARK: - MainView Dummy Data
     let activityNameArray = ["Interview", "Seminar", "Internal Meeting", "Client Meeting", "Webinar"]
@@ -24,9 +29,10 @@ class HomeViewController: UIViewController {
     @IBOutlet var menubarTableView: UITableView!
     @IBOutlet var menubarView: UIView!
     
+    
     //MARK: - Menubar Items and Icons
-    let menuItems = ["Home", "Profile", "Use Instructions", "About Author", "Privacy Policy", "Contact Us", "Sign Out"]
-    let menuIcons = ["home", "profile", "instructions", "about-author", "privacy-policy", "contact-us", "sign-out"]
+    let menuItems = ["Home", "Instructions", "About Author", "Privacy Policy", "Contact Us", "Sign Out"]
+    let menuIcons = ["home", "instructions", "about-author", "privacy-policy", "contact-us", "sign-out"]
     var isSideViewOpened: Bool = false
     
     override func viewDidLoad() {
@@ -40,42 +46,66 @@ class HomeViewController: UIViewController {
         //Add shadow to Menubar
         Utilities.addShadowAndBorderToView(menubarView)
         menubarView.layer.borderWidth = 0
+        profileImageView.layer.cornerRadius = 40
+        profileImageView.layer.borderWidth = 2
+        profileImageView.layer.borderColor = Utilities.secondaryTextColor.cgColor
+        
         
     }
 
     
     @IBAction func sideMenuButtonTapped(_ sender: UIBarButtonItem) {
         
+        
         menubarView.isHidden = false
         menubarTableView.isHidden = false
         self.view.bringSubviewToFront(menubarView)
+        navigationItem.largeTitleDisplayMode = .never
         
         if !isSideViewOpened {
             isSideViewOpened = true
-            menubarView.frame = CGRect(x: 0, y: 88, width: 0, height: 350)
-            menubarTableView.frame = CGRect(x: 0, y: 0, width: 0, height: 350)
+            menubarView.frame = CGRect(x: 0, y: 88, width: 0, height: 838)
+            menubarTableView.frame = CGRect(x: 0, y: 0, width: 0, height: 838)
+            profileView.frame = CGRect(x: 0, y: 0, width: 0, height: 150)
+            profileImageView.frame = CGRect(x: 20, y: 10, width: 0, height: 80)
+            nameLabel.frame = CGRect(x: 0, y: 0, width: 0, height: 30)
+            emailLabel.frame = CGRect(x: 0, y: 30, width: 0, height: 30)
+            profileEditButtonOutlet.frame = CGRect(x: 82, y: 70, width: 0, height: 0)
             
-            UIView.animate(withDuration: 0.7) {
-                self.menubarView.frame = CGRect(x: 0, y: 88, width: 250, height: 350)
-                self.menubarTableView.frame = CGRect(x: 0, y: 0, width: 250, height: 350)
+            UIView.animate(withDuration: 0.3) {
+                self.menubarView.frame = CGRect(x: 0, y: 88, width: 320, height: 838)
+                self.menubarTableView.frame = CGRect(x: 0, y: 0, width: 320, height: 838)
+                self.profileView.frame = CGRect(x: 0, y: 0, width: 320, height: 150)
+                self.profileImageView.frame = CGRect(x: 20, y: 10, width: 80, height: 80)
+                self.nameLabel.frame = CGRect(x: 0, y: 0, width: 210, height: 30)
+                self.emailLabel.frame = CGRect(x: 0, y: 30, width: 210, height: 30)
+                self.profileEditButtonOutlet.frame = CGRect(x: 82, y: 70, width: 20, height: 20)
             }
         } else {
             menubarView.isHidden = true
             menubarTableView.isHidden = true
             isSideViewOpened = false
+            navigationItem.largeTitleDisplayMode = .automatic
 
-            menubarView.frame = CGRect(x: 0, y: 88, width: 250, height: 350)
-            menubarTableView.frame = CGRect(x: 0, y: 0, width: 250 , height: 350)
+//            menubarView.frame = CGRect(x: 0, y: 88, width: 320, height: 838)
+//            menubarTableView.frame = CGRect(x: 0, y: 0, width: 320 , height: 838)
+//            profileView.frame = CGRect(x: 0, y: 0, width: 320, height: 150)
 
-            UIView.animate(withDuration: 0.7) {
-                self.menubarView.frame = CGRect(x: 0, y: 88, width: 0, height: 350)
-                self.menubarTableView.frame = CGRect(x: 0, y: 0, width: 250, height: 350)
-            }
+//            UIView.animate(withDuration: 0.3) {
+//                self.menubarView.frame = CGRect(x: 0, y: 88, width: 0, height: 838)
+//                self.menubarTableView.frame = CGRect(x: 0, y: 0, width: 0, height: 838)
+//                self.profileView.frame = CGRect(x: 0, y: 0, width: 0, height: 150)
+//            }
         }
     }
     
     @IBAction func addActivityButtonTapped(_ sender: UIBarButtonItem) {
     
+    }
+    
+    @IBAction func profileEditButtonTapped(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: Constants.Segues.homeToProfileSegue, sender: self)
     }
     
 }
@@ -141,11 +171,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 self.navigationController?.pushViewController(homeVC, animated: true)
                 break
                 
-            case "Profile":
-                performSegue(withIdentifier: Constants.Segues.homeToProfileSegue, sender: self)
-                break
-                
-            case "Use Instructions":
+            case "Instructions":
                 performSegue(withIdentifier: Constants.Segues.homeToUseInstructionsSegue, sender: self)
                 break
                 

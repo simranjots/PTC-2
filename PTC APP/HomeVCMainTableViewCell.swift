@@ -17,9 +17,9 @@ class HomeVCMainTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        Utilities.addShadowAndBorderToView(containerView)
-        containerView.layer.borderWidth = 0
-        containerView.layer.cornerRadius = 10
+//        Utilities.addShadowAndBorderToView(containerView)
+//        containerView.layer.borderWidth = 0
+//        containerView.layer.cornerRadius = 10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
