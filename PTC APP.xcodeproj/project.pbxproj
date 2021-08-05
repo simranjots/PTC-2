@@ -11,6 +11,7 @@
 		2639EB1726BB18B4006C1CF2 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2639EB1626BB18B4006C1CF2 /* IQKeyboardManagerSwift */; };
 		2639EB1926BB459D006C1CF2 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */; };
 		2639EB1B26BB45DE006C1CF2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */; };
+		2639EB1D26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1C26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift */; };
 		263C866826BA453300012F55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C866726BA453300012F55 /* Constants.swift */; };
 		DC87FAA1319C6B01861197AD /* Pods_PTC_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7E7A87D71B12D56F58F219 /* Pods_PTC_APP.framework */; };
 		E156D86624106E3D00AB52CB /* testTableVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156D86524106E3D00AB52CB /* testTableVIew.swift */; };
@@ -42,6 +43,7 @@
 		2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2639EB1C26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCMainTableViewCell.swift; sourceTree = "<group>"; };
 		263C866726BA453300012F55 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8A7E7A87D71B12D56F58F219 /* Pods_PTC_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PTC_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E156D86524106E3D00AB52CB /* testTableVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTableVIew.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */,
 				E15B0BAF23E9FA2B0014DBA1 /* SignUpViewController.swift */,
 				2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */,
+				2639EB1C26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift */,
 				2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */,
 				E19F7A8B23FCC21B00E718B8 /* ToDoItemCell.swift */,
 				E19F7A8923FC7AC400E718B8 /* ToDoParent.swift */,
@@ -286,6 +289,7 @@
 				E162574223E3304B00E84948 /* LoginViewController.swift in Sources */,
 				263C866826BA453300012F55 /* Constants.swift in Sources */,
 				E159DD3F24185C2E00C4433F /* video.swift in Sources */,
+				2639EB1D26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift in Sources */,
 				E159DD3D24185B5600C4433F /* videoCell.swift in Sources */,
 				E162573E23E3304B00E84948 /* AppDelegate.swift in Sources */,
 				E15B0BB223E9FCEF0014DBA1 /* Utilities.swift in Sources */,
