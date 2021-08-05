@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2639EB1426BAE9B3006C1CF2 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */; };
 		2639EB1726BB18B4006C1CF2 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2639EB1626BB18B4006C1CF2 /* IQKeyboardManagerSwift */; };
+		2639EB1926BB459D006C1CF2 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */; };
+		2639EB1B26BB45DE006C1CF2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */; };
 		263C866826BA453300012F55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C866726BA453300012F55 /* Constants.swift */; };
 		DC87FAA1319C6B01861197AD /* Pods_PTC_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7E7A87D71B12D56F58F219 /* Pods_PTC_APP.framework */; };
 		E156D86624106E3D00AB52CB /* testTableVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156D86524106E3D00AB52CB /* testTableVIew.swift */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		035C471E8BC5E8721724FA53 /* Pods-PTC APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTC APP.release.xcconfig"; path = "Target Support Files/Pods-PTC APP/Pods-PTC APP.release.xcconfig"; sourceTree = "<group>"; };
 		2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
+		2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		263C866726BA453300012F55 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8A7E7A87D71B12D56F58F219 /* Pods_PTC_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PTC_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E156D86524106E3D00AB52CB /* testTableVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTableVIew.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 				E162574123E3304B00E84948 /* LoginViewController.swift */,
 				2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */,
 				E15B0BAF23E9FA2B0014DBA1 /* SignUpViewController.swift */,
+				2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */,
+				2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */,
 				E19F7A8B23FCC21B00E718B8 /* ToDoItemCell.swift */,
 				E19F7A8923FC7AC400E718B8 /* ToDoParent.swift */,
 				E159DD3A2418597A00C4433F /* historyViewController.swift */,
@@ -284,6 +290,7 @@
 				E162573E23E3304B00E84948 /* AppDelegate.swift in Sources */,
 				E15B0BB223E9FCEF0014DBA1 /* Utilities.swift in Sources */,
 				E182C92323FB568300A6D37E /* historySitution.swift in Sources */,
+				2639EB1B26BB45DE006C1CF2 /* HomeViewController.swift in Sources */,
 				2639EB1426BAE9B3006C1CF2 /* ResetPasswordViewController.swift in Sources */,
 				E18E82D723FD9F5600F35982 /* introductionViewController.swift in Sources */,
 				E19F7A8C23FCC21B00E718B8 /* ToDoItemCell.swift in Sources */,
@@ -295,6 +302,7 @@
 				E156D86624106E3D00AB52CB /* testTableVIew.swift in Sources */,
 				E1A022F123F31F4E0093FED2 /* homePage.swift in Sources */,
 				E1A022F323F3652C0093FED2 /* saveFileController.swift in Sources */,
+				2639EB1926BB459D006C1CF2 /* SideMenuTableViewCell.swift in Sources */,
 				E19F7A8A23FC7AC400E718B8 /* ToDoParent.swift in Sources */,
 				E159DD3B2418597A00C4433F /* historyViewController.swift in Sources */,
 			);
