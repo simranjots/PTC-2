@@ -288,7 +288,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwu-Kt-vDu">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_5481pick" translatesAutoresizingMaskIntoConstraints="NO" id="W7o-dA-l97">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teresa" translatesAutoresizingMaskIntoConstraints="NO" id="W7o-dA-l97">
                                                 <rect key="frame" x="20" y="10" width="80" height="80"/>
                                                 <color key="tintColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
@@ -612,7 +612,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_5481pick" translatesAutoresizingMaskIntoConstraints="NO" id="xPZ-LD-ona">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teresa" translatesAutoresizingMaskIntoConstraints="NO" id="xPZ-LD-ona">
                                 <rect key="frame" x="154" y="145" width="120" height="120"/>
                                 <color key="tintColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -1134,14 +1134,106 @@
                     <view key="view" contentMode="scaleToFill" id="nXV-ku-yyC">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_5481pick" translatesAutoresizingMaskIntoConstraints="NO" id="hX5-D2-fbP">
+                                <rect key="frame" x="144" y="145" width="140" height="140"/>
+                                <color key="tintColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="LqP-s9-u1F"/>
+                                    <constraint firstAttribute="height" constant="140" id="dgA-Fk-rlk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teresa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="gor-rY-dhf">
+                                <rect key="frame" x="139.66666666666666" y="295" width="148.99999999999997" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="hBe-Bk-QIC"/>
+                                    <constraint firstAttribute="width" constant="149" id="iaQ-tH-Yrm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kle-k4-8Xh">
+                                <rect key="frame" x="0.0" y="330" width="428" height="596"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WcK-dw-V6S">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1276"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="dO0-Ik-cBY">
+                                                <rect key="frame" x="16" y="0.0" width="396" height="1276"/>
+                                                <mutableString key="text">For as far back as she can remember Teresa has always been passionate about the power of good communication. In fact, it was an incident that happened in her formative years that truly shaped the trajectory of her life.
+
+When Teresa was in grade school in the late 1950s, she was punished for talking out of turn in class (I know we were shocked too!). The teacher decided that her “punishment” was to be seated next to the only African American child in the class. Teresa certainly didn’t see this as much of a punishment for herself, but even at that young age she was acutely aware of how humiliating this must have been for the other child. That incident was the beginning of her commitment to seeing things from other peoples’ perspectives, and the power of both verbal, and non-verbal communication.
+
+Whether guiding business leaders to reach new heights, coaching individuals to increase results by bettering their presentation skills or mentoring women of all ages, Teresa works with joyful determination to ensure her clients leave their time together challenged, and in an enhanced position to reach their goals. Teresa has found there are certain universal principles that work consistently. “When we communicate from the best of who we are,” she says, “from what’s most important to us, we inspire ourselves and we can inspire others. There’s communication, not just data exchange.”
+
+When we look at the depth and diversity of Teresa’s entrepreneurial experiences, we often joke that it appears she has had many incarnations. She has done everything from running a successful gourmet cheesecake business from her home (yes, she was head baker too!), to running a company that offered high-end video production services to corporate clients. No matter what the business she quickly recognized that her success was rooted in good communication.
+
+After many years of consulting with her corporate clients, Teresa realized companies needed help with their messaging, marketing and overall communication strategy, so she formed Connect To The Core Inc. because she truly believes at the core of all success is great communication, and at the core of all great communication is connection.
+
+It is over 35 years since she started, and Teresa has helped thousands of individuals and hundreds of companies reach their goals. She is now in her element, creating original solutions to complex issues for her clients to become their best selves and achieve remarkable results.
+
+Teresa was born and raised in Michigan and lived throughout the US for many years. She currently splits her time between her home in Toronto, Canada and her farm in Northern Michigan.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <mutableString key="userLabel">For as far back as she can remember Teresa has always been passionate about the power of good communication. In fact, it was an incident that happened in her formative years that truly shaped the trajectory of her life.  When Teresa was in grade school in the late 1950s, she was punished for talking out of turn in class (I know we were shocked too!). The teacher decided that her “punishment” was to be seated next to the only African American child in the class. Teresa certainly didn’t see this as much of a punishment for herself, but even at that young age she was acutely aware of how humiliating this must have been for the other child. That incident was the beginning of her commitment to seeing things from other peoples’ perspectives, and the power of both verbal, and non-verbal communication.  Whether guiding business leaders to reach new heights, coaching individuals to increase results by bettering their presentation skills or mentoring women of all ages, Teresa works with joyful determination to ensure her clients leave their time together challenged, and in an enhanced position to reach their goals. Teresa has found there are certain universal principles that work consistently. “When we communicate from the best of who we are,” she says, “from what’s most important to us, we inspire ourselves and we can inspire others. There’s communication, not just data exchange.”  When we look at the depth and diversity of Teresa’s entrepreneurial experiences, we often joke that it appears she has had many incarnations. She has done everything from running a successful gourmet cheesecake business from her home (yes, she was head baker too!), to running a company that offered high-end video production services to corporate clients. No matter what the business she quickly recognized that her success was rooted in good communication.  After many years of consulting with her corporate clients, Teresa realized companies needed help with their messaging, marketing and overall communication strategy, so she formed Connect To The Core Inc. because she truly believes at the core of all success is great communication, and at the core of all great communication is connection.  It is over 35 years since she started, and Teresa has helped thousands of individuals and hundreds of companies reach their goals. She is now in her element, creating original solutions to complex issues for her clients to become their best selves and achieve remarkable results.  Teresa was born and raised in Michigan and lived throughout the US for many years. She currently splits her time between her home in Toronto, Canada and her farm in Northern Michigan.</mutableString>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXc-zc-Csz">
+                                                <rect key="frame" x="16" y="1281" width="396" height="0.66666666666674246"/>
+                                                <color key="backgroundColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="0.67000000000000004" id="sK9-rv-Ihb"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="OXc-zc-Csz" firstAttribute="leading" secondItem="WcK-dw-V6S" secondAttribute="leading" constant="16" id="A2g-Lz-bvA"/>
+                                            <constraint firstItem="OXc-zc-Csz" firstAttribute="top" secondItem="dO0-Ik-cBY" secondAttribute="bottom" constant="5" id="RZC-dv-ghz"/>
+                                            <constraint firstAttribute="trailing" secondItem="dO0-Ik-cBY" secondAttribute="trailing" constant="16" id="Sel-0g-2u9"/>
+                                            <constraint firstAttribute="trailing" secondItem="OXc-zc-Csz" secondAttribute="trailing" constant="16" id="Vmb-on-f5b"/>
+                                            <constraint firstItem="dO0-Ik-cBY" firstAttribute="leading" secondItem="WcK-dw-V6S" secondAttribute="leading" constant="16" id="l55-bk-knb"/>
+                                            <constraint firstAttribute="bottom" secondItem="dO0-Ik-cBY" secondAttribute="bottom" id="vor-j0-aTD"/>
+                                            <constraint firstItem="dO0-Ik-cBY" firstAttribute="top" secondItem="WcK-dw-V6S" secondAttribute="top" id="z6w-oZ-nad"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WcK-dw-V6S" firstAttribute="bottom" secondItem="d1O-zK-pz9" secondAttribute="bottom" id="2cX-Qu-rnW"/>
+                                    <constraint firstItem="WcK-dw-V6S" firstAttribute="width" secondItem="vda-s9-UDr" secondAttribute="width" id="8m7-Gp-Zmp"/>
+                                    <constraint firstItem="WcK-dw-V6S" firstAttribute="height" secondItem="vda-s9-UDr" secondAttribute="height" constant="680" id="DqV-qR-SUe"/>
+                                    <constraint firstItem="WcK-dw-V6S" firstAttribute="leading" secondItem="d1O-zK-pz9" secondAttribute="leading" id="IOz-rO-HrF"/>
+                                    <constraint firstItem="WcK-dw-V6S" firstAttribute="trailing" secondItem="d1O-zK-pz9" secondAttribute="trailing" id="apz-P0-Pb7"/>
+                                    <constraint firstItem="WcK-dw-V6S" firstAttribute="top" secondItem="d1O-zK-pz9" secondAttribute="top" id="riv-1n-QLL"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="d1O-zK-pz9"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="vda-s9-UDr"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="yje-87-4Td"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hX5-D2-fbP" firstAttribute="top" secondItem="yje-87-4Td" secondAttribute="top" constant="5" id="Bn6-4n-28E"/>
+                            <constraint firstItem="Kle-k4-8Xh" firstAttribute="trailing" secondItem="yje-87-4Td" secondAttribute="trailing" id="IWB-m7-OYV"/>
+                            <constraint firstItem="Kle-k4-8Xh" firstAttribute="top" secondItem="gor-rY-dhf" secondAttribute="bottom" constant="10" id="cxP-GT-vRg"/>
+                            <constraint firstAttribute="bottom" secondItem="Kle-k4-8Xh" secondAttribute="bottom" id="dwD-OX-Puy"/>
+                            <constraint firstItem="hX5-D2-fbP" firstAttribute="centerX" secondItem="nXV-ku-yyC" secondAttribute="centerX" id="f5c-DC-mHc"/>
+                            <constraint firstItem="gor-rY-dhf" firstAttribute="centerX" secondItem="nXV-ku-yyC" secondAttribute="centerX" id="fKR-lA-4ep"/>
+                            <constraint firstItem="gor-rY-dhf" firstAttribute="top" secondItem="hX5-D2-fbP" secondAttribute="bottom" constant="10" id="fMw-xY-ccd"/>
+                            <constraint firstItem="Kle-k4-8Xh" firstAttribute="leading" secondItem="yje-87-4Td" secondAttribute="leading" id="ho4-oZ-sSI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About Author" largeTitleDisplayMode="always" id="LlC-po-Xn4"/>
+                    <connections>
+                        <outlet property="aboutAuthorLabel" destination="dO0-Ik-cBY" id="noc-b2-vxF"/>
+                        <outlet property="authorImage" destination="hX5-D2-fbP" id="JOV-60-dAb"/>
+                        <outlet property="authorNameLabel" destination="gor-rY-dhf" id="1kT-te-iT4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cC3-r2-FAV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2593" y="426"/>
+            <point key="canvasLocation" x="2592.0560747663549" y="425.70194384449246"/>
         </scene>
         <!--Privacy Policy-->
         <scene sceneID="VB7-ed-3zV">
@@ -1445,6 +1537,7 @@
         <image name="menu-bar" width="29" height="29"/>
         <image name="pin" width="170.66667175292969" height="170.66667175292969"/>
         <image name="soundcloud" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="teresa" width="234.33332824707031" height="255.33332824707031"/>
         <image name="twitter" width="170.66667175292969" height="170.66667175292969"/>
         <image name="uncheck" width="170.66667175292969" height="170.66667175292969"/>
         <image name="youtube" width="170.66667175292969" height="170.66667175292969"/>
