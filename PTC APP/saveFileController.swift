@@ -116,7 +116,7 @@ class saveFileController : ToDoParent{
             let value = valueTextField.text
             let doValue = doTextField.text
             let you = youTextField.text
-            print(title)
+            
             // Nil todos can't be added
             if let title = title{
                 todo.title = title

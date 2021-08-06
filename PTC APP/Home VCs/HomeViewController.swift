@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var emailLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var profileEditButtonOutlet: UIButton!
+    @IBOutlet var separatorView: UIView!
     
     //MARK: - MainView Dummy Data
     let activityNameArray = ["Interview", "Seminar", "Internal Meeting", "Client Meeting", "Webinar"]
@@ -70,9 +71,10 @@ class HomeViewController: UIViewController {
             profileImageView.frame = CGRect(x: 20, y: 10, width: 0, height: 80)
             nameLabel.frame = CGRect(x: 0, y: 0, width: 0, height: 30)
             emailLabel.frame = CGRect(x: 0, y: 30, width: 0, height: 30)
-            profileEditButtonOutlet.frame = CGRect(x: 82, y: 70, width: 0, height: 0)
+            profileEditButtonOutlet.frame = CGRect(x: 82, y: 70, width: 0, height: 20)
+            separatorView.frame = CGRect(x: 20, y: 98.67, width: 0, height: 0.33)
             
-            UIView.animate(withDuration: 0.3) {
+            UIView.animate(withDuration: 0.5) {
                 self.menubarView.frame = CGRect(x: 0, y: 88, width: 320, height: 838)
                 self.menubarTableView.frame = CGRect(x: 0, y: 0, width: 320, height: 838)
                 self.profileView.frame = CGRect(x: 0, y: 0, width: 320, height: 150)
@@ -80,6 +82,8 @@ class HomeViewController: UIViewController {
                 self.nameLabel.frame = CGRect(x: 0, y: 0, width: 210, height: 30)
                 self.emailLabel.frame = CGRect(x: 0, y: 30, width: 210, height: 30)
                 self.profileEditButtonOutlet.frame = CGRect(x: 82, y: 70, width: 20, height: 20)
+                self.separatorView.frame = CGRect(x: 20, y: 98.67, width: 280, height: 0.33)
+                
             }
         } else {
             menubarView.isHidden = true

@@ -20,6 +20,7 @@ struct Constants {
     struct CellIdentifiers {
         static let homeScreenMainTableViewCell = "homeScreenMainTableViewCell"
         static let homeScreenMenuBarCell = "menubarTableViewCell"
+        static let privacyPolicyTableViewCell = "privacyPolicyVCResudableCell"
     }
     
     //MARK: - Segue identifiers

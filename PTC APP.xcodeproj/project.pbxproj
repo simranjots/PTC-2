@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260FA9EC26BCCE740088184B /* AboutAuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9EB26BCCE740088184B /* AboutAuthorViewController.swift */; };
+		260FA9EE26BCCE8D0088184B /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9ED26BCCE8D0088184B /* InstructionsViewController.swift */; };
+		260FA9F026BCCE980088184B /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9EF26BCCE980088184B /* ContactUsViewController.swift */; };
+		260FA9F226BCCEB30088184B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9F126BCCEB30088184B /* ProfileViewController.swift */; };
+		260FA9F426BCCECA0088184B /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9F326BCCECA0088184B /* PrivacyPolicyViewController.swift */; };
+		260FA9F626BCF9090088184B /* PrivacyPolicyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9F526BCF9090088184B /* PrivacyPolicyTableViewCell.swift */; };
 		2639EB1426BAE9B3006C1CF2 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */; };
 		2639EB1726BB18B4006C1CF2 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2639EB1626BB18B4006C1CF2 /* IQKeyboardManagerSwift */; };
 		2639EB1926BB459D006C1CF2 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */; };
@@ -40,6 +46,12 @@
 
 /* Begin PBXFileReference section */
 		035C471E8BC5E8721724FA53 /* Pods-PTC APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTC APP.release.xcconfig"; path = "Target Support Files/Pods-PTC APP/Pods-PTC APP.release.xcconfig"; sourceTree = "<group>"; };
+		260FA9EB26BCCE740088184B /* AboutAuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAuthorViewController.swift; sourceTree = "<group>"; };
+		260FA9ED26BCCE8D0088184B /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
+		260FA9EF26BCCE980088184B /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		260FA9F126BCCEB30088184B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		260FA9F326BCCECA0088184B /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		260FA9F526BCF9090088184B /* PrivacyPolicyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyTableViewCell.swift; sourceTree = "<group>"; };
 		2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +98,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		260FA9F726BCFE440088184B /* Unused Old Files */ = {
+			isa = PBXGroup;
+			children = (
+				E159DD402418691200C4433F /* DetailViewController.swift */,
+				E159DD3C24185B5600C4433F /* videoCell.swift */,
+				E159DD3E24185C2E00C4433F /* video.swift */,
+				E156D86524106E3D00AB52CB /* testTableVIew.swift */,
+				E159DD3A2418597A00C4433F /* historyViewController.swift */,
+				E1A022F023F31F4E0093FED2 /* homePage.swift */,
+				E159DD262418370800C4433F /* TaresaViewController.swift */,
+				E18E82D623FD9F5600F35982 /* introductionViewController.swift */,
+			);
+			path = "Unused Old Files";
+			sourceTree = "<group>";
+		};
+		260FA9F826BCFF050088184B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E162574323E3304B00E84948 /* Main.storyboard */,
+				E162574B23E3304D00E84948 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		260FA9F926BCFF530088184B /* Login VCs */ = {
+			isa = PBXGroup;
+			children = (
+				E162574123E3304B00E84948 /* LoginViewController.swift */,
+				E15B0BAF23E9FA2B0014DBA1 /* SignUpViewController.swift */,
+				2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */,
+			);
+			path = "Login VCs";
+			sourceTree = "<group>";
+		};
+		260FA9FA26BCFF990088184B /* Home VCs */ = {
+			isa = PBXGroup;
+			children = (
+				2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */,
+				2639EB1C26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift */,
+				2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */,
+			);
+			path = "Home VCs";
+			sourceTree = "<group>";
+		};
+		260FA9FB26BCFFD60088184B /* More VCs */ = {
+			isa = PBXGroup;
+			children = (
+				260FA9F126BCCEB30088184B /* ProfileViewController.swift */,
+				260FA9ED26BCCE8D0088184B /* InstructionsViewController.swift */,
+				260FA9EB26BCCE740088184B /* AboutAuthorViewController.swift */,
+				260FA9F326BCCECA0088184B /* PrivacyPolicyViewController.swift */,
+				260FA9F526BCF9090088184B /* PrivacyPolicyTableViewCell.swift */,
+				260FA9EF26BCCE980088184B /* ContactUsViewController.swift */,
+			);
+			path = "More VCs";
+			sourceTree = "<group>";
+		};
 		4234677012C2F4B4A6091FDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,13 +163,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E15B0BB323E9FD100014DBA1 /* helpers */ = {
+		E15B0BB323E9FD100014DBA1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				E15B0BB123E9FCEF0014DBA1 /* Utilities.swift */,
 				263C866726BA453300012F55 /* Constants.swift */,
 			);
-			path = helpers;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		E162573123E3304B00E84948 = {
@@ -124,33 +193,22 @@
 		E162573C23E3304B00E84948 /* PTC APP */ = {
 			isa = PBXGroup;
 			children = (
-				E15B0BB323E9FD100014DBA1 /* helpers */,
 				E162573D23E3304B00E84948 /* AppDelegate.swift */,
 				E162573F23E3304B00E84948 /* SceneDelegate.swift */,
-				E162574323E3304B00E84948 /* Main.storyboard */,
-				E162574123E3304B00E84948 /* LoginViewController.swift */,
-				2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */,
-				E15B0BAF23E9FA2B0014DBA1 /* SignUpViewController.swift */,
-				2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */,
-				2639EB1C26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift */,
-				2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */,
+				E15B0BB323E9FD100014DBA1 /* Helpers */,
+				260FA9F826BCFF050088184B /* Storyboards */,
+				260FA9F926BCFF530088184B /* Login VCs */,
+				260FA9FA26BCFF990088184B /* Home VCs */,
+				260FA9FB26BCFFD60088184B /* More VCs */,
+				E1A022F223F3652C0093FED2 /* saveFileController.swift */,
 				E19F7A8B23FCC21B00E718B8 /* ToDoItemCell.swift */,
 				E19F7A8923FC7AC400E718B8 /* ToDoParent.swift */,
-				E159DD3A2418597A00C4433F /* historyViewController.swift */,
-				E159DD402418691200C4433F /* DetailViewController.swift */,
-				E159DD3C24185B5600C4433F /* videoCell.swift */,
-				E159DD3E24185C2E00C4433F /* video.swift */,
-				E156D86524106E3D00AB52CB /* testTableVIew.swift */,
 				E182C92223FB568200A6D37E /* historySitution.swift */,
-				E18E82D623FD9F5600F35982 /* introductionViewController.swift */,
-				E1A022F223F3652C0093FED2 /* saveFileController.swift */,
 				E19F7A8D23FCDC3700E718B8 /* Assets.xcassets */,
-				E1A022F023F31F4E0093FED2 /* homePage.swift */,
-				E162574B23E3304D00E84948 /* LaunchScreen.storyboard */,
-				E159DD262418370800C4433F /* TaresaViewController.swift */,
 				E162574E23E3304D00E84948 /* Info.plist */,
 				E162574623E3304C00E84948 /* PTC_APP.xcdatamodeld */,
 				E15B0BAD23E9F67C0014DBA1 /* GoogleService-Info.plist */,
+				260FA9F726BCFE440088184B /* Unused Old Files */,
 			);
 			path = "PTC APP";
 			sourceTree = "<group>";
@@ -290,16 +348,22 @@
 				263C866826BA453300012F55 /* Constants.swift in Sources */,
 				E159DD3F24185C2E00C4433F /* video.swift in Sources */,
 				2639EB1D26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift in Sources */,
+				260FA9EE26BCCE8D0088184B /* InstructionsViewController.swift in Sources */,
 				E159DD3D24185B5600C4433F /* videoCell.swift in Sources */,
+				260FA9F226BCCEB30088184B /* ProfileViewController.swift in Sources */,
 				E162573E23E3304B00E84948 /* AppDelegate.swift in Sources */,
+				260FA9F026BCCE980088184B /* ContactUsViewController.swift in Sources */,
 				E15B0BB223E9FCEF0014DBA1 /* Utilities.swift in Sources */,
+				260FA9EC26BCCE740088184B /* AboutAuthorViewController.swift in Sources */,
 				E182C92323FB568300A6D37E /* historySitution.swift in Sources */,
 				2639EB1B26BB45DE006C1CF2 /* HomeViewController.swift in Sources */,
 				2639EB1426BAE9B3006C1CF2 /* ResetPasswordViewController.swift in Sources */,
 				E18E82D723FD9F5600F35982 /* introductionViewController.swift in Sources */,
+				260FA9F426BCCECA0088184B /* PrivacyPolicyViewController.swift in Sources */,
 				E19F7A8C23FCC21B00E718B8 /* ToDoItemCell.swift in Sources */,
 				E159DD272418370800C4433F /* TaresaViewController.swift in Sources */,
 				E159DD412418691200C4433F /* DetailViewController.swift in Sources */,
+				260FA9F626BCF9090088184B /* PrivacyPolicyTableViewCell.swift in Sources */,
 				E162574023E3304B00E84948 /* SceneDelegate.swift in Sources */,
 				E162574823E3304C00E84948 /* PTC_APP.xcdatamodeld in Sources */,
 				E15B0BB023E9FA2B0014DBA1 /* SignUpViewController.swift in Sources */,

@@ -49,7 +49,7 @@ class Utilities {
         //Create the bottom line
         let bottomLine  = CALayer()
         
-        bottomLine.frame = CGRect(x: 0, y: textField.frame.height - 2, width: textField.frame.width, height: 1)
+        bottomLine.frame = CGRect(x: 10, y: textField.frame.height - 2, width: textField.frame.width - 25, height: 0.7)
         bottomLine.backgroundColor = secondaryTextColor.cgColor
             
         //Remove border on textField
