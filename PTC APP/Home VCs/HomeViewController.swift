@@ -7,9 +7,10 @@
 //
 
 import UIKit
-
+import RealmSwift
 class HomeViewController: UIViewController {
-
+    // Variable
+    let realm = try! Realm()
     //MARK: - MainView Outlets
     
     @IBOutlet var mainTableView: UITableView!
@@ -21,10 +22,8 @@ class HomeViewController: UIViewController {
     @IBOutlet var profileEditButtonOutlet: UIButton!
     @IBOutlet var separatorView: UIView!
     
-    //MARK: - MainView Dummy Data
-    let activityNameArray = ["Interview", "Seminar", "Internal Meeting", "Client Meeting", "Webinar"]
-    let activityDate = ["Aug 5, 2021", "Aug 6, 2021", "Aug 7, 2021", "Aug 8, 2021", "Aug 9, 2021"]
-    
+    //MARK: - MainView  Data
+    var activityNameArray : Results<SituationData>?
     
     //MARK: - Menubar Outlets
     @IBOutlet var menubarTableView: UITableView!
@@ -35,7 +34,10 @@ class HomeViewController: UIViewController {
     let menuItems = ["Home", "Guidelines", "About Author", "Privacy Policy", "Contact Us", "Sign Out"]
     let menuIcons = ["home", "guidelines", "about-author", "privacy-policy", "contact-us", "sign-out"]
     var isSideViewOpened: Bool = false
-    
+    override func viewWillAppear(_ animated: Bool) {
+        activityNameArray = realm.objects(SituationData.self)
+        mainTableView.reloadData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -89,7 +91,7 @@ class HomeViewController: UIViewController {
             menubarView.isHidden = true
             menubarTableView.isHidden = true
             isSideViewOpened = false
-            navigationItem.largeTitleDisplayMode = .automatic
+            self.navigationItem.largeTitleDisplayMode = .automatic
 
 //            menubarView.frame = CGRect(x: 0, y: 88, width: 320, height: 838)
 //            menubarTableView.frame = CGRect(x: 0, y: 0, width: 320 , height: 838)
@@ -126,7 +128,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch tableView {
         case mainTableView:
-            numberOfRow = activityNameArray.count
+            numberOfRow = activityNameArray?.count ?? 0
         case menubarTableView:
             numberOfRow = menuItems.count
         default:
@@ -143,8 +145,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch tableView {
         case mainTableView:
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.homeScreenMainTableViewCell, for: indexPath) as! HomeVCMainTableViewCell
-            cell.acitivityNameLabel.text = activityNameArray[indexPath.row]
-            cell.dateLabel.text = activityDate[indexPath.row]
+            cell.acitivityNameLabel.text = activityNameArray?[indexPath.row].situationTitle
+            cell.dateLabel.text = activityNameArray?[indexPath.row].date
             return cell
         case menubarTableView:
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.homeScreenMenuBarCell, for: indexPath) as! SideMenuTableViewCell
@@ -171,8 +173,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             switch menuItems[indexPath.row] {
         
             case "Home":
-                let homeVC = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as! HomeViewController
-                self.navigationController?.pushViewController(homeVC, animated: true)
+                menubarView.isHidden = true
+                menubarTableView.isHidden = true
+                isSideViewOpened = false
+                self.navigationItem.largeTitleDisplayMode = .always
+                
                 break
                 
             case "Guidelines":

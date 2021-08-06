@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Firebase
 import IQKeyboardManagerSwift
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,7 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         //eIQKeyboardManager.shared.enableAutoToolbar =  false
         IQKeyboardManager.shared.shouldResignOnTouchOutside =  true
-        
+        do {
+                   let realm = try Realm()
+               } catch {
+                   print("Error initialising new realm, \(error)")
+               }
+               
+               
         return true
     }
 
