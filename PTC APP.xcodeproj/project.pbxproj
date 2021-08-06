@@ -19,6 +19,12 @@
 		2639EB1B26BB45DE006C1CF2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */; };
 		2639EB1D26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1C26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift */; };
 		263C866826BA453300012F55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C866726BA453300012F55 /* Constants.swift */; };
+		26C2FDC826BDA7E600A53C75 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C2FDC326BDA7E500A53C75 /* 2.png */; };
+		26C2FDC926BDA7E600A53C75 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C2FDC426BDA7E600A53C75 /* 1.png */; };
+		26C2FDCA26BDA7E600A53C75 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C2FDC526BDA7E600A53C75 /* 3.png */; };
+		26C2FDCB26BDA7E600A53C75 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C2FDC626BDA7E600A53C75 /* 4.png */; };
+		26C2FDCC26BDA7E600A53C75 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C2FDC726BDA7E600A53C75 /* 5.png */; };
+		26C2FDCE26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C2FDCD26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift */; };
 		DC87FAA1319C6B01861197AD /* Pods_PTC_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7E7A87D71B12D56F58F219 /* Pods_PTC_APP.framework */; };
 		E156D86624106E3D00AB52CB /* testTableVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156D86524106E3D00AB52CB /* testTableVIew.swift */; };
 		E159DD272418370800C4433F /* TaresaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E159DD262418370800C4433F /* TaresaViewController.swift */; };
@@ -57,6 +63,12 @@
 		2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2639EB1C26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCMainTableViewCell.swift; sourceTree = "<group>"; };
 		263C866726BA453300012F55 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		26C2FDC326BDA7E500A53C75 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		26C2FDC426BDA7E600A53C75 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		26C2FDC526BDA7E600A53C75 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		26C2FDC626BDA7E600A53C75 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		26C2FDC726BDA7E600A53C75 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		26C2FDCD26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsCollectionViewCell.swift; sourceTree = "<group>"; };
 		8A7E7A87D71B12D56F58F219 /* Pods_PTC_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PTC_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E156D86524106E3D00AB52CB /* testTableVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTableVIew.swift; sourceTree = "<group>"; };
 		E159DD262418370800C4433F /* TaresaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaresaViewController.swift; sourceTree = "<group>"; };
@@ -147,12 +159,25 @@
 			children = (
 				260FA9F126BCCEB30088184B /* ProfileViewController.swift */,
 				260FA9ED26BCCE8D0088184B /* InstructionsViewController.swift */,
+				26C2FDCD26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift */,
 				260FA9EB26BCCE740088184B /* AboutAuthorViewController.swift */,
 				260FA9F326BCCECA0088184B /* PrivacyPolicyViewController.swift */,
 				260FA9F526BCF9090088184B /* PrivacyPolicyTableViewCell.swift */,
 				260FA9EF26BCCE980088184B /* ContactUsViewController.swift */,
 			);
 			path = "More VCs";
+			sourceTree = "<group>";
+		};
+		26C2FDC226BDA78200A53C75 /* Instruction Images */ = {
+			isa = PBXGroup;
+			children = (
+				26C2FDC426BDA7E600A53C75 /* 1.png */,
+				26C2FDC326BDA7E500A53C75 /* 2.png */,
+				26C2FDC526BDA7E600A53C75 /* 3.png */,
+				26C2FDC626BDA7E600A53C75 /* 4.png */,
+				26C2FDC726BDA7E600A53C75 /* 5.png */,
+			);
+			path = "Instruction Images";
 			sourceTree = "<group>";
 		};
 		4234677012C2F4B4A6091FDF /* Frameworks */ = {
@@ -200,8 +225,9 @@
 				260FA9F926BCFF530088184B /* Login VCs */,
 				260FA9FA26BCFF990088184B /* Home VCs */,
 				260FA9FB26BCFFD60088184B /* More VCs */,
-				E1A022F223F3652C0093FED2 /* saveFileController.swift */,
+				26C2FDC226BDA78200A53C75 /* Instruction Images */,
 				E19F7A8B23FCC21B00E718B8 /* ToDoItemCell.swift */,
+				E1A022F223F3652C0093FED2 /* saveFileController.swift */,
 				E19F7A8923FC7AC400E718B8 /* ToDoParent.swift */,
 				E182C92223FB568200A6D37E /* historySitution.swift */,
 				E19F7A8D23FCDC3700E718B8 /* Assets.xcassets */,
@@ -290,7 +316,12 @@
 			files = (
 				E162574D23E3304D00E84948 /* LaunchScreen.storyboard in Resources */,
 				E162574523E3304B00E84948 /* Main.storyboard in Resources */,
+				26C2FDC826BDA7E600A53C75 /* 2.png in Resources */,
+				26C2FDC926BDA7E600A53C75 /* 1.png in Resources */,
+				26C2FDCB26BDA7E600A53C75 /* 4.png in Resources */,
 				E19F7A8E23FCDC3800E718B8 /* Assets.xcassets in Resources */,
+				26C2FDCC26BDA7E600A53C75 /* 5.png in Resources */,
+				26C2FDCA26BDA7E600A53C75 /* 3.png in Resources */,
 				E15B0BAE23E9F67C0014DBA1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +378,7 @@
 				E162574223E3304B00E84948 /* LoginViewController.swift in Sources */,
 				263C866826BA453300012F55 /* Constants.swift in Sources */,
 				E159DD3F24185C2E00C4433F /* video.swift in Sources */,
+				26C2FDCE26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift in Sources */,
 				2639EB1D26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift in Sources */,
 				260FA9EE26BCCE8D0088184B /* InstructionsViewController.swift in Sources */,
 				E159DD3D24185B5600C4433F /* videoCell.swift in Sources */,

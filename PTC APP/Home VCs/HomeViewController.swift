@@ -32,8 +32,8 @@ class HomeViewController: UIViewController {
     
     
     //MARK: - Menubar Items and Icons
-    let menuItems = ["Home", "Instructions", "About Author", "Privacy Policy", "Contact Us", "Sign Out"]
-    let menuIcons = ["home", "instructions", "about-author", "privacy-policy", "contact-us", "sign-out"]
+    let menuItems = ["Home", "Guidelines", "About Author", "Privacy Policy", "Contact Us", "Sign Out"]
+    let menuIcons = ["home", "guidelines", "about-author", "privacy-policy", "contact-us", "sign-out"]
     var isSideViewOpened: Bool = false
     
     override func viewDidLoad() {
@@ -175,7 +175,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 self.navigationController?.pushViewController(homeVC, animated: true)
                 break
                 
-            case "Instructions":
+            case "Guidelines":
                 performSegue(withIdentifier: Constants.Segues.homeToUseInstructionsSegue, sender: self)
                 break
                 
