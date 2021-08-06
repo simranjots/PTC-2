@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A66AEEC26BDE402002BB556 /* saveFileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A66AEEB26BDE402002BB556 /* saveFileController.swift */; };
+		1A66AEEF26BDE4F7002BB556 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1A66AEEE26BDE4F7002BB556 /* Realm */; };
+		1A66AEF126BDE4F7002BB556 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1A66AEF026BDE4F7002BB556 /* RealmSwift */; };
+		1A66AEF326BDE532002BB556 /* SituationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A66AEF226BDE532002BB556 /* SituationData.swift */; };
 		260FA9EC26BCCE740088184B /* AboutAuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9EB26BCCE740088184B /* AboutAuthorViewController.swift */; };
 		260FA9EE26BCCE8D0088184B /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9ED26BCCE8D0088184B /* InstructionsViewController.swift */; };
 		260FA9F026BCCE980088184B /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9EF26BCCE980088184B /* ContactUsViewController.swift */; };
@@ -47,11 +51,12 @@
 		E19F7A8C23FCC21B00E718B8 /* ToDoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19F7A8B23FCC21B00E718B8 /* ToDoItemCell.swift */; };
 		E19F7A8E23FCDC3800E718B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E19F7A8D23FCDC3700E718B8 /* Assets.xcassets */; };
 		E1A022F123F31F4E0093FED2 /* homePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A022F023F31F4E0093FED2 /* homePage.swift */; };
-		E1A022F323F3652C0093FED2 /* saveFileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A022F223F3652C0093FED2 /* saveFileController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		035C471E8BC5E8721724FA53 /* Pods-PTC APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTC APP.release.xcconfig"; path = "Target Support Files/Pods-PTC APP/Pods-PTC APP.release.xcconfig"; sourceTree = "<group>"; };
+		1A66AEEB26BDE402002BB556 /* saveFileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = saveFileController.swift; path = "../../../Deleted Files/saveFileController.swift"; sourceTree = "<group>"; };
+		1A66AEF226BDE532002BB556 /* SituationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SituationData.swift; sourceTree = "<group>"; };
 		260FA9EB26BCCE740088184B /* AboutAuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAuthorViewController.swift; sourceTree = "<group>"; };
 		260FA9ED26BCCE8D0088184B /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		260FA9EF26BCCE980088184B /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +98,6 @@
 		E19F7A8B23FCC21B00E718B8 /* ToDoItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItemCell.swift; sourceTree = "<group>"; };
 		E19F7A8D23FCDC3700E718B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1A022F023F31F4E0093FED2 /* homePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homePage.swift; sourceTree = "<group>"; };
-		E1A022F223F3652C0093FED2 /* saveFileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saveFileController.swift; sourceTree = "<group>"; };
 		F487755962854DE61752D9CC /* Pods-PTC APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTC APP.debug.xcconfig"; path = "Target Support Files/Pods-PTC APP/Pods-PTC APP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A66AEF126BDE4F7002BB556 /* RealmSwift in Frameworks */,
+				1A66AEEF26BDE4F7002BB556 /* Realm in Frameworks */,
 				DC87FAA1319C6B01861197AD /* Pods_PTC_APP.framework in Frameworks */,
 				2639EB1726BB18B4006C1CF2 /* IQKeyboardManagerSwift in Frameworks */,
 			);
@@ -191,6 +197,7 @@
 		E15B0BB323E9FD100014DBA1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1A66AEF226BDE532002BB556 /* SituationData.swift */,
 				E15B0BB123E9FCEF0014DBA1 /* Utilities.swift */,
 				263C866726BA453300012F55 /* Constants.swift */,
 			);
@@ -227,7 +234,7 @@
 				260FA9FB26BCFFD60088184B /* More VCs */,
 				26C2FDC226BDA78200A53C75 /* Instruction Images */,
 				E19F7A8B23FCC21B00E718B8 /* ToDoItemCell.swift */,
-				E1A022F223F3652C0093FED2 /* saveFileController.swift */,
+				1A66AEEB26BDE402002BB556 /* saveFileController.swift */,
 				E19F7A8923FC7AC400E718B8 /* ToDoParent.swift */,
 				E182C92223FB568200A6D37E /* historySitution.swift */,
 				E19F7A8D23FCDC3700E718B8 /* Assets.xcassets */,
@@ -268,6 +275,8 @@
 			name = "PTC APP";
 			packageProductDependencies = (
 				2639EB1626BB18B4006C1CF2 /* IQKeyboardManagerSwift */,
+				1A66AEEE26BDE4F7002BB556 /* Realm */,
+				1A66AEF026BDE4F7002BB556 /* RealmSwift */,
 			);
 			productName = "PTC APP";
 			productReference = E162573A23E3304B00E84948 /* PTC APP.app */;
@@ -299,6 +308,7 @@
 			mainGroup = E162573123E3304B00E84948;
 			packageReferences = (
 				2639EB1526BB18B4006C1CF2 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				1A66AEED26BDE4F7002BB556 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = E162573B23E3304B00E84948 /* Products */;
 			projectDirPath = "";
@@ -399,9 +409,10 @@
 				E162574023E3304B00E84948 /* SceneDelegate.swift in Sources */,
 				E162574823E3304C00E84948 /* PTC_APP.xcdatamodeld in Sources */,
 				E15B0BB023E9FA2B0014DBA1 /* SignUpViewController.swift in Sources */,
+				1A66AEEC26BDE402002BB556 /* saveFileController.swift in Sources */,
 				E156D86624106E3D00AB52CB /* testTableVIew.swift in Sources */,
+				1A66AEF326BDE532002BB556 /* SituationData.swift in Sources */,
 				E1A022F123F31F4E0093FED2 /* homePage.swift in Sources */,
-				E1A022F323F3652C0093FED2 /* saveFileController.swift in Sources */,
 				2639EB1926BB459D006C1CF2 /* SideMenuTableViewCell.swift in Sources */,
 				E19F7A8A23FC7AC400E718B8 /* ToDoParent.swift in Sources */,
 				E159DD3B2418597A00C4433F /* historyViewController.swift in Sources */,
@@ -608,6 +619,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1A66AEED26BDE4F7002BB556 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.12.0;
+			};
+		};
 		2639EB1526BB18B4006C1CF2 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -619,6 +638,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1A66AEEE26BDE4F7002BB556 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A66AEED26BDE4F7002BB556 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		1A66AEF026BDE4F7002BB556 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A66AEED26BDE4F7002BB556 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
 		2639EB1626BB18B4006C1CF2 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2639EB1526BB18B4006C1CF2 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
