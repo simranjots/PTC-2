@@ -59,13 +59,12 @@ class Utilities {
         textField.layer.addSublayer(bottomLine)
     }
     
-    
     static func styleTextView(_ textView:UITextView) {
         
         //TextView style
         textView.layer.borderWidth = 1.0
         textView.layer.cornerRadius = 8.0
-        textView.layer.borderColor = secondaryTextColor.cgColor
+        textView.layer.borderColor = primaryTextColor.cgColor
     }
     
     //MARK: - Set TextField left image
@@ -87,6 +86,15 @@ class Utilities {
         //Set leftside textField properties
         textField.leftView = textFieldView
         textField.leftViewMode = .always
+    }
+    
+    //MARK: - Label Stylling
+    
+    static func styleLabel(_ label: UILabel) {
+        
+        label.layer.cornerRadius = 8
+        label.layer.masksToBounds = true
+        
     }
     
     //MARK: -  ImageView Stylling
