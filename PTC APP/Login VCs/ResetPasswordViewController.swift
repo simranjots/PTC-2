@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ResetPasswordViewController: UIViewController {
 
@@ -26,7 +27,17 @@ class ResetPasswordViewController: UIViewController {
 
     
     @IBAction func resetPasswordButtonTapped(_ sender: UIButton) {
-    
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let auth = Auth.auth()
+        auth.sendPasswordReset(withEmail: email) { (error) in
+            if error != nil {
+                self.showAlert(title: "Error!", message: error!.localizedDescription, buttonTitle: "Try Again")
+            } else {
+                
+                self.showAlert(title: "Hurray!", message: "A password reset request link has been sent on your email. Please check your inbox.", buttonTitle: "OK")
+                self.emailTextField.text = ""
+            }
+        }
     
     }
 }

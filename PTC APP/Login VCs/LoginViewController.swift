@@ -13,6 +13,16 @@ import Firebase
 
 class LoginViewController: UIViewController {
 
+    //Dabase initilizers
+    var currentUser : CurrentUser!
+    var userObjectPass: User!
+    let db = Firestore.firestore()
+    var userSetup = [userModel]()
+    let storageRef = Storage.storage().reference()
+    private var rememberMeFlag = false
+    
+    @IBOutlet weak var checkbox: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passWordTextField: UITextField!
     @IBOutlet var signInButtonOutlet: UIButton!
@@ -23,26 +33,129 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+        currentUser = CurrentUser()
+        rememberMeFlag = UserDefaults.standard.bool(forKey: "REMEMBER_USER")
+        if rememberMeFlag {
+            checkbox.setImage(UIImage(named: "check"), for: .normal)
+            let email = UserDefaults.standard.string(forKey: "USER_EMAIL")
+            emailTextField.text = email
+        }else{
+            checkbox.setImage(UIImage(named: "uncheck"), for: .selected)
+        }
         styleElements()
     }
 
     @IBAction func loginPressed(_ sender: Any) {
+        view.endEditing(true)
         
+        activityIndicator.startAnimating()
         
-        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let password = passWordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let error = validateFields()
         
-        // Signing in the user
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+        if error != nil {
             
-            if error != nil {
-                // Couldn't sign in
-                //self.errorLabel.text = error!.localizedDescription
-                //self.errorLabel.alpha = 1
-            }
-            else {
-                
-         print("logged in succesfully")
+            showToast(message: error!, duration: 2.0)
+            
+        } else {
+            
+            var email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passWordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            email = email.lowercased()
+            if(email.isValidEmail) {
+                if(password.isValidPassword) {
+                    Auth.auth().signIn(withEmail: email, password: password) {[weak self] (success,message) in
+                        guard let self = self else { return }
+                        if message != nil {
+                            self.showAlert(title: "Error!", message: message!.localizedDescription, buttonTitle: "Try Again")
+                            self.activityIndicator.stopAnimating()
+                            self.activityIndicator.isHidden = true
+                        }
+                        if (success != nil) {
+                        if (Auth.auth().currentUser?.isEmailVerified)! {
+                            let userupdate = self.db.collection("pow_users").document(Auth.auth().currentUser!.uid)
+                            userupdate.updateData([
+                                "verified": "Verified"
+                            ]) { err in
+                                if let err = err {
+                                    print("Error updating document: \(err)")
+                                } else {
+                                    print("Document successfully updated")
+                                }
+                            }
+                            if self.currentUser.checkUser(email: email) {
+                                if self.currentUser.passwordCheck(email: email, password: password){
+                                    let save = self.currentUser.updateLoginStatus(status: true, email: email)
+                                    if save == 0 {
+                                       
+                                            self.performSegue(withIdentifier: Constants.Segues.signInToHomeSegue, sender: self)
+                                            
+                                    }
+                                    
+                                }else{
+                                    let saved =  self.currentUser.updatepassword(Email: email, password: password)
+                                    if saved == 0 {
+                                       
+                                            self.performSegue(withIdentifier: Constants.Segues.signInToHomeSegue, sender: self)
+                                            
+                                    }
+                                }
+                            }else{
+                                self.currentUser.FetchUserData(email: email, completion: { (users) in
+                                    self.userSetup = users
+                                    for user in self.userSetup {
+                                        
+                                        if user.email == email {
+                                            let fileUrl = URL(string: user.imageLink!)
+                                            
+                                            // Fetch Image Data
+                                            if let data = try? Data(contentsOf: fileUrl!) {
+                                                
+                                                // Create Image and Update Image View
+                                                let imagedownloaded = UIImage(data: data)
+                                                let image = imagedownloaded?.jpegData(compressionQuality: 1.0)
+                                                let out = self.currentUser.addUser(name: user.name!, email: email, password: password, image: image, uid: (success?.user.uid)!)
+                                                if(out == 0){
+                                                   
+                                                        self.performSegue(withIdentifier: Constants.Segues.signInToHomeSegue, sender: self)
+                                                        
+                                                   
+                                                }else{
+                                                    self.showAlert(title: "Login Fail", message: "Invalid Login Credentials. . .", buttonTitle: "Try Again")
+                                                    self.activityIndicator.stopAnimating()
+                                                    self.activityIndicator.isHidden = true
+                                                }
+                                            }
+                                        }
+                                    }
+                                })
+                            }
+                            
+                            
+                        }else{
+                            self.showAlert(title: "Login Fail", message: "Please verify your email. An email verification link has already sent on your email.", buttonTitle: "OK")
+                            self.activityIndicator.stopAnimating()
+                            self.activityIndicator.isHidden = true
+                        }
+                    }else{
+                            self.showAlert(title: "Login Fail", message: "Please verify your email. An email verification link has already sent on your email.", buttonTitle: "OK")
+                            self.activityIndicator.stopAnimating()
+                            self.activityIndicator.isHidden = true
+                        }
+                        
+                    }
+                    
+                    
+                    
+                } else {
+                    showToast(message: "Enter Valid Password", duration: 2.0)
+                    activityIndicator.stopAnimating()
+                    activityIndicator.isHidden = true
+                }
+            } else {
+                showToast(message: "Enter Valid Email", duration: 2.0)
+                activityIndicator.stopAnimating()
+                activityIndicator.isHidden = true
             }
         }
     }
@@ -126,6 +239,34 @@ class LoginViewController: UIViewController {
             passWordTextField.isSecureTextEntry = true
         }
         
+    }
+    func validateFields() -> String? {
+        
+        //Validate any field is not blank
+        if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            passWordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            activityIndicator.stopAnimating()
+            activityIndicator.isHidden = true
+            return "Email or password are blank."
+        }
+        
+        //Validate Email format is correct
+        let cleanedEmail = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if Utilities.isEmailValid(cleanedEmail) == false {
+            activityIndicator.stopAnimating()
+            activityIndicator.isHidden = true
+            return "Please enter correct email."
+        }
+        
+        //Validate password is correct
+        let cleanedPassword = passWordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if Utilities.isPasswordValid(cleanedPassword) == false {
+            activityIndicator.stopAnimating()
+            activityIndicator.isHidden = true
+            return "Please enter correct password."
+        }
+        
+        return nil
     }
     
     

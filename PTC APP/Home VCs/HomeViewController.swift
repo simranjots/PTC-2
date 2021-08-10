@@ -8,11 +8,16 @@
 
 import UIKit
 import RealmSwift
+
 class HomeViewController: UIViewController {
-    // Variable
-    let realm = try! Realm()
-    //MARK: - MainView Outlets
     
+    //MARK: - Variable
+    let realm = try! Realm()
+    var value = ""
+    var name = ""
+    var index = 0
+    
+    //MARK: - MainView Outlets
     @IBOutlet var mainTableView: UITableView!
     @IBOutlet var mainView: UIView!
     @IBOutlet var profileView: UIView!
@@ -106,7 +111,8 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func addActivityButtonTapped(_ sender: UIBarButtonItem) {
-    
+        value = "add"
+        performSegue(withIdentifier: Constants.Segues.homeToSituationSegue, sender: self)
     }
     
     @IBAction func profileEditButtonTapped(_ sender: UIButton) {
@@ -147,6 +153,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.homeScreenMainTableViewCell, for: indexPath) as! HomeVCMainTableViewCell
             cell.acitivityNameLabel.text = activityNameArray?[indexPath.row].situationTitle
             cell.dateLabel.text = activityNameArray?[indexPath.row].date
+            cell.timeLabel.text = activityNameArray?[indexPath.row].time
             return cell
         case menubarTableView:
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.homeScreenMenuBarCell, for: indexPath) as! SideMenuTableViewCell
@@ -168,7 +175,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         case mainTableView:
             print("MainTableView's cells are Tapped")
-        
+            value = "show"
+            name = activityNameArray![indexPath.row].situationTitle
+            index = indexPath.row
+            performSegue(withIdentifier: Constants.Segues.homeToSituationSegue, sender: self)
+            
         case menubarTableView:
             switch menuItems[indexPath.row] {
         
@@ -229,4 +240,56 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             print("Something's wrong!")
         }
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if(editingStyle == .delete){
+            
+            let title = self.activityNameArray![indexPath.row]
+            let alert = UIAlertController(title: "Warning", message: "Do you want to delete \(title.situationTitle)?", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action:UIAlertAction) -> Void in
+                if let situationData = self.activityNameArray?[indexPath.row]{
+                    do {
+                        try self.realm.write {
+                            self.realm.delete(situationData)
+                        }
+                    } catch {
+                        print("Error saving done status \(error)")
+                    }
+                }
+                self.mainTableView.reloadData()
+                
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let editAction = UIContextualAction(style: .normal, title: "Edit") { (action, view, handler) in
+            self.value = "edit"
+            self.name = self.activityNameArray![indexPath.row].situationTitle
+            self.index = indexPath.row
+            self.performSegue(withIdentifier: Constants.Segues.homeToSituationSegue, sender: self)
+        }
+        editAction.backgroundColor = .lightGray
+        let configuration = UISwipeActionsConfiguration(actions: [editAction])
+        return configuration
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.destination is PTCWorksheetViewController {
+            let vc = segue.destination as? PTCWorksheetViewController
+            vc?.viewType = value
+            vc?.situationName = name
+            vc?.myIndex = index
+        }
+    }
 }
+

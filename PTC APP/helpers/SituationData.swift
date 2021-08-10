@@ -4,6 +4,7 @@ import RealmSwift
 class SituationData: Object {
     @objc dynamic var appreciate: String  = ""
     @objc dynamic var date: String  = ""
+    @objc dynamic var time: String  = ""
     @objc dynamic var doitem: String  = ""
     @objc dynamic var feel: String  = ""
     @objc dynamic var obstacle: String  = ""

@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>574151659157-nkchtn66c7iv8nru6f1semcdco4nsr0o.apps.googleusercontent.com</string>
+	<string>887324293813-fjfe0af1eoge216u37v2ddvrnjp78bms.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.574151659157-nkchtn66c7iv8nru6f1semcdco4nsr0o</string>
+	<string>com.googleusercontent.apps.887324293813-fjfe0af1eoge216u37v2ddvrnjp78bms</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBON01W47Ts3juc83SIwYicU_jTcNZusbc</string>
+	<string>AIzaSyAxFGKvu6jdPs44kGoSBS6v0OB959NUzgg</string>
 	<key>GCM_SENDER_ID</key>
-	<string>574151659157</string>
+	<string>887324293813</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>aa.PTC-APP</string>
+	<string>com.PTCWorksheet.app</string>
 	<key>PROJECT_ID</key>
-	<string>fir-demoptc</string>
+	<string>ptc-worksheet</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fir-demoptc.appspot.com</string>
+	<string>ptc-worksheet.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:574151659157:ios:177bc3e97c9ec3d18d159c</string>
-	<key>DATABASE_URL</key>
-	<string>https://fir-demoptc.firebaseio.com</string>
+	<string>1:887324293813:ios:a29169603a1f07c8039cfc</string>
 </dict>
 </plist>

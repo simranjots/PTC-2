@@ -9,12 +9,16 @@
 import Foundation
 import FirebaseAuth
 import Firebase
+import FirebaseFirestore
 import FirebaseDatabase
 import UIKit
 
 class SignUpViewController: UIViewController {
     
     var refusers : DatabaseReference!
+    var currentUser : CurrentUser!
+
+    let db = Firestore.firestore()
   // var ref : DatabaseReference!
     
     
@@ -28,9 +32,8 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
-        refusers = Database.database().reference().child("users")
+        currentUser = CurrentUser()
         styleElements()
         
     }
@@ -127,52 +130,115 @@ class SignUpViewController: UIViewController {
     
 
     @IBAction func signUpTapped(_ sender: UIButton) {
-        adduser()
-       // FirebaseApp.configure()
-       // validateFields()
-        //validate the fields
-//        let error  = validateFields()
-//
-//
-//        if error != nil{
-//
-//           showError(error!)
-//        }
-             // create the user
-//        else{
-//
-//            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-//            let password = passWordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-//
-//            Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
-//
-//                if  err != nil {
-//
-//                    self.showError("error creating user")
-//                }
-//                else {
-//                    let db = Firestore.firestore()
-//                    db.collection("users").addDocument(data: ["firstname": email,"password" : password, "uid": result!.user.uid]) { (error) in
-//                        if error != nil {
-//
-//                            self.showError("user data couln't saved properly")
-//                        }
-//
-//                    }
-//                    //
-//
-//
-//                }
-//
-//            }
-//
-//        }
+        let error = validateFields()
         
-       
-        
-        
-        //Transition to the home screeen
+        if error != nil {
+            
+            showAlert(title: "Warning!", message: error! , buttonTitle: "Try Again")
+            
+        } else {
+            
+            let userName = nameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            var email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passWordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            email = email.lowercased()
+            
+            if(!userName.isEmpty && !email.isEmpty && !password.isEmpty){
+                
+                if(email.isValidEmail){
+                    if(password.isValidPassword){
+                        //Create the user
+                        Auth.auth().createUser(withEmail: email, password: password) { result, err in
+                            if err != nil {
+                                //There was an error creating the user
+                                self.showAlert(title: "Error!", message: err!.localizedDescription , buttonTitle: "Try Again")
+                            } else {
+                                
+                                
+                                DispatchQueue.global().async {
+                                    let imagepath = "https://firebasestorage.googleapis.com/v0/b/dayachievementprinciple.appspot.com/o/Profile%2FprofileImage1-2.png?alt=media&token=58f52b23-2cf9-4558-81b0-3d8c9545622d"
+                                    let fileUrl = URL(string: imagepath)
+                                    // Fetch Image Data
+                                    if let data = try? Data(contentsOf: fileUrl!) {
+                                        DispatchQueue.main.async {
+                                            // Create Image and Update Image View
+                                            let imagedownloaded = UIImage(data: data)
+                                            let image = imagedownloaded?.jpegData(compressionQuality: 1.0)
+                                            let flag = self.currentUser.addUser(name: userName, email: email, password: password, image: image, uid: Auth.auth().currentUser!.uid)
+                                            if(flag == 1){
+                                                
+                                                self.showAlert(title: "Warning", message: "User Already Exist", buttonTitle: "Try Again")
+                                                
+                                                
+                                            }else if (flag == 2){
+                                                
+                                                self.showAlert(title: "Error", message: "Please Report an error. . .", buttonTitle: "Try Again")
+                                                
+                                            }else if (flag == 0){
+                                                
+                                                self.db.collection("pow_users").document(Auth.auth().currentUser!.uid)
+                                                    .setData(["uid":Auth.auth().currentUser!.uid,
+                                                              "name": userName,
+                                                              "email":email,
+                                                              "imageLink":imagepath,
+                                                              "verified":"Not Verified"]) { error in
+                                                        if error != nil {
+                                                            self.showAlert(title: "Error!", message: error!.localizedDescription , buttonTitle: "Try Again")
+                                                        }
+                                                    }
+                                                if Auth.auth().currentUser != nil && Auth.auth().currentUser!.isEmailVerified {
+                                                    self.showAlert(title: "Error!", message: err!.localizedDescription , buttonTitle: "Try Again")
+                                                    }
+                                                    else {
+                                                        Auth.auth().currentUser!.sendEmailVerification(completion: { (error) in
+                                                            if error != nil {
+                                                                self.showAlert(title: "Error!", message: error!.localizedDescription , buttonTitle: "Try Again")
+                                                            }
+                                                                // Notify the user that the mail has sent or couldn't because of an error.
+                                                            
+                                                        let alert = UIAlertController(title: "Email Sent", message: "An email verification link has been sent to your email. Please check your email.", preferredStyle: .alert)
+                                                              alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action:UIAlertAction) -> Void in
+                                                                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                                                let vc = storyboard.instantiateViewController(withIdentifier: "LoginScreen") as! LoginViewController
+                                                                self.present(vc, animated: true, completion: nil)
+                                                              }))
+                                                      
+                                                            
+                                                        self.present(alert, animated: true, completion: nil)
+                                                            })
+                                                    
+                                                       
+                                                        
+                                                    }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                
+                                
+                            }
+                        }
+                        
+                        
+                    }else{
+                        showToast(message: "Enter Valid Password", duration: 2.0)
+                    }
+                }else{
+                    showToast(message: "Enter Valid Email", duration: 2.0)
+                }
+                
+                
+            }
+            else{
+                
+                print("fill the form")
+                
+            }
+            
+        }
     }
+    
     func adduser(){
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passWordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)

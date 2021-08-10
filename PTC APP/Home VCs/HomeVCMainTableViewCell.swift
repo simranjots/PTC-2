@@ -14,6 +14,7 @@ class HomeVCMainTableViewCell: UITableViewCell {
     @IBOutlet var documentImageView: UIImageView!
     @IBOutlet var acitivityNameLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

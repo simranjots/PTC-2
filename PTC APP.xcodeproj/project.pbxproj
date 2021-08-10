@@ -10,6 +10,9 @@
 		1A66AEEF26BDE4F7002BB556 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1A66AEEE26BDE4F7002BB556 /* Realm */; };
 		1A66AEF126BDE4F7002BB556 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1A66AEF026BDE4F7002BB556 /* RealmSwift */; };
 		1A66AEF326BDE532002BB556 /* SituationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A66AEF226BDE532002BB556 /* SituationData.swift */; };
+		1A66AEFA26C2C61F002BB556 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A66AEF926C2C61F002BB556 /* CurrentUser.swift */; };
+		1A66AEFC26C2C994002BB556 /* UserModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A66AEFB26C2C994002BB556 /* UserModal.swift */; };
+		1A66AEFE26C2D614002BB556 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A66AEFD26C2D614002BB556 /* GoogleService-Info.plist */; };
 		260FA9EC26BCCE740088184B /* AboutAuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9EB26BCCE740088184B /* AboutAuthorViewController.swift */; };
 		260FA9EE26BCCE8D0088184B /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9ED26BCCE8D0088184B /* InstructionsViewController.swift */; };
 		260FA9F026BCCE980088184B /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9EF26BCCE980088184B /* ContactUsViewController.swift */; };
@@ -24,6 +27,8 @@
 		263C866826BA453300012F55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C866726BA453300012F55 /* Constants.swift */; };
 		26B3504226BDEA870038A5E2 /* saveFileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3504126BDEA870038A5E2 /* saveFileController.swift */; };
 		26B3504426BDFBC80038A5E2 /* PTCWorksheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3504326BDFBC80038A5E2 /* PTCWorksheetViewController.swift */; };
+		26B3504626BE3A940038A5E2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3504526BE3A940038A5E2 /* Extension.swift */; };
+		26B3504826BE43AD0038A5E2 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3504726BE43AD0038A5E2 /* Utilities.swift */; };
 		26C2FDC826BDA7E600A53C75 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C2FDC326BDA7E500A53C75 /* 2.png */; };
 		26C2FDC926BDA7E600A53C75 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C2FDC426BDA7E600A53C75 /* 1.png */; };
 		26C2FDCA26BDA7E600A53C75 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C2FDC526BDA7E600A53C75 /* 3.png */; };
@@ -37,9 +42,7 @@
 		E159DD3D24185B5600C4433F /* videoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E159DD3C24185B5600C4433F /* videoCell.swift */; };
 		E159DD3F24185C2E00C4433F /* video.swift in Sources */ = {isa = PBXBuildFile; fileRef = E159DD3E24185C2E00C4433F /* video.swift */; };
 		E159DD412418691200C4433F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E159DD402418691200C4433F /* DetailViewController.swift */; };
-		E15B0BAE23E9F67C0014DBA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E15B0BAD23E9F67C0014DBA1 /* GoogleService-Info.plist */; };
 		E15B0BB023E9FA2B0014DBA1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B0BAF23E9FA2B0014DBA1 /* SignUpViewController.swift */; };
-		E15B0BB223E9FCEF0014DBA1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15B0BB123E9FCEF0014DBA1 /* Utilities.swift */; };
 		E162573E23E3304B00E84948 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162573D23E3304B00E84948 /* AppDelegate.swift */; };
 		E162574023E3304B00E84948 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162573F23E3304B00E84948 /* SceneDelegate.swift */; };
 		E162574223E3304B00E84948 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162574123E3304B00E84948 /* LoginViewController.swift */; };
@@ -57,6 +60,9 @@
 /* Begin PBXFileReference section */
 		035C471E8BC5E8721724FA53 /* Pods-PTC APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTC APP.release.xcconfig"; path = "Target Support Files/Pods-PTC APP/Pods-PTC APP.release.xcconfig"; sourceTree = "<group>"; };
 		1A66AEF226BDE532002BB556 /* SituationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SituationData.swift; sourceTree = "<group>"; };
+		1A66AEF926C2C61F002BB556 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		1A66AEFB26C2C994002BB556 /* UserModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModal.swift; sourceTree = "<group>"; };
+		1A66AEFD26C2D614002BB556 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		260FA9EB26BCCE740088184B /* AboutAuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAuthorViewController.swift; sourceTree = "<group>"; };
 		260FA9ED26BCCE8D0088184B /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		260FA9EF26BCCE980088184B /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +76,8 @@
 		263C866726BA453300012F55 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		26B3504126BDEA870038A5E2 /* saveFileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = saveFileController.swift; sourceTree = "<group>"; };
 		26B3504326BDFBC80038A5E2 /* PTCWorksheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTCWorksheetViewController.swift; sourceTree = "<group>"; };
+		26B3504526BE3A940038A5E2 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		26B3504726BE43AD0038A5E2 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		26C2FDC326BDA7E500A53C75 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		26C2FDC426BDA7E600A53C75 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		26C2FDC526BDA7E600A53C75 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
@@ -83,9 +91,7 @@
 		E159DD3C24185B5600C4433F /* videoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoCell.swift; sourceTree = "<group>"; };
 		E159DD3E24185C2E00C4433F /* video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = video.swift; sourceTree = "<group>"; };
 		E159DD402418691200C4433F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		E15B0BAD23E9F67C0014DBA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E15B0BAF23E9FA2B0014DBA1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		E15B0BB123E9FCEF0014DBA1 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		E162573A23E3304B00E84948 /* PTC APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PTC APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E162573D23E3304B00E84948 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E162573F23E3304B00E84948 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,9 +124,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A66AEF826C2C5EB002BB556 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				1A66AEF926C2C61F002BB556 /* CurrentUser.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
 		260FA9F726BCFE440088184B /* Unused Old Files */ = {
 			isa = PBXGroup;
 			children = (
+				26B3504126BDEA870038A5E2 /* saveFileController.swift */,
+				E19F7A8923FC7AC400E718B8 /* ToDoParent.swift */,
+				E182C92223FB568200A6D37E /* historySitution.swift */,
+				E19F7A8B23FCC21B00E718B8 /* ToDoItemCell.swift */,
 				E159DD402418691200C4433F /* DetailViewController.swift */,
 				E159DD3C24185B5600C4433F /* videoCell.swift */,
 				E159DD3E24185C2E00C4433F /* video.swift */,
@@ -158,6 +176,7 @@
 				2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */,
 				2639EB1C26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift */,
 				2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */,
+				26B3504326BDFBC80038A5E2 /* PTCWorksheetViewController.swift */,
 			);
 			path = "Home VCs";
 			sourceTree = "<group>";
@@ -200,8 +219,10 @@
 			isa = PBXGroup;
 			children = (
 				1A66AEF226BDE532002BB556 /* SituationData.swift */,
-				E15B0BB123E9FCEF0014DBA1 /* Utilities.swift */,
+				1A66AEFB26C2C994002BB556 /* UserModal.swift */,
+				26B3504726BE43AD0038A5E2 /* Utilities.swift */,
 				263C866726BA453300012F55 /* Constants.swift */,
+				26B3504526BE3A940038A5E2 /* Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -227,6 +248,7 @@
 		E162573C23E3304B00E84948 /* PTC APP */ = {
 			isa = PBXGroup;
 			children = (
+				1A66AEF826C2C5EB002BB556 /* Modal */,
 				E162573D23E3304B00E84948 /* AppDelegate.swift */,
 				E162573F23E3304B00E84948 /* SceneDelegate.swift */,
 				260FA9F826BCFF050088184B /* Storyboards */,
@@ -235,15 +257,10 @@
 				260FA9FA26BCFF990088184B /* Home VCs */,
 				260FA9FB26BCFFD60088184B /* More VCs */,
 				26C2FDC226BDA78200A53C75 /* Instruction Images */,
-				26B3504326BDFBC80038A5E2 /* PTCWorksheetViewController.swift */,
-				E19F7A8B23FCC21B00E718B8 /* ToDoItemCell.swift */,
-				26B3504126BDEA870038A5E2 /* saveFileController.swift */,
-				E19F7A8923FC7AC400E718B8 /* ToDoParent.swift */,
-				E182C92223FB568200A6D37E /* historySitution.swift */,
 				E19F7A8D23FCDC3700E718B8 /* Assets.xcassets */,
 				E162574E23E3304D00E84948 /* Info.plist */,
+				1A66AEFD26C2D614002BB556 /* GoogleService-Info.plist */,
 				E162574623E3304C00E84948 /* PTC_APP.xcdatamodeld */,
-				E15B0BAD23E9F67C0014DBA1 /* GoogleService-Info.plist */,
 				260FA9F726BCFE440088184B /* Unused Old Files */,
 			);
 			path = "PTC APP";
@@ -329,13 +346,13 @@
 			files = (
 				E162574D23E3304D00E84948 /* LaunchScreen.storyboard in Resources */,
 				E162574523E3304B00E84948 /* Main.storyboard in Resources */,
+				1A66AEFE26C2D614002BB556 /* GoogleService-Info.plist in Resources */,
 				26C2FDC826BDA7E600A53C75 /* 2.png in Resources */,
 				26C2FDC926BDA7E600A53C75 /* 1.png in Resources */,
 				26C2FDCB26BDA7E600A53C75 /* 4.png in Resources */,
 				E19F7A8E23FCDC3800E718B8 /* Assets.xcassets in Resources */,
 				26C2FDCC26BDA7E600A53C75 /* 5.png in Resources */,
 				26C2FDCA26BDA7E600A53C75 /* 3.png in Resources */,
-				E15B0BAE23E9F67C0014DBA1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E162574223E3304B00E84948 /* LoginViewController.swift in Sources */,
+				1A66AEFC26C2C994002BB556 /* UserModal.swift in Sources */,
 				263C866826BA453300012F55 /* Constants.swift in Sources */,
 				E159DD3F24185C2E00C4433F /* video.swift in Sources */,
 				26C2FDCE26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift in Sources */,
@@ -398,11 +416,11 @@
 				260FA9F226BCCEB30088184B /* ProfileViewController.swift in Sources */,
 				E162573E23E3304B00E84948 /* AppDelegate.swift in Sources */,
 				260FA9F026BCCE980088184B /* ContactUsViewController.swift in Sources */,
-				E15B0BB223E9FCEF0014DBA1 /* Utilities.swift in Sources */,
 				260FA9EC26BCCE740088184B /* AboutAuthorViewController.swift in Sources */,
 				E182C92323FB568300A6D37E /* historySitution.swift in Sources */,
 				2639EB1B26BB45DE006C1CF2 /* HomeViewController.swift in Sources */,
 				2639EB1426BAE9B3006C1CF2 /* ResetPasswordViewController.swift in Sources */,
+				26B3504626BE3A940038A5E2 /* Extension.swift in Sources */,
 				E18E82D723FD9F5600F35982 /* introductionViewController.swift in Sources */,
 				260FA9F426BCCECA0088184B /* PrivacyPolicyViewController.swift in Sources */,
 				E19F7A8C23FCC21B00E718B8 /* ToDoItemCell.swift in Sources */,
@@ -412,9 +430,11 @@
 				E162574023E3304B00E84948 /* SceneDelegate.swift in Sources */,
 				E162574823E3304C00E84948 /* PTC_APP.xcdatamodeld in Sources */,
 				E15B0BB023E9FA2B0014DBA1 /* SignUpViewController.swift in Sources */,
+				26B3504826BE43AD0038A5E2 /* Utilities.swift in Sources */,
 				26B3504226BDEA870038A5E2 /* saveFileController.swift in Sources */,
 				E156D86624106E3D00AB52CB /* testTableVIew.swift in Sources */,
 				26B3504426BDFBC80038A5E2 /* PTCWorksheetViewController.swift in Sources */,
+				1A66AEFA26C2C61F002BB556 /* CurrentUser.swift in Sources */,
 				1A66AEF326BDE532002BB556 /* SituationData.swift in Sources */,
 				E1A022F123F31F4E0093FED2 /* homePage.swift in Sources */,
 				2639EB1926BB459D006C1CF2 /* SideMenuTableViewCell.swift in Sources */,
@@ -567,13 +587,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28Z9D9648R;
+				DEVELOPMENT_TEAM = RP2W7V2ZKT;
 				INFOPLIST_FILE = "PTC APP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "aa.PTC-APP";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PTCWorksheet.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -586,13 +606,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28Z9D9648R;
+				DEVELOPMENT_TEAM = RP2W7V2ZKT;
 				INFOPLIST_FILE = "PTC APP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "aa.PTC-APP";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PTCWorksheet.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

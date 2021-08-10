@@ -26,10 +26,14 @@ struct Constants {
     
     //MARK: - Segue identifiers
     struct Segues {
+        static let signInToHomeSegue = "navigateToHome"
+        static let signUpToHomeSegue = "navigateToHome"
+        static let forgotPasswordSegue = "forgotPasswordSegue"
+        static let signUpSegue = "signUpSegue"
         static let homeToProfileSegue = "navigateToProfileScreen"
         static let homeToUseInstructionsSegue = "navigateToUseInstructionScreen"
         static let homeToAboutAuthor = "navigateToAboutAuthorScreen"
         static let homeToPrivacyPolicySegue = "navigateToPrivacyPolicyScreen"
         static let homeToContactUsSegue = "navigateToContactUsScreen"
-    }
+        static let homeToSituationSegue = "situationView"    }
 }
