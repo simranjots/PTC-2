@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 import FirebaseAuth
 import Firebase
+import FirebaseFirestore
 
 class LoginViewController: UIViewController {
 
@@ -60,7 +61,7 @@ class LoginViewController: UIViewController {
     }
     @IBAction func loginPressed(_ sender: Any) {
         view.endEditing(true)
-        
+        activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         
         let error = validateFields()
@@ -160,12 +161,12 @@ class LoginViewController: UIViewController {
                     
                     
                 } else {
-                    showToast(message: "Enter Valid Password", duration: 2.0)
+                    showToast(message: "Enter Valid Password", duration: 1.0)
                     activityIndicator.stopAnimating()
                     activityIndicator.isHidden = true
                 }
             } else {
-                showToast(message: "Enter Valid Email", duration: 2.0)
+                showToast(message: "Enter Valid Email", duration: 1.0)
                 activityIndicator.stopAnimating()
                 activityIndicator.isHidden = true
             }
@@ -184,7 +185,7 @@ class LoginViewController: UIViewController {
         
         //Disappear error label
         //errorLabel.alpha = 0
-        
+        activityIndicator.isHidden = true
         //Add textfields icons
         guard let emailIcon = UIImage(named: "email") else { return }
         guard let passwordLeftIcon = UIImage(named: "password") else { return }

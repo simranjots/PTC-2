@@ -39,21 +39,29 @@ class SignUpViewController: UIViewController {
     }
     
     func validateFields() -> String? {
-        if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""  || passWordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
-            print("please fill all the fields")
+        
+        //Check that all the fields are filled
+        if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""  ||
+            emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            passWordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            
+            return "Please fill all the fields."
         }
         
-        // password if th password is secure
-        let cleanPassword = passWordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        if Utilities.isPasswordValid(cleanPassword) == false {
-            //
-            return "Please make sure your password is at least 8 characters, contains a special character and a number."
+        //Check email format is valid
+        let cleanedEmail = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if Utilities.isEmailValid(cleanedEmail) == false {
+            return "Please make sure you have entered valid email format."
         }
         
+        //Check password is secured
+        let cleanedPassword = passWordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if Utilities.isPasswordValid(cleanedPassword) == false {
+            return "Please make sure your password is at least 8 charactors, contains at least one upper case letter, a special charactor and a number."
+        }
         return nil
-    
     }
+    
     
     func styleElements() {
         
@@ -222,10 +230,10 @@ class SignUpViewController: UIViewController {
                         
                         
                     }else{
-                        showToast(message: "Enter Valid Password", duration: 2.0)
+                        showToast(message: "Enter Valid Password", duration: 1.0)
                     }
                 }else{
-                    showToast(message: "Enter Valid Email", duration: 2.0)
+                    showToast(message: "Enter Valid Email", duration: 1.0)
                 }
                 
                 

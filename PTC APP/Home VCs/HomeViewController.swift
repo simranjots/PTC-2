@@ -161,7 +161,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.homeScreenMainTableViewCell, for: indexPath) as! HomeVCMainTableViewCell
             cell.acitivityNameLabel.text = activityNameArray?[indexPath.row].situationTitle
             if activityNameArray?[indexPath.row].prefix == true {
-                cell.prefixLabel.text = "updated on :"
+                cell.prefixLabel.text = "Updated on :"
             }
             cell.dateLabel.text = activityNameArray?[indexPath.row].date
             cell.timeLabel.text = activityNameArray?[indexPath.row].time
