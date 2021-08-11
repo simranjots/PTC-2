@@ -185,6 +185,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch tableView {
         
         case mainTableView:
+           
             value = "show"
             name = activityNameArray![indexPath.row].situationTitle
             index = indexPath.row
@@ -252,7 +253,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+        
+        switch tableView {
+        case mainTableView:
+            return true
+        case menubarTableView:
+           return false
+        default:
+            print("Something's wrong!")
+        }
+        return false
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
