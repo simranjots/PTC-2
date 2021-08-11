@@ -78,7 +78,7 @@ class Utilities {
         
         //Set subview frame
         textFieldImageView.frame = CGRect(x: 15, y: 8, width: 25, height: 25)
-        textFieldImageView.tintColor = primaryTextColor
+        textFieldImageView.tintColor = UIColor(named: "BrandColor")
         
         //Add subview
         textFieldView.addSubview(textFieldImageView)
@@ -131,20 +131,6 @@ class Utilities {
         //button.tintColor = UIColor.init(red: 62/255, green: 178/255, blue: 174/255, alpha: 1)
     }
     
-    static func styleGmailButton(_ button:UIButton) {
-        
-        //Filled rounded corner style
-        button.backgroundColor = UIColor.init(red: 234/255, green: 67/255, blue: 53/255, alpha: 1)
-        button.layer.cornerRadius = 8.0
-        button.tintColor = UIColor.white
-    }
-    
-    static func styleFacebookButton(_ button:UIButton) {
-        //Filled rounded corner style
-        button.backgroundColor = UIColor.init(red: 66/255, green: 103/255, blue: 178/255, alpha: 1)
-        button.layer.cornerRadius = 8.0
-        button.tintColor = UIColor.white
-    }
     
     static func addButtonImage(button: UIButton, andImage image: UIImage) {
         button.setImage(image, for: .normal)
@@ -153,12 +139,6 @@ class Utilities {
         button.titleEdgeInsets = UIEdgeInsets(top: 15, left: -170, bottom: 15, right: 0)
     }
     
-    static func addGoogleImage(button: UIButton, andImage image: UIImage) {
-        button.setImage(image, for: .normal)
-        button.imageView?.contentMode = .scaleAspectFit
-        button.imageEdgeInsets = UIEdgeInsets(top: 10, left: -97, bottom: 10, right: 0)
-        button.titleEdgeInsets = UIEdgeInsets(top: 15, left: -170, bottom: 15, right: 0)
-    }
     
     //MARK: - Regular expressions for Email and Password
     static func isPasswordValid(_ password:String) -> Bool {

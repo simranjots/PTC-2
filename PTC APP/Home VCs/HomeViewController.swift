@@ -231,7 +231,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                           print ("Error signing out: %@", signOutError)
                         }
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        let vc = storyboard.instantiateViewController(withIdentifier: "LoginScreen") as! LoginViewController
+                        let vc = storyboard.instantiateViewController(withIdentifier: "newlogin") as! UINavigationController
                         self.present(vc, animated: true, completion: nil)
     
                     } else {

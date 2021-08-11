@@ -33,7 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                    } else {
                        print("Not Logged in")
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "LoginScreen") as! LoginViewController
+                    let vc = storyboard.instantiateViewController(withIdentifier: "newlogin") as! UINavigationController
                     self.window?.rootViewController = vc
 
                        }
