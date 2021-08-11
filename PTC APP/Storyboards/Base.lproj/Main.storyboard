@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -20,11 +21,11 @@
                         <color key="tintColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                            <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" name="BrandColor"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                            <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" name="BrandColor"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -323,7 +324,7 @@
                                                             <constraint firstAttribute="height" constant="30" id="w8y-DV-Jhu"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" name="BrandColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="teresa.easler@gmail.com" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lNP-VG-Un7">
@@ -332,7 +333,7 @@
                                                             <constraint firstAttribute="height" constant="30" id="L1C-du-c75"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" name="BrandColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -403,7 +404,7 @@
                                                                         <constraint firstAttribute="height" constant="40" id="9eE-jU-NQk"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                                    <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" name="BrandColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -487,7 +488,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:20 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7X-8G-D89">
                                                                     <rect key="frame" x="330.66666666666669" y="18" width="57.333333333333314" height="14.333333333333336"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                                                    <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" name="BrandColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="J0G-Tk-vUG">
@@ -499,7 +500,7 @@
                                                                                 <constraint firstAttribute="width" constant="255" id="Wyc-bG-kXO"/>
                                                                             </constraints>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                                                            <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="textColor" name="BrandColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="vus-xL-f8R">
@@ -688,7 +689,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="fMp-8c-mJO"/>
                                                 </constraints>
-                                                <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" name="BrandColor"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -717,7 +718,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="PXs-5V-uPX"/>
                                                 </constraints>
-                                                <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" name="BrandColor"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
@@ -1160,7 +1161,7 @@
                                                     <constraint firstAttribute="width" constant="250" id="2Pi-m2-mis"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" name="BrandColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKt-UM-uZv">
@@ -1367,7 +1368,7 @@ It is over 35 years since she started, and Teresa has helped thousands of indivi
 
 Teresa was born and raised in Michigan and lived throughout the US for many years. She currently splits her time between her home in Toronto, Canada and her farm in Northern Michigan.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" name="BrandColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <string key="userLabel">For as far back as she can remember Teresa has always been passionate about the power of good communication. In fact, it was an incident that happened in her formative years that truly shaped the trajectory of her life.  When Teresa was in grade school in the late 1950s, she was punished for talking out of turn in class (I know we were shocked too!). The teacher decided that her “punishment” was to be seated next to the only African American child in the class. Teresa certainly didn’t see this as much of a punishment for herself, but even at that young age she was acutely aware of how humiliating this must have been for the other child. That incident was the beginning of her commitment to seeing things from other peoples’ perspectives, and the power of both verbal, and non-verbal communication.  Whether guiding business leaders to reach new heights, coaching individuals to increase results by bettering their presentation skills or mentoring women of all ages, Teresa works with joyful determination to ensure her clients leave their time together challenged, and in an enhanced position to reach their goals. Teresa has found there are certain universal principles that work consistently. “When we communicate from the best of who we are,” she says, “from what’s most important to us, we inspire ourselves and we can inspire others. There’s communication, not just data exchange.”  When we look at the depth and diversity of Teresa’s entrepreneurial experiences, we often joke that it appears she has had many incarnations. She has done everything from running a successful gourmet cheesecake business from her home (yes, she was head baker too!), to running a company that offered high-end video production services to corporate clients. No matter what the business she quickly recognized that her success was rooted in good communication.  After many years of consulting with her corporate clients, Teresa realized companies needed help with their messaging, marketing and overall communication strategy, so she formed Connect To The Core Inc. because she truly believes at the core of all success is great communication, and at the core of all great communication is connection.  It is over 35 years since she started, and Teresa has helped thousands of individuals and hundreds of companies reach their goals. She is now in her element, creating original solutions to complex issues for her clients to become their best selves and achieve remarkable results.  Teresa was born and raised in Michigan and lived throughout the US for many years. She currently splits her time between her home in Toronto, Canada and her farm in Northern Michigan.</string>
                                             </label>
@@ -1461,7 +1462,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                     <rect key="frame" x="20" y="35" width="388" height="140.66666666666666"/>
                                                     <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" name="BrandColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHK-t5-fZR">
@@ -1547,7 +1548,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Connect To The Core" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHv-Qf-DzC">
                                         <rect key="frame" x="0.0" y="0.0" width="338" height="21.666666666666668"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" name="BrandColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="374 Aspen Forest Drive, Oakville, ON L6J 6H4" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmp-jw-tbA">
@@ -1564,13 +1565,13 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call us at (416) 696-2020" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJx-P8-UeZ">
                                         <rect key="frame" x="0.0" y="0.0" width="396" height="21.666666666666668"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" name="BrandColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send us an email at info@connecttothecore.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neJ-hg-eHO">
                                         <rect key="frame" x="0.0" y="31.666666666666629" width="396" height="21.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" name="BrandColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1760,6 +1761,9 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
         <image name="twitter" width="170.66667175292969" height="170.66667175292969"/>
         <image name="uncheck" width="170.66667175292969" height="170.66667175292969"/>
         <image name="youtube" width="170.66667175292969" height="170.66667175292969"/>
+        <namedColor name="BrandColor">
+            <color red="0.26492425800000002" green="0.20305740829999999" blue="0.4343702197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

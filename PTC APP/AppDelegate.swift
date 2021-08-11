@@ -31,15 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                } catch {
                    print("Error initialising new realm, \(error)")
                }
-        //MARK:  to select app launch
-        
-    
-        
-        let currentUser = CurrentUser()
-        let userObject: userModel?
-        userObject = currentUser.checkLoggedIn()
       
-       
                
         return true
     }
