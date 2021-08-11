@@ -10,6 +10,7 @@ import UIKit
 
 class HomeVCMainTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var prefixLabel: UILabel!
     @IBOutlet var containerView: UIView!
     @IBOutlet var documentImageView: UIImageView!
     @IBOutlet var acitivityNameLabel: UILabel!

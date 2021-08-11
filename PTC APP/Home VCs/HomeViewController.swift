@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Firebase
 
 class HomeViewController: UIViewController {
     
@@ -16,6 +17,8 @@ class HomeViewController: UIViewController {
     var value = ""
     var name = ""
     var index = 0
+    var currentUser : CurrentUser!
+    var userObject: userModel!
     
     //MARK: - MainView Outlets
     @IBOutlet var mainTableView: UITableView!
@@ -26,8 +29,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var profileEditButtonOutlet: UIButton!
     @IBOutlet var separatorView: UIView!
-    
-    //MARK: - MainView  Data
+        //MARK: - MainView  Data
     var activityNameArray : Results<SituationData>?
     
     //MARK: - Menubar Outlets
@@ -40,7 +42,9 @@ class HomeViewController: UIViewController {
     let menuIcons = ["home", "guidelines", "about-author", "privacy-policy", "contact-us", "sign-out"]
     var isSideViewOpened: Bool = false
     override func viewWillAppear(_ animated: Bool) {
-        activityNameArray = realm.objects(SituationData.self)
+        currentUser = CurrentUser()
+        userObject = currentUser.checkLoggedIn()
+        activityNameArray = userObject.situationData.filter("user = %@",userObject.email as Any )
         mainTableView.reloadData()
     }
     override func viewDidLoad() {
@@ -108,6 +112,10 @@ class HomeViewController: UIViewController {
 //                self.profileView.frame = CGRect(x: 0, y: 0, width: 0, height: 150)
 //            }
         }
+        let data = UIImage(named: "profileImage")?.jpegData(compressionQuality: 1.0)
+        profileImageView.image = UIImage(data: (userObject.image ?? data)!)
+        emailLabel.text = userObject.email
+        nameLabel.text = userObject.name
     }
     
     @IBAction func addActivityButtonTapped(_ sender: UIBarButtonItem) {
@@ -152,6 +160,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case mainTableView:
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.homeScreenMainTableViewCell, for: indexPath) as! HomeVCMainTableViewCell
             cell.acitivityNameLabel.text = activityNameArray?[indexPath.row].situationTitle
+            if activityNameArray?[indexPath.row].prefix == true {
+                cell.prefixLabel.text = "updated on :"
+            }
             cell.dateLabel.text = activityNameArray?[indexPath.row].date
             cell.timeLabel.text = activityNameArray?[indexPath.row].time
             return cell
@@ -174,7 +185,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch tableView {
         
         case mainTableView:
-            print("MainTableView's cells are Tapped")
             value = "show"
             name = activityNameArray![indexPath.row].situationTitle
             index = indexPath.row
@@ -209,27 +219,27 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 
             case "Sign Out":
                 print("Sign Out")
-    //            if (userObject != nil) {
-    //
-    //                let resultFlag = currentUser.updateLoginStatus(status: false, email: (userObject?.email)!)
-    //
-    //                if (resultFlag == 0) {
-    //                    let firebaseAuth = Auth.auth()
-    //                    do {
-    //                      try firebaseAuth.signOut()
-    //                    } catch let signOutError as NSError {
-    //                      print ("Error signing out: %@", signOutError)
-    //                    }
-    //                    let storyboard = UIStoryboard(name: "Login", bundle: nil)
-    //                    let vc = storyboard.instantiateViewController(withIdentifier: "newLoginOptions") as! UINavigationController
-    //                    self.present(vc, animated: true, completion: nil)
-    //
-    //                } else {
-    //                    showAlert(title: "Error!", message: "Failed to update login status.", buttonTitle: "Try Again")
-    //                }
-    //            } else {
-    //                showAlert(title: "Error!", message: "There's problem in loging out.", buttonTitle: "Try Again")
-    //            }
+                if (userObject != nil) {
+    
+                    let resultFlag = currentUser.updateLoginStatus(status: false, email: (userObject?.email)!)
+    
+                    if (resultFlag == 0) {
+                        let firebaseAuth = Auth.auth()
+                        do {
+                          try firebaseAuth.signOut()
+                        } catch let signOutError as NSError {
+                          print ("Error signing out: %@", signOutError)
+                        }
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "LoginScreen") as! LoginViewController
+                        self.present(vc, animated: true, completion: nil)
+    
+                    } else {
+                        showAlert(title: "Error!", message: "Failed to update login status.", buttonTitle: "Try Again")
+                    }
+                } else {
+                    showAlert(title: "Error!", message: "There's problem in loging out.", buttonTitle: "Try Again")
+                }
                 break
                 
             default:
@@ -289,6 +299,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             vc?.viewType = value
             vc?.situationName = name
             vc?.myIndex = index
+            vc?.selectedUser = userObject
         }
     }
 }

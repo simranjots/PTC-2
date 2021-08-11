@@ -23,7 +23,6 @@ class CurrentUser {
     typealias userSignIn = (Bool) -> Void
     typealias userAdded = (Int) -> Void
     
-    var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func addUser(name: String, email: String, password: String,image : Data?,uid : String)-> Int{
         loadUser()
@@ -87,14 +86,18 @@ class CurrentUser {
     func updateUser(oldEmail: String,newEmail: String, name: String, password: String,image: Data?) -> Int {
         
         let userObject = getUserObject(email: oldEmail)
-        
-        userObject!.name = name
-        userObject!.email = newEmail
-        userObject!.password = password
-        userObject?.image = image
-        let result = saveUser(user: userObject!)
-        if result == 0 {
-            
+        do {
+            try realm.write {
+                
+                  userObject!.name = name
+                  userObject!.email = newEmail
+                  userObject!.password = password
+                  userObject?.image = image
+            }
+        } catch {
+            print("Error saving done status \(error)")
+        }
+    
             let spaceRef = storageRef.child("images/\(userObject!.uid!)/\((userObject?.image)!)")
             let metaData = StorageMetadata()
             metaData.contentType = "image/jpg"
@@ -109,7 +112,7 @@ class CurrentUser {
                         return
                     }
                     let urlString: String = downloadURL.absoluteString
-                    let userupdate = self.database.collection("dap_users").document(userObject!.uid!)
+                    let userupdate = self.database.collection("pow_users").document(userObject!.uid!)
                     userupdate.updateData(["uid":Auth.auth().currentUser!.uid,
                                   "name": name,
                                   "email":newEmail,
@@ -122,8 +125,8 @@ class CurrentUser {
             }
             
             
-        }
-        return result
+        
+        return 0
         
         
     }
@@ -215,14 +218,14 @@ class CurrentUser {
     }
     
     func loadUser() {
-        
+      
         users = realm.objects(userModel.self)
         
         
     }
     func FetchUserData(email: String,completion: @escaping ([userModel]) -> Void) {
         
-        let ref = Firestore.firestore().collection("dap_users").whereField("email", isEqualTo: email)
+        let ref = Firestore.firestore().collection("pow_users").whereField("email", isEqualTo: email)
         ref.getDocuments() { (snapshot, error) in
             if error != nil
             {

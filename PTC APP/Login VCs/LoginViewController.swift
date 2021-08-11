@@ -41,11 +41,23 @@ class LoginViewController: UIViewController {
             let email = UserDefaults.standard.string(forKey: "USER_EMAIL")
             emailTextField.text = email
         }else{
-            checkbox.setImage(UIImage(named: "uncheck"), for: .selected)
+            checkbox.setImage(UIImage(named: "uncheck"), for: .normal)
         }
         styleElements()
     }
 
+    @IBAction func checkBtn(_ sender: Any) {
+        rememberMeFlag = !rememberMeFlag
+        UserDefaults.standard.set(rememberMeFlag, forKey: "REMEMBER_USER")
+        if rememberMeFlag {
+            checkbox.setImage(UIImage(named: "check"), for: .normal)
+            let text = emailTextField.text
+            UserDefaults.standard.set(text, forKey:"USER_EMAIL")
+        }else{
+            checkbox.setImage(UIImage(named: "uncheck"), for: .normal)
+            UserDefaults.standard.removeObject(forKey: "USER_EMAIL")
+        }
+    }
     @IBAction func loginPressed(_ sender: Any) {
         view.endEditing(true)
         
@@ -97,7 +109,7 @@ class LoginViewController: UIViewController {
                                     if saved == 0 {
                                        
                                             self.performSegue(withIdentifier: Constants.Segues.signInToHomeSegue, sender: self)
-                                            
+                        
                                     }
                                 }
                             }else{

@@ -13,4 +13,7 @@ class SituationData: Object {
     @objc dynamic var situationTitle: String  = ""
     @objc dynamic var value: String  = ""
     @objc dynamic var you: String  = ""
+    @objc dynamic var prefix: Bool  = false
+    @objc dynamic var user: String  = ""
+    
 }

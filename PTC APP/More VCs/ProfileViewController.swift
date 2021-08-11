@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import MobileCoreServices
+import Firebase
+
 
 class ProfileViewController: UIViewController {
 
@@ -17,11 +20,19 @@ class ProfileViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var updateProfileButtonOutlet: UIButton!
     @IBOutlet var profileImageEditButtonOutlet: UIButton!
+    var user : CurrentUser!
+    var userObject: userModel!
+    var email = ""
+    var Password = ""
     var isIconClicked = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         styleElements()
+        user = CurrentUser()
+        userObject = user.checkLoggedIn()
+       
+        setUpData()
     }
     
     func styleElements() {
@@ -49,6 +60,19 @@ class ProfileViewController: UIViewController {
         //Style Button
         Utilities.styleButton(updateProfileButtonOutlet)
     }
+    func setUpData() {
+        guard let passwordRightIcon = UIImage(named: "openEye") else { return }
+        addPasswordEyeIcon(textField: passwordTextField, andImage: passwordRightIcon)
+        nameTextField.text = userObject.name
+        emailTextField.text = userObject.email
+        passwordTextField.text = userObject.password
+        email = userObject.email!
+        if userObject.image != nil {
+            profileImageView.image  = UIImage(data: userObject.image!)
+        }
+        Password = userObject.password!
+   
+    }
     
     //MARK: - Update Profile and Image
     @IBAction func profileImageEditButtonTapped(_ sender: UIButton) {
@@ -56,7 +80,58 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func updateProfileTapped(_ sender: UIButton) {
-    
+        let newEmail = emailTextField.text!
+        let newpassword = passwordTextField.text!
+        let newName = nameTextField.text!
+        let data = UIImage(named: "profileImage")?.jpegData(compressionQuality: 1.0)
+        let imageData = profileImageView.image?.jpegData(compressionQuality: 1.0)
+        let credential = EmailAuthProvider.credential(withEmail: email, password: Password)
+        let user = Auth.auth().currentUser
+        user?.reauthenticate(with: credential, completion: { Result, Error in
+            if Error !=  nil {
+            }else{
+//                Auth.auth().currentUser?.updateEmail(to: newEmail) { error in
+//                    if error != nil {
+//                        self.showAlert(title: "warning", message: "The email address is already in use by another account.", buttonTitle: "try again")
+//                    }else{
+//                        let result = self.user.updateUser(oldEmail: self.email, newEmail: newEmail, name: newName, password: newpassword, image: imageData ?? data)
+//                        if result == 0 {
+//                            self.showToast(message: "Successfully updated", duration: 2.0)
+//                            _ = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { timer in
+//                                self.navigationController?.popViewController(animated: true)
+//                            }
+//
+//
+//                        } else {
+//
+//                            self.showToast(message: "Updation Fail. . .", duration: 2.0)
+//
+//                        }
+//                    }
+//                }
+                Auth.auth().currentUser?.updatePassword(to: newpassword) { error in
+                    if error != nil {
+                        self.showAlert(title: "warning", message: "\(String(describing: error))" , buttonTitle: "tryagain")
+                    }else{
+                        let result = self.user.updateUser(oldEmail: self.email, newEmail: newEmail, name: newName, password: newpassword, image: imageData ?? data)
+                        if result == 0 {
+                            self.showToast(message: "Successfully updated", duration: 2.0)
+                            _ = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { timer in
+                                self.navigationController?.popViewController(animated: true)
+                            }
+                         
+                            
+                        } else {
+                          
+                            self.showToast(message: "Updation Fail. . .", duration: 2.0)
+                            
+                        }
+                    }
+                    
+                }
+            }
+        })
+       
     }
     
     //MARK: - Right imageIcon for password textfield

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A2AAC4426C3C51600FCED6C /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2AAC4326C3C51600FCED6C /* MainNavigationController.swift */; };
 		1A66AEEF26BDE4F7002BB556 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1A66AEEE26BDE4F7002BB556 /* Realm */; };
 		1A66AEF126BDE4F7002BB556 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1A66AEF026BDE4F7002BB556 /* RealmSwift */; };
 		1A66AEF326BDE532002BB556 /* SituationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A66AEF226BDE532002BB556 /* SituationData.swift */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		035C471E8BC5E8721724FA53 /* Pods-PTC APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTC APP.release.xcconfig"; path = "Target Support Files/Pods-PTC APP/Pods-PTC APP.release.xcconfig"; sourceTree = "<group>"; };
+		1A2AAC4326C3C51600FCED6C /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		1A66AEF226BDE532002BB556 /* SituationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SituationData.swift; sourceTree = "<group>"; };
 		1A66AEF926C2C61F002BB556 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		1A66AEFB26C2C994002BB556 /* UserModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModal.swift; sourceTree = "<group>"; };
@@ -128,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				1A66AEF926C2C61F002BB556 /* CurrentUser.swift */,
+				1A66AEF226BDE532002BB556 /* SituationData.swift */,
+				1A66AEFB26C2C994002BB556 /* UserModal.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -163,6 +167,7 @@
 		260FA9F926BCFF530088184B /* Login VCs */ = {
 			isa = PBXGroup;
 			children = (
+				1A2AAC4326C3C51600FCED6C /* MainNavigationController.swift */,
 				E162574123E3304B00E84948 /* LoginViewController.swift */,
 				E15B0BAF23E9FA2B0014DBA1 /* SignUpViewController.swift */,
 				2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */,
@@ -218,8 +223,6 @@
 		E15B0BB323E9FD100014DBA1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				1A66AEF226BDE532002BB556 /* SituationData.swift */,
-				1A66AEFB26C2C994002BB556 /* UserModal.swift */,
 				26B3504726BE43AD0038A5E2 /* Utilities.swift */,
 				263C866726BA453300012F55 /* Constants.swift */,
 				26B3504526BE3A940038A5E2 /* Extension.swift */,
@@ -423,6 +426,7 @@
 				26B3504626BE3A940038A5E2 /* Extension.swift in Sources */,
 				E18E82D723FD9F5600F35982 /* introductionViewController.swift in Sources */,
 				260FA9F426BCCECA0088184B /* PrivacyPolicyViewController.swift in Sources */,
+				1A2AAC4426C3C51600FCED6C /* MainNavigationController.swift in Sources */,
 				E19F7A8C23FCC21B00E718B8 /* ToDoItemCell.swift in Sources */,
 				E159DD272418370800C4433F /* TaresaViewController.swift in Sources */,
 				E159DD412418691200C4433F /* DetailViewController.swift in Sources */,

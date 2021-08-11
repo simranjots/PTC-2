@@ -39,6 +39,7 @@ class PTCWorksheetViewController: UIViewController {
     var situationName: String = ""
     var myIndex = 0
     var activityNameArray : Results<SituationData>?
+    var selectedUser: userModel?
     
     //MARK: - Life Cycle Methods
     override func viewDidLoad() {
@@ -67,9 +68,10 @@ class PTCWorksheetViewController: UIViewController {
     }
     
     func writeData(title: String)  {
+        
         let todo = SituationData()
         todo.situationTitle = title
-        todo.date = "Created at: " + Date().shortdateToString()!
+        todo.date = Date().shortdateToString()!
         todo.time = Date().currentTime()
         todo.value = valueTextView.text!
         todo.feel = feelTextView.text!
@@ -79,7 +81,9 @@ class PTCWorksheetViewController: UIViewController {
         todo.appreciate = appreciateTextView.text!
         todo.doitem = doTextView.text!
         todo.you = youTextView.text!
+        todo.user = (selectedUser?.email)!
         save(situationData: todo)
+        
     }
     
     func updateData() {
@@ -87,7 +91,7 @@ class PTCWorksheetViewController: UIViewController {
             do {
                 try realm.write {
                     situationData.situationTitle = communicationSituationTextField.text!
-                    situationData.date = "Updated On: " + Date().shortdateToString()!
+                    situationData.date =  Date().shortdateToString()!
                     situationData.value = valueTextView.text!
                     situationData.feel = feelTextView.text!
                     situationData.obstacle = obstaclesTextView.text!
@@ -96,6 +100,7 @@ class PTCWorksheetViewController: UIViewController {
                     situationData.appreciate = appreciateTextView.text!
                     situationData.doitem = doTextView.text!
                     situationData.you = youTextView.text!
+                    situationData.prefix = true
                 }
             } catch {
                 print("Error saving done status \(error)")
@@ -103,12 +108,15 @@ class PTCWorksheetViewController: UIViewController {
         }
     }
     func save(situationData: SituationData)  {
+        if let currentU = self.selectedUser {
         do {
             try realm.write {
-                realm.add(situationData)
+                currentU.situationData.append(situationData)
+               // realm.add(situationData)
             }
         }catch {
             print("Error saving situation Data\(error)")
+        }
         }
     }
     

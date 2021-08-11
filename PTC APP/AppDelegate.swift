@@ -15,7 +15,7 @@ import RealmSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -31,7 +31,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                } catch {
                    print("Error initialising new realm, \(error)")
                }
-               
+        //MARK:  to select app launch
+        
+    
+        
+        let currentUser = CurrentUser()
+        let userObject: userModel?
+        userObject = currentUser.checkLoggedIn()
+      
+       
                
         return true
     }
