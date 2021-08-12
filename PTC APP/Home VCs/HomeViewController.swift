@@ -123,6 +123,7 @@ class HomeViewController: UIViewController {
         
         if let swipedView = gesture.view {
             swipedView.isHidden = true
+            self.navigationItem.largeTitleDisplayMode = .automatic
         }
     }
     
