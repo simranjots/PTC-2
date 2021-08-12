@@ -52,21 +52,42 @@ class PTCWorksheetViewController: UIViewController {
     }
     
 
-    @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
-        
-        if viewType == "add"{
-            
-        let title = communicationSituationTextField.text
-        
-        if let title = title{
-            writeData(title: title)
+    func validateFields() -> String? {
+    
+        //Validate communication situation is not blank
+        if communicationSituationTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return "Communication situation should not be empty."
         }
-        }else if viewType == "edit"{
-            updateData()
+        
+        //Validate communication situation should not contain special charactors
+        let cleanedcommunicationSituation = communicationSituationTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if Utilities.isStringValid(cleanedcommunicationSituation) == true {
+            return "Communication situation should not contain any special charactors or numbers."
         }
-        navigationController?.popViewController(animated: true)
+        return nil
     }
     
+    @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
+        
+        let error = validateFields()
+        
+        if error != nil {
+            showAlert(title: "Warning", message: error!, buttonTitle: "OK")
+        } else {
+            if viewType == "add"{
+                
+            let title = communicationSituationTextField.text
+            
+            if let title = title{
+                writeData(title: title)
+            }
+            }else if viewType == "edit"{
+                updateData()
+            }
+            navigationController?.popViewController(animated: true)
+            }
+        }
+
     func writeData(title: String)  {
         
         let todo = SituationData()
@@ -107,7 +128,9 @@ class PTCWorksheetViewController: UIViewController {
             }
         }
     }
+    
     func save(situationData: SituationData)  {
+        
         if let currentU = self.selectedUser {
         do {
             try realm.write {
@@ -169,14 +192,14 @@ class PTCWorksheetViewController: UIViewController {
     //MARK: - user interaction Disabled
     func userInteractionDisabled() {
         communicationSituationTextField.isUserInteractionEnabled = false
-        valueTextView.isUserInteractionEnabled = false
-        feelTextView.isUserInteractionEnabled = false
-        obstaclesTextView.isUserInteractionEnabled = false
-        rememberTextView.isUserInteractionEnabled = false
-        themTextView.isUserInteractionEnabled = false
-        appreciateTextView.isUserInteractionEnabled = false
-        doTextView.isUserInteractionEnabled = false
-        youTextView.isUserInteractionEnabled = false
+        valueTextView.isEditable = false
+        feelTextView.isEditable = false
+        obstaclesTextView.isEditable = false
+        rememberTextView.isEditable = false
+        themTextView.isEditable = false
+        appreciateTextView.isEditable = false
+        doTextView.isEditable = false
+        youTextView.isEditable = false
     }
     
     func styleElements() {
@@ -207,8 +230,5 @@ class PTCWorksheetViewController: UIViewController {
         Utilities.styleLabel(doLabel)
         Utilities.styleLabel(youLabel)
     }
-    
-
-    
     
 }

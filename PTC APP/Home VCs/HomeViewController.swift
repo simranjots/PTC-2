@@ -41,33 +41,20 @@ class HomeViewController: UIViewController {
     let menuItems = ["Home", "Guidelines", "About Author", "Privacy Policy", "Contact Us", "Sign Out"]
     let menuIcons = ["home", "guidelines", "about-author", "privacy-policy", "contact-us", "sign-out"]
     var isSideViewOpened: Bool = false
+    
     override func viewWillAppear(_ animated: Bool) {
         currentUser = CurrentUser()
         userObject = currentUser.checkLoggedIn()
         activityNameArray = userObject.situationData.filter("user = %@",userObject.email as Any )
         mainTableView.reloadData()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //Hide Menubar on ViewDidLoad
-        menubarView.isHidden = true
-        menubarTableView.backgroundColor = UIColor.systemBackground
-        isSideViewOpened = false
-        
-        //Add shadow to Menubar
-        Utilities.addShadowAndBorderToView(menubarView)
-        menubarView.layer.borderWidth = 0
-        profileImageView.layer.cornerRadius = 40
-        profileImageView.layer.borderWidth = 2
-        profileImageView.layer.borderColor = Utilities.secondaryTextColor.cgColor
-        
-        
+        setupElementsOnViewDidLoad()
     }
 
-    
     @IBAction func sideMenuButtonTapped(_ sender: UIBarButtonItem) {
-        
         
         menubarView.isHidden = false
         menubarTableView.isHidden = false
@@ -118,16 +105,54 @@ class HomeViewController: UIViewController {
         nameLabel.text = userObject.name
     }
     
+    
     @IBAction func addActivityButtonTapped(_ sender: UIBarButtonItem) {
         value = "add"
         performSegue(withIdentifier: Constants.Segues.homeToSituationSegue, sender: self)
     }
     
     @IBAction func profileEditButtonTapped(_ sender: UIButton) {
-        
         performSegue(withIdentifier: Constants.Segues.homeToProfileSegue, sender: self)
     }
     
+    @objc func gestureFired(_ gesture: UITapGestureRecognizer) {
+        performSegue(withIdentifier: Constants.Segues.homeToProfileSegue, sender: self)
+    }
+    
+    @objc func gestureFired1(_ gesture: UITapGestureRecognizer) {
+        
+        if let swipedView = gesture.view {
+            swipedView.isHidden = true
+        }
+    }
+    
+    func setupElementsOnViewDidLoad() {
+        
+        //Hide Menubar on ViewDidLoad
+        menubarView.isHidden = true
+        menubarTableView.backgroundColor = UIColor.systemBackground
+        isSideViewOpened = false
+        
+        //Add shadow to Menubar
+        Utilities.addShadowAndBorderToView(menubarView)
+        menubarView.layer.borderWidth = 0
+        profileImageView.layer.cornerRadius = 40
+        profileImageView.layer.borderWidth = 2
+        profileImageView.layer.borderColor = Utilities.secondaryTextColor.cgColor
+        
+        //Add tapgesture to ProfileImage View
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(gestureFired(_:)))
+        gestureRecognizer.numberOfTapsRequired = 1
+        gestureRecognizer.numberOfTouchesRequired = 1
+        profileImageView.addGestureRecognizer(gestureRecognizer)
+        profileImageView.isUserInteractionEnabled = true
+        
+        let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(gestureFired1(_:)))
+        swipeGestureRecognizer.numberOfTouchesRequired = 1
+        swipeGestureRecognizer.direction = .left
+        menubarView.addGestureRecognizer(swipeGestureRecognizer)
+        menubarView.isUserInteractionEnabled = true
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
