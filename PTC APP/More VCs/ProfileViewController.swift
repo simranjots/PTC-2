@@ -59,7 +59,15 @@ class ProfileViewController: UIViewController {
         
         //Style Button
         Utilities.styleButton(updateProfileButtonOutlet)
+        
+        //Add tapgesture to ProfileImage View
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(gestureFired(_:)))
+        gestureRecognizer.numberOfTapsRequired = 1
+        gestureRecognizer.numberOfTouchesRequired = 1
+        profileImageView.addGestureRecognizer(gestureRecognizer)
+        profileImageView.isUserInteractionEnabled = true
     }
+    
     func setUpData() {
         guard let passwordRightIcon = UIImage(named: "openEye") else { return }
         addPasswordEyeIcon(textField: passwordTextField, andImage: passwordRightIcon)
@@ -76,6 +84,10 @@ class ProfileViewController: UIViewController {
     
     //MARK: - Update Profile and Image
     @IBAction func profileImageEditButtonTapped(_ sender: UIButton) {
+        actionSheet()
+    }
+    
+    @objc func gestureFired(_ gesture: UITapGestureRecognizer) {
         actionSheet()
     }
     

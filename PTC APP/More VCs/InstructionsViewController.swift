@@ -25,6 +25,9 @@ class InstructionsViewController: UIViewController {
         Utilities.addShadowToButton(previousButtonOutlet)
         Utilities.addShadowToButton(nextButtonOutlet)
         
+        pageControl.numberOfPages = collectionViewImages.count
+        pageControl.currentPage = 0
+        
     }
     
     @IBAction func previousButtonTapped(_ sender: UIButton) {
@@ -71,7 +74,11 @@ extension InstructionsViewController: UICollectionViewDataSource {
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let x = targetContentOffset.pointee.x
-        pageControl.currentPage = Int(x / instructionCollectionView.frame.width)
+//        let x = targetContentOffset.pointee.x
+//        pageControl.currentPage = Int(x / instructionCollectionView.frame.width)
+        
+        let xCoordinate = targetContentOffset.pointee.x
+        let pageNumber = xCoordinate / scrollView.frame.width
+        pageControl.currentPage = Int(pageNumber)
     }
 }

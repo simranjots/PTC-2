@@ -249,7 +249,7 @@ class SignUpViewController: UIViewController {
     
     func adduser(){
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let password = passWordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        //let password = passWordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let key = refusers.childByAutoId().key
         
         let artist = [ "id" : key, "email" : email ]

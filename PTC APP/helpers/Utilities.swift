@@ -64,7 +64,7 @@ class Utilities {
         //TextView style
         textView.layer.borderWidth = 1.0
         textView.layer.cornerRadius = 8.0
-        textView.layer.borderColor = primaryTextColor.cgColor
+        textView.layer.borderColor = UIColor(named: "BrandColor")?.cgColor
     }
     
     //MARK: - Set TextField left image
@@ -170,7 +170,7 @@ class Utilities {
     static func addShadowAndBorderToView(_ view: UIView) {
         view.layer.borderColor = secondaryTextColor.cgColor
         view.layer.borderWidth = 1
-        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowColor = UIColor(named: "BrandColor")?.cgColor
         view.layer.shadowOpacity = 0.5
         view.layer.shadowOffset = CGSize(width: 0.0, height: 1.7)
     }
