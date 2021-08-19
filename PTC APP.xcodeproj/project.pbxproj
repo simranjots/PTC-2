@@ -29,12 +29,10 @@
 		26B3504426BDFBC80038A5E2 /* PTCWorksheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3504326BDFBC80038A5E2 /* PTCWorksheetViewController.swift */; };
 		26B3504626BE3A940038A5E2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3504526BE3A940038A5E2 /* Extension.swift */; };
 		26B3504826BE43AD0038A5E2 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3504726BE43AD0038A5E2 /* Utilities.swift */; };
-		26C2FDC826BDA7E600A53C75 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C2FDC326BDA7E500A53C75 /* 2.png */; };
-		26C2FDC926BDA7E600A53C75 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C2FDC426BDA7E600A53C75 /* 1.png */; };
-		26C2FDCA26BDA7E600A53C75 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C2FDC526BDA7E600A53C75 /* 3.png */; };
-		26C2FDCB26BDA7E600A53C75 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C2FDC626BDA7E600A53C75 /* 4.png */; };
-		26C2FDCC26BDA7E600A53C75 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C2FDC726BDA7E600A53C75 /* 5.png */; };
 		26C2FDCE26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C2FDCD26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift */; };
+		26D12A4B26CED6CA0039C495 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26D12A4826CED6CA0039C495 /* 1.png */; };
+		26D12A4C26CED6CA0039C495 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26D12A4926CED6CA0039C495 /* 2.png */; };
+		26D12A4D26CED6CA0039C495 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 26D12A4A26CED6CA0039C495 /* 3.png */; };
 		DC87FAA1319C6B01861197AD /* Pods_PTC_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7E7A87D71B12D56F58F219 /* Pods_PTC_APP.framework */; };
 		E156D86624106E3D00AB52CB /* testTableVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156D86524106E3D00AB52CB /* testTableVIew.swift */; };
 		E159DD272418370800C4433F /* TaresaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E159DD262418370800C4433F /* TaresaViewController.swift */; };
@@ -78,12 +76,10 @@
 		26B3504326BDFBC80038A5E2 /* PTCWorksheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTCWorksheetViewController.swift; sourceTree = "<group>"; };
 		26B3504526BE3A940038A5E2 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		26B3504726BE43AD0038A5E2 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		26C2FDC326BDA7E500A53C75 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
-		26C2FDC426BDA7E600A53C75 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		26C2FDC526BDA7E600A53C75 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
-		26C2FDC626BDA7E600A53C75 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
-		26C2FDC726BDA7E600A53C75 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
 		26C2FDCD26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsCollectionViewCell.swift; sourceTree = "<group>"; };
+		26D12A4826CED6CA0039C495 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		26D12A4926CED6CA0039C495 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		26D12A4A26CED6CA0039C495 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		8A7E7A87D71B12D56F58F219 /* Pods_PTC_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PTC_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E156D86524106E3D00AB52CB /* testTableVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTableVIew.swift; sourceTree = "<group>"; };
 		E159DD262418370800C4433F /* TaresaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaresaViewController.swift; sourceTree = "<group>"; };
@@ -200,11 +196,9 @@
 		26C2FDC226BDA78200A53C75 /* Instruction Images */ = {
 			isa = PBXGroup;
 			children = (
-				26C2FDC426BDA7E600A53C75 /* 1.png */,
-				26C2FDC326BDA7E500A53C75 /* 2.png */,
-				26C2FDC526BDA7E600A53C75 /* 3.png */,
-				26C2FDC626BDA7E600A53C75 /* 4.png */,
-				26C2FDC726BDA7E600A53C75 /* 5.png */,
+				26D12A4826CED6CA0039C495 /* 1.png */,
+				26D12A4926CED6CA0039C495 /* 2.png */,
+				26D12A4A26CED6CA0039C495 /* 3.png */,
 			);
 			path = "Instruction Images";
 			sourceTree = "<group>";
@@ -344,15 +338,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26D12A4C26CED6CA0039C495 /* 2.png in Resources */,
 				E162574D23E3304D00E84948 /* LaunchScreen.storyboard in Resources */,
 				E162574523E3304B00E84948 /* Main.storyboard in Resources */,
 				1A66AEFE26C2D614002BB556 /* GoogleService-Info.plist in Resources */,
-				26C2FDC826BDA7E600A53C75 /* 2.png in Resources */,
-				26C2FDC926BDA7E600A53C75 /* 1.png in Resources */,
-				26C2FDCB26BDA7E600A53C75 /* 4.png in Resources */,
 				E19F7A8E23FCDC3800E718B8 /* Assets.xcassets in Resources */,
-				26C2FDCC26BDA7E600A53C75 /* 5.png in Resources */,
-				26C2FDCA26BDA7E600A53C75 /* 3.png in Resources */,
+				26D12A4D26CED6CA0039C495 /* 3.png in Resources */,
+				26D12A4B26CED6CA0039C495 /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
