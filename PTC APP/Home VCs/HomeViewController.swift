@@ -38,7 +38,7 @@ class HomeViewController: UIViewController {
     
     
     //MARK: - Menubar Items and Icons
-    let menuItems = ["Home", "Guidelines", "About Author", "Privacy Policy", "Contact Us", "Sign Out"]
+    let menuItems = ["Home", "Guidelines", "About The Author", "Privacy Policy", "Contact Us", "Sign Out"]
     let menuIcons = ["home", "guidelines", "about-author", "privacy-policy", "contact-us", "sign-out"]
     var isSideViewOpened: Bool = false
     
@@ -231,7 +231,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 performSegue(withIdentifier: Constants.Segues.homeToUseInstructionsSegue, sender: self)
                 break
                 
-            case "About Author":
+            case "About The Author":
                 performSegue(withIdentifier: Constants.Segues.homeToAboutAuthor, sender: self)
                 break
                 
