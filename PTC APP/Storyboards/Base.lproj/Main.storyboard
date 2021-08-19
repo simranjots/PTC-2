@@ -166,7 +166,7 @@
                                                 <rect key="frame" x="250" y="0.0" width="146" height="25"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <state key="normal" title="Register">
-                                                    <color key="titleColor" red="0.82745098039215681" green="0.36470588235294116" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" name="BrandBlueColor"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="qYO-gT-kyv" kind="show" id="4uj-kH-aFC"/>
@@ -201,38 +201,12 @@
                         <outlet property="passWordTextField" destination="kee-eN-Xie" id="oRX-Wh-vLG"/>
                         <outlet property="signInButtonOutlet" destination="gMH-D2-F6U" id="jAy-Mu-5bX"/>
                         <outlet property="tagLineLabel" destination="M8g-3F-bJt" id="CoT-uV-Qlm"/>
-                        <segue destination="HeF-F7-l9T" kind="show" identifier="navigateToHome" id="eAy-cj-w0r"/>
+                        <segue destination="aDZ-b1-ky8" kind="show" identifier="navigateToHome" id="Pjb-sT-qN8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-830" y="190"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="6Bj-eN-XLA">
-            <objects>
-                <navigationController storyboardIdentifier="HomeVC" modalPresentationStyle="fullScreen" id="HeF-F7-l9T" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="8eI-7q-tKX"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Y6f-n2-Y6W">
-                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                            <color key="textColor" name="BrandColor"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                            <color key="textColor" name="BrandColor"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="ueN-yH-roO" kind="relationship" relationship="rootViewController" id="bQW-8t-2xL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oC9-bh-fQb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="45" y="480"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="Ai8-lh-ahI">
@@ -309,6 +283,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmG-ma-l7B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="45" y="-229"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="m5Y-mj-UFm">
+            <objects>
+                <navigationController storyboardIdentifier="HomeVC" modalPresentationStyle="fullScreen" id="aDZ-b1-ky8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ejt-uw-b1S"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="KM3-0E-8x7">
+                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <color key="textColor" name="BrandBlueColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                            <color key="textColor" name="BrandBlueColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ueN-yH-roO" kind="relationship" relationship="rootViewController" id="Bxb-Ek-PRf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JB2-Zx-N3l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="486"/>
         </scene>
         <!--Home-->
         <scene sceneID="cPK-RY-3IR">
@@ -515,45 +514,46 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:20 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7X-8G-D89">
-                                                                    <rect key="frame" x="330.66666666666669" y="24.999999999999996" width="57.333333333333314" height="14.333333333333332"/>
+                                                                    <rect key="frame" x="328.66666666666669" y="24.999999999999996" width="59.333333333333314" height="14.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                                                    <color key="textColor" name="BrandBlueColor"/>
+                                                                    <color key="textColor" name="BrandRedColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="J0G-Tk-vUG">
-                                                                    <rect key="frame" x="70" y="11.666666666666671" width="255" height="57"/>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="apv-K1-V1M">
+                                                                    <rect key="frame" x="67.999999999999986" y="15.000000000000004" width="255.66666666666663" height="50.333333333333343"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hvk-DF-zsZ">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="255" height="37"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="255" id="Wyc-bG-kXO"/>
-                                                                            </constraints>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="255.66666666666666" height="29.333333333333332"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                                             <color key="textColor" name="BrandColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="vus-xL-f8R">
-                                                                            <rect key="frame" x="0.0" y="42" width="255" height="15"/>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vus-xL-f8R">
+                                                                            <rect key="frame" x="0.0" y="35.333333333333336" width="255.66666666666666" height="15"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created at :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="iob-Yv-CGX">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="15"/>
                                                                                     <constraints>
-                                                                                        <constraint firstAttribute="width" constant="70" id="VKw-Ph-smP"/>
+                                                                                        <constraint firstAttribute="height" constant="15" id="FRQ-lm-j3v"/>
+                                                                                        <constraint firstAttribute="width" constant="70" id="ThG-Qp-o4z"/>
                                                                                     </constraints>
                                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
-                                                                                    <color key="textColor" name="BrandBlueColor"/>
+                                                                                    <color key="textColor" name="BrandPurpleColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aug 5, 2021" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAY-pa-9bN">
-                                                                                    <rect key="frame" x="70" y="0.0" width="185" height="15"/>
+                                                                                    <rect key="frame" x="69.999999999999986" y="0.0" width="185.66666666666663" height="15"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="15" id="eIN-kf-lpl"/>
                                                                                     </constraints>
                                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                                                                    <color key="textColor" name="BrandBlueColor"/>
+                                                                                    <color key="textColor" name="BrandPurpleColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="255.66999999999999" id="YRc-Ff-VkJ"/>
+                                                                            </constraints>
                                                                         </stackView>
                                                                     </subviews>
                                                                 </stackView>
@@ -561,13 +561,14 @@
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstItem="5Rx-Sn-gHX" firstAttribute="leading" secondItem="fyH-7w-C1J" secondAttribute="leading" constant="10" id="4ks-55-vtB"/>
+                                                                <constraint firstItem="apv-K1-V1M" firstAttribute="top" secondItem="fyH-7w-C1J" secondAttribute="top" constant="15" id="AT5-dJ-Tka"/>
                                                                 <constraint firstAttribute="trailing" secondItem="5Rx-Sn-gHX" secondAttribute="trailing" constant="20" id="DVO-3I-kvB"/>
-                                                                <constraint firstItem="5Rx-Sn-gHX" firstAttribute="top" secondItem="J0G-Tk-vUG" secondAttribute="bottom" constant="11.67" id="GeN-2X-4PU"/>
                                                                 <constraint firstItem="G7X-8G-D89" firstAttribute="top" secondItem="fyH-7w-C1J" secondAttribute="top" constant="25" id="Lvu-df-Zcr"/>
+                                                                <constraint firstItem="G7X-8G-D89" firstAttribute="leading" secondItem="apv-K1-V1M" secondAttribute="trailing" constant="5" id="MaD-3H-xFB"/>
                                                                 <constraint firstItem="Srv-q9-B7f" firstAttribute="leading" secondItem="fyH-7w-C1J" secondAttribute="leading" constant="10" id="N6T-s8-LVO"/>
-                                                                <constraint firstItem="J0G-Tk-vUG" firstAttribute="top" secondItem="fyH-7w-C1J" secondAttribute="top" constant="11.67" id="NnR-xu-ITO"/>
-                                                                <constraint firstItem="J0G-Tk-vUG" firstAttribute="leading" secondItem="Srv-q9-B7f" secondAttribute="trailing" constant="10" id="Uz8-iO-dND"/>
                                                                 <constraint firstItem="Srv-q9-B7f" firstAttribute="top" secondItem="fyH-7w-C1J" secondAttribute="top" constant="17.670000000000002" id="XNu-Ux-xmM"/>
+                                                                <constraint firstItem="apv-K1-V1M" firstAttribute="leading" secondItem="Srv-q9-B7f" secondAttribute="trailing" constant="8" symbolic="YES" id="cIJ-RO-GqG"/>
+                                                                <constraint firstItem="5Rx-Sn-gHX" firstAttribute="top" secondItem="apv-K1-V1M" secondAttribute="bottom" constant="15" id="hZ7-5J-SDG"/>
                                                                 <constraint firstAttribute="bottom" secondItem="5Rx-Sn-gHX" secondAttribute="bottom" constant="4.3300000000000001" id="pit-U1-wNM"/>
                                                                 <constraint firstAttribute="trailing" secondItem="G7X-8G-D89" secondAttribute="trailing" constant="20" symbolic="YES" id="qXX-Mo-aSj"/>
                                                                 <constraint firstAttribute="bottom" secondItem="Srv-q9-B7f" secondAttribute="bottom" constant="17.329999999999998" id="vED-vO-atX"/>
@@ -620,13 +621,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="BH4-RG-SI5">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="menu-bar" id="gwa-W4-R4g">
-                            <color key="tintColor" name="BrandColor"/>
+                            <color key="tintColor" name="BrandBlueColor"/>
                             <connections>
                                 <action selector="sideMenuButtonTapped:" destination="ueN-yH-roO" id="tiy-cg-YZr"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="Plus" id="vot-Lh-jdM">
-                            <color key="tintColor" name="BrandColor"/>
+                            <color key="tintColor" name="BrandBlueColor"/>
                             <connections>
                                 <action selector="addActivityButtonTapped:" destination="ueN-yH-roO" id="9JW-CS-Va4"/>
                             </connections>
@@ -686,7 +687,7 @@
                                         <variation key="heightClass=regular-widthClass=regular" constant="40"/>
                                     </constraint>
                                 </constraints>
-                                <color key="tintColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" name="BrandRedColor"/>
                                 <state key="normal" title="Edit Button" image="camera"/>
                                 <connections>
                                     <action selector="profileImageEditButtonTapped:" destination="egG-6v-3jz" eventType="touchUpInside" id="16x-eQ-A5Q"/>
@@ -1179,7 +1180,7 @@
                                                 <rect key="frame" x="250" y="0.0" width="146" height="34"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <state key="normal" title="Login">
-                                                    <color key="titleColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" name="BrandBlueColor"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="BYZ-38-t0r" kind="show" id="hmZ-Pc-q4h"/>
@@ -1280,7 +1281,7 @@
                                     <constraint firstAttribute="width" constant="30" id="7th-7W-kfF"/>
                                     <constraint firstAttribute="height" constant="30" id="wUt-CN-BF1"/>
                                 </constraints>
-                                <color key="tintColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" name="BrandPurpleColor"/>
                                 <state key="normal" title="Button" image="previous"/>
                                 <connections>
                                     <action selector="previousButtonTapped:" destination="gq2-ms-KGu" eventType="touchUpInside" id="LBs-LC-K68"/>
@@ -1292,7 +1293,7 @@
                                     <constraint firstAttribute="width" constant="30" id="A3j-Nt-SsA"/>
                                     <constraint firstAttribute="height" constant="30" id="VSV-oR-cRi"/>
                                 </constraints>
-                                <color key="tintColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" name="BrandPurpleColor"/>
                                 <state key="normal" image="next"/>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="gq2-ms-KGu" eventType="touchUpInside" id="x4Y-mX-pbx"/>
@@ -1757,10 +1758,10 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="i.e Interview" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IGx-zK-zu3">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="i.e Interview" textAlignment="center" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="IGx-zK-zu3">
                                                         <rect key="frame" x="208.66666666666663" y="0.0" width="203.33333333333337" height="34"/>
                                                         <color key="tintColor" name="BrandColor"/>
-                                                        <color key="textColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="textColor" name="BrandBlueColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1778,8 +1779,18 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Dbl-qh-Oto">
                                                                         <rect key="frame" x="0.0" y="0.0" width="203.66666666666666" height="34"/>
                                                                         <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDU-yW-kfd">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="15" height="34"/>
+                                                                                <color key="backgroundColor" name="BrandRedColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="15" id="PxC-eV-8Uj"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Them" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KaJ-GW-DVh">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="34"/>
+                                                                                <rect key="frame" x="17" y="0.0" width="150.66666666666666" height="34"/>
                                                                                 <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="LxX-ZF-gOw"/>
@@ -1884,8 +1895,18 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="v3b-uK-vRz">
                                                                         <rect key="frame" x="0.0" y="0.0" width="203.33333333333334" height="34"/>
                                                                         <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8X-Tw-t3v">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="15" height="34"/>
+                                                                                <color key="backgroundColor" name="BrandRedColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="15" id="qun-4e-2cz"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appreciate" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="aLf-09-Xnt">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="167.33333333333334" height="34"/>
+                                                                                <rect key="frame" x="17" y="0.0" width="150.33333333333334" height="34"/>
                                                                                 <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="FyR-Us-9WY"/>
@@ -1992,8 +2013,18 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ym1-ei-YpR">
                                                                         <rect key="frame" x="0.0" y="0.0" width="203.66666666666666" height="34"/>
                                                                         <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BG7-X5-hH0">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="15" height="34"/>
+                                                                                <color key="backgroundColor" name="BrandRedColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="15" id="S9s-4J-Ate"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Owz-O4-fqB">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="34"/>
+                                                                                <rect key="frame" x="17" y="0.0" width="150.66666666666666" height="34"/>
                                                                                 <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="unn-D5-T0y"/>
@@ -2095,8 +2126,18 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="QdC-fT-WtD">
                                                                         <rect key="frame" x="0.0" y="0.0" width="203.33333333333334" height="34"/>
                                                                         <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VT2-0G-oPr">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="15" height="34"/>
+                                                                                <color key="backgroundColor" name="BrandRedColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="15" id="Jat-6N-rG2"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Obstacles" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vkx-TU-lev">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="167.33333333333334" height="34"/>
+                                                                                <rect key="frame" x="17" y="0.0" width="150.33333333333334" height="34"/>
                                                                                 <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="bmr-Wm-HQr"/>
@@ -2203,8 +2244,18 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="uo6-Uz-W4B">
                                                                         <rect key="frame" x="0.0" y="0.0" width="203.66666666666666" height="34"/>
                                                                         <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ol-sg-CKr">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="15" height="34"/>
+                                                                                <color key="backgroundColor" name="BrandRedColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="15" id="rMl-Mb-V1h"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="XJN-A9-wJJ">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="34"/>
+                                                                                <rect key="frame" x="17" y="0.0" width="150.66666666666666" height="34"/>
                                                                                 <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="A9h-RF-s60"/>
@@ -2306,8 +2357,18 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Wh8-yJ-APt">
                                                                         <rect key="frame" x="0.0" y="0.0" width="203.33333333333334" height="34"/>
                                                                         <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd1-8z-N5E">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="15" height="34"/>
+                                                                                <color key="backgroundColor" name="BrandRedColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="15" id="8mV-ad-MZx"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="FwP-df-xMf">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="167.33333333333334" height="34"/>
+                                                                                <rect key="frame" x="17" y="0.0" width="150.33333333333334" height="34"/>
                                                                                 <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="JeP-TV-Wqy"/>
@@ -2414,8 +2475,18 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="2o5-LL-bjY">
                                                                         <rect key="frame" x="0.0" y="0.0" width="203.66666666666666" height="34"/>
                                                                         <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZP-Hj-6W0">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="15" height="34"/>
+                                                                                <color key="backgroundColor" name="BrandRedColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="15" id="jnh-2F-W91"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Yui-y6-PM6">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="34"/>
+                                                                                <rect key="frame" x="17" y="0.0" width="150.66666666666666" height="34"/>
                                                                                 <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="Fkh-hC-hf7"/>
@@ -2517,8 +2588,18 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="iq7-7F-PbM">
                                                                         <rect key="frame" x="0.0" y="0.0" width="203.33333333333334" height="34"/>
                                                                         <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdT-WW-gDI">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="15" height="34"/>
+                                                                                <color key="backgroundColor" name="BrandRedColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="15" id="eRY-9R-nhy"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="P89-1J-Pqy">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="167.33333333333334" height="34"/>
+                                                                                <rect key="frame" x="17" y="0.0" width="150.33333333333334" height="34"/>
                                                                                 <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="FN7-pS-FTW"/>
@@ -2656,7 +2737,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                     </view>
                     <navigationItem key="navigationItem" title="The PTC Worksheet" largeTitleDisplayMode="always" id="du2-GV-7KP">
                         <barButtonItem key="rightBarButtonItem" image="save" id="lFE-hX-hvV">
-                            <color key="tintColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="tintColor" name="BrandBlueColor"/>
                             <connections>
                                 <action selector="saveButtonTapped:" destination="YLV-FL-w6Q" id="up6-hM-Q1C"/>
                             </connections>
@@ -2746,6 +2827,9 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
             <color red="0.42745098039215684" green="0.80000000000000004" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandColor">
+            <color red="0.15686274509803921" green="0.062745098039215685" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandPurpleColor">
             <color red="0.15686274509803921" green="0.062745098039215685" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BrandRedColor">

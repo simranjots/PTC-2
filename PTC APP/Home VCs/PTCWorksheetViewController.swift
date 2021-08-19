@@ -277,37 +277,35 @@ class PTCWorksheetViewController: UIViewController {
     func styleElements() {
         
         //Style textfield
-        communicationSituationTextField.layer.cornerRadius = 8
-        communicationSituationTextField.layer.borderWidth = 1
-        communicationSituationTextField.layer.borderColor = Utilities.primaryTextColor.cgColor
-            
+        Utilities.addBottomLineToTextField(communicationSituationTextField)
+        
         //Style textViews
-        Utilities.styleTextView(themTextView1)
-        Utilities.styleTextView(appreciateTextView1)
-        Utilities.styleTextView(rememberTextView1)
-        Utilities.styleTextView(obstaclesTextView1)
-        Utilities.styleTextView(feelTextView1)
-        Utilities.styleTextView(valueTextView1)
-        Utilities.styleTextView(doTextView1)
-        Utilities.styleTextView(youTextView1)
+        Utilities.addBottomLineToTextView(themTextView1)
+        Utilities.addBottomLineToTextView(appreciateTextView1)
+        Utilities.addBottomLineToTextView(rememberTextView1)
+        Utilities.addBottomLineToTextView(obstaclesTextView1)
+        Utilities.addBottomLineToTextView(feelTextView1)
+        Utilities.addBottomLineToTextView(valueTextView1)
+        Utilities.addBottomLineToTextView(doTextView1)
+        Utilities.addBottomLineToTextView(youTextView1)
         
-        Utilities.styleTextView(themTextView2)
-        Utilities.styleTextView(appreciateTextView2)
-        Utilities.styleTextView(rememberTextView2)
-        Utilities.styleTextView(obstaclesTextView2)
-        Utilities.styleTextView(feelTextView2)
-        Utilities.styleTextView(valueTextView2)
-        Utilities.styleTextView(doTextView2)
-        Utilities.styleTextView(youTextView2)
+        Utilities.addBottomLineToTextView(themTextView2)
+        Utilities.addBottomLineToTextView(appreciateTextView2)
+        Utilities.addBottomLineToTextView(rememberTextView2)
+        Utilities.addBottomLineToTextView(obstaclesTextView2)
+        Utilities.addBottomLineToTextView(feelTextView2)
+        Utilities.addBottomLineToTextView(valueTextView2)
+        Utilities.addBottomLineToTextView(doTextView2)
+        Utilities.addBottomLineToTextView(youTextView2)
         
-        Utilities.styleTextView(themTextView3)
-        Utilities.styleTextView(appreciateTextView3)
-        Utilities.styleTextView(rememberTextView3)
-        Utilities.styleTextView(obstaclesTextView3)
-        Utilities.styleTextView(feelTextView3)
-        Utilities.styleTextView(valueTextView3)
-        Utilities.styleTextView(doTextView3)
-        Utilities.styleTextView(youTextView3)
+        Utilities.addBottomLineToTextView(themTextView3)
+        Utilities.addBottomLineToTextView(appreciateTextView3)
+        Utilities.addBottomLineToTextView(rememberTextView3)
+        Utilities.addBottomLineToTextView(obstaclesTextView3)
+        Utilities.addBottomLineToTextView(feelTextView3)
+        Utilities.addBottomLineToTextView(valueTextView3)
+        Utilities.addBottomLineToTextView(doTextView3)
+        Utilities.addBottomLineToTextView(youTextView3)
         
         //Style Labels
         Utilities.styleLabel(communicationSituationLabel)
@@ -321,14 +319,14 @@ class PTCWorksheetViewController: UIViewController {
         Utilities.styleLabel(youLabel)
         
         //Style Buttons
-        themButton.layer.cornerRadius = 17.0
-        appreciateButton.layer.cornerRadius = 17.0
-        rememberButton.layer.cornerRadius = 17.0
-        obstaclesButton.layer.cornerRadius = 17.0
-        feelButton.layer.cornerRadius = 17.0
-        valueButton.layer.cornerRadius = 17.0
-        doButton.layer.cornerRadius = 17.0
-        youButton.layer.cornerRadius = 17.0
+        themButton.layer.cornerRadius = 7.0
+        appreciateButton.layer.cornerRadius = 7.0
+        rememberButton.layer.cornerRadius = 7.0
+        obstaclesButton.layer.cornerRadius = 7.0
+        feelButton.layer.cornerRadius = 7.0
+        valueButton.layer.cornerRadius = 7.0
+        doButton.layer.cornerRadius = 7.0
+        youButton.layer.cornerRadius = 7.0
     }
     
 }

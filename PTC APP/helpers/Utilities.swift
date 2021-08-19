@@ -17,19 +17,19 @@ class Utilities {
         return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1.0)
     }
     
-    static let primaryTextColor = rgb(red: 39, green: 24, blue: 78)
-    static let secondaryTextColor = rgb(red: 211, green: 93, blue: 94)
-    static let gradientColor1 = rgb(red: 78, green: 114, blue: 186) //#3EB2AE
-    static let gradientColor2 = rgb(red: 62, green: 178, blue: 174) //#4E72BA
+    static let primaryTextColor = rgb(red: 40, green: 16, blue: 78)
+    static let secondaryTextColor = rgb(red: 232, green: 81, blue: 81)
+    static let brandBlueColor = rgb(red: 109, green: 204, blue: 220)
+    //static let gradientColor1 = rgb(red: 78, green: 114, blue: 186) //#3EB2AE
+    //static let gradientColor2 = rgb(red: 62, green: 178, blue: 174) //#4E72BA
     
-    func addColorGradient(view: UIView) {
-        
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = view.bounds
-        gradientLayer.colors = [Utilities.gradientColor1.cgColor, Utilities.gradientColor2.cgColor]
-        view.layer.addSublayer(gradientLayer)
-        
-    }
+//    func addColorGradient(view: UIView) {
+//
+//        let gradientLayer = CAGradientLayer()
+//        gradientLayer.frame = view.bounds
+//        gradientLayer.colors = [Utilities.gradientColor1.cgColor, Utilities.gradientColor2.cgColor]
+//        view.layer.addSublayer(gradientLayer)
+//    }
     
     //MARK: -  Textfield & TextView stylling
     
@@ -50,7 +50,7 @@ class Utilities {
         let bottomLine  = CALayer()
         
         bottomLine.frame = CGRect(x: 10, y: textField.frame.height - 2, width: textField.frame.width - 25, height: 0.7)
-        bottomLine.backgroundColor = secondaryTextColor.cgColor
+        bottomLine.backgroundColor = primaryTextColor.cgColor
             
         //Remove border on textField
         textField.borderStyle = .none
@@ -59,12 +59,26 @@ class Utilities {
         textField.layer.addSublayer(bottomLine)
     }
     
+    
+    static func addBottomLineToTextView(_ textView: UITextView) {
+        
+        //Create the bottom line
+        let bottomLine  = CALayer()
+        
+        bottomLine.frame = CGRect(x: 10, y: textView.frame.height - 2, width: textView.frame.width - 25, height: 0.7)
+        bottomLine.backgroundColor = primaryTextColor.cgColor
+            
+        //Add the line to the textField
+        textView.layer.addSublayer(bottomLine)
+    }
+    
+    
     static func styleTextView(_ textView:UITextView) {
         
         //TextView style
         textView.layer.borderWidth = 1.0
         textView.layer.cornerRadius = 8.0
-        textView.layer.borderColor = UIColor(named: "BrandColor")?.cgColor
+        textView.layer.borderColor = UIColor(named: "BrandPurpleColor")?.cgColor
     }
     
     //MARK: - Set TextField left image
@@ -78,7 +92,7 @@ class Utilities {
         
         //Set subview frame
         textFieldImageView.frame = CGRect(x: 15, y: 8, width: 25, height: 25)
-        textFieldImageView.tintColor = UIColor(named: "BrandColor")
+        textFieldImageView.tintColor = UIColor(named: "BrandPurpleColor")
         //
         //Add subview
         textFieldView.addSubview(textFieldImageView)
@@ -131,6 +145,14 @@ class Utilities {
         //button.tintColor = UIColor.init(red: 62/255, green: 178/255, blue: 174/255, alpha: 1)
     }
     
+    static func styleRoundButton(_ button:UIButton) {
+        
+        // Filled rounded corner style
+        button.backgroundColor = primaryTextColor
+        button.layer.cornerRadius = 17.0
+        button.tintColor = UIColor.white
+    }
+    
     
     static func addButtonImage(button: UIButton, andImage image: UIImage) {
         button.setImage(image, for: .normal)
@@ -170,7 +192,7 @@ class Utilities {
     static func addShadowAndBorderToView(_ view: UIView) {
         view.layer.borderColor = secondaryTextColor.cgColor
         view.layer.borderWidth = 1
-        view.layer.shadowColor = UIColor(named: "BrandColor")?.cgColor
+        view.layer.shadowColor = UIColor(named: "BrandPurpleColor")?.cgColor
         view.layer.shadowOpacity = 0.5
         view.layer.shadowOffset = CGSize(width: 0.0, height: 1.7)
     }
