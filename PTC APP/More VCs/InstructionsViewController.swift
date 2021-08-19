@@ -17,7 +17,7 @@ class InstructionsViewController: UIViewController {
     @IBOutlet var nextButtonOutlet: UIButton!
     
     //Images Array
-    let collectionViewImages = ["1", "2", "3", "4", "5"]
+    let collectionViewImages = ["1", "2", "3"]
     
     
     override func viewDidLoad() {
