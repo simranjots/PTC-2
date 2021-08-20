@@ -196,8 +196,27 @@ extension UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: buttonTitle, style: .cancel, handler: nil))
-        
+       
         self.present(alert, animated: true, completion: nil)
+        
+    }
+    func showAlertforQuestionMark(vc: UIPopoverPresentationControllerDelegate,title:String, message: String, buttonTitle: String,buttonType: UIButton) {
+        
+        // get a reference to the view controller for the popover
+                let popController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PopoverContentController") as? NewPasteOptionViewController
+         
+                // set the presentation style
+        popController!.modalPresentationStyle = UIModalPresentationStyle.popover
+
+                // set up the popover presentation controller
+        popController?.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.any
+        popController?.popoverPresentationController?.delegate = vc
+        popController?.popoverPresentationController?.sourceView = buttonType // button
+        popController?.popoverPresentationController?.sourceRect = buttonType.bounds
+     
+        popController?.message = title
+                // present the popover
+        self.present(popController!, animated: true, completion: nil)
         
     }
     

@@ -20,49 +20,48 @@ class PTCWorksheetViewController: UIViewController {
     @IBOutlet var themTextView1: UITextView!
     @IBOutlet var themTextView2: UITextView!
     @IBOutlet var themTextView3: UITextView!
-    @IBOutlet var themButton: UIButton!
+    
     
     @IBOutlet var appreciateLabel: UILabel!
     @IBOutlet var appreciateTextView1: UITextView!
     @IBOutlet var appreciateTextView2: UITextView!
     @IBOutlet var appreciateTextView3: UITextView!
-    @IBOutlet var appreciateButton: UIButton!
     
     @IBOutlet var rememberLabel: UILabel!
     @IBOutlet var rememberTextView1: UITextView!
     @IBOutlet var rememberTextView2: UITextView!
     @IBOutlet var rememberTextView3: UITextView!
-    @IBOutlet var rememberButton: UIButton!
+
     
     @IBOutlet var obstaclesLabel: UILabel!
     @IBOutlet var obstaclesTextView1: UITextView!
     @IBOutlet var obstaclesTextView2: UITextView!
     @IBOutlet var obstaclesTextView3: UITextView!
-    @IBOutlet var obstaclesButton: UIButton!
+ 
     
     @IBOutlet var feelLabel: UILabel!
     @IBOutlet var feelTextView1: UITextView!
     @IBOutlet var feelTextView2: UITextView!
     @IBOutlet var feelTextView3: UITextView!
-    @IBOutlet var feelButton: UIButton!
+
     
     @IBOutlet var valueLabel: UILabel!
     @IBOutlet var valueTextView1: UITextView!
     @IBOutlet var valueTextView2: UITextView!
     @IBOutlet var valueTextView3: UITextView!
-    @IBOutlet var valueButton: UIButton!
+   
     
     @IBOutlet var doLabel: UILabel!
     @IBOutlet var doTextView1: UITextView!
     @IBOutlet var doTextView2: UITextView!
     @IBOutlet var doTextView3: UITextView!
-    @IBOutlet var doButton: UIButton!
+    
     
     @IBOutlet var youLabel: UILabel!
     @IBOutlet var youTextView1: UITextView!
     @IBOutlet var youTextView2: UITextView!
     @IBOutlet var youTextView3: UITextView!
-    @IBOutlet var youButton: UIButton!
+   
     
     @IBOutlet var saveButton: UIBarButtonItem!
     
@@ -123,41 +122,43 @@ class PTCWorksheetViewController: UIViewController {
             }
         }
     
-    @IBAction func themButtonTapped(_ sender: UIButton) {
+    @IBAction func questionMarkTapped(_ sender: UIButton) {
         
+        switch sender.tag {
+        
+        case 0:
+        
+            showAlertforQuestionMark(vc: self, title: "How to write in Remember", message: " ", buttonTitle: "Dismiss", buttonType: sender)
+             
+            break
+        case 1:
+            showAlertforQuestionMark(vc: self, title: "How to write in Remember", message: " ", buttonTitle: "Dismiss", buttonType: sender)
+            break
+        case 2:
+            showAlertforQuestionMark(vc: self, title: "How to write in Remember", message: " ", buttonTitle: "Dismiss", buttonType: sender)
+            break
+        case 3:
+            showAlertforQuestionMark(vc: self, title: "How to write in Obstacles", message: " ", buttonTitle: "Dismiss", buttonType: sender)
+            break
+        case 4:
+            showAlertforQuestionMark(vc: self, title: "How to write in Feel", message: " ", buttonTitle: "Dismiss", buttonType: sender)
+            break
+        case 5:
+            showAlertforQuestionMark(vc: self, title: "How to write in Value", message: " ", buttonTitle: "Dismiss", buttonType: sender)
+            break
+        case 6:
+            showAlertforQuestionMark(vc: self, title: "How to write in Do", message: " ", buttonTitle: "Dismiss", buttonType: sender)
+            break
+        case 7:
+            showAlertforQuestionMark(vc: self, title: "How to write in You", message: " ", buttonTitle: "Dismiss", buttonType: sender)
+            break
+            
+        default:
+            print("Ther is something wrong")
+        }
     }
 
-    @IBAction func appreciateButtonTapped(_ sender: UIButton) {
-        
-    }
-
-    @IBAction func rememberButtonTapped(_ sender: UIButton) {
-        
-    }
-
-    @IBAction func obstaclesButtonTapped(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func feelButtonTapped(_ sender: UIButton) {
-        
-    }
-
-    @IBAction func valueButtonTapped(_ sender: UIButton) {
-        
-    }
-
-    @IBAction func doButtonTapped(_ sender: UIButton) {
-        
-    }
-
-    @IBAction func youButtonTapped(_ sender: UIButton) {
-        
-    }
-
-    
-    
-    
+ 
     
 
     func writeData(title: String)  {
@@ -415,14 +416,31 @@ class PTCWorksheetViewController: UIViewController {
         Utilities.styleLabel(youLabel)
         
         //Style Buttons
-        themButton.layer.cornerRadius = 7.0
-        appreciateButton.layer.cornerRadius = 7.0
-        rememberButton.layer.cornerRadius = 7.0
-        obstaclesButton.layer.cornerRadius = 7.0
-        feelButton.layer.cornerRadius = 7.0
-        valueButton.layer.cornerRadius = 7.0
-        doButton.layer.cornerRadius = 7.0
-        youButton.layer.cornerRadius = 7.0
+//        themButton.layer.cornerRadius = 7.0
+//        appreciateButton.layer.cornerRadius = 7.0
+//        rememberButton.layer.cornerRadius = 7.0
+//        obstaclesButton.layer.cornerRadius = 7.0
+//        feelButton.layer.cornerRadius = 7.0
+//        valueButton.layer.cornerRadius = 7.0
+//        doButton.layer.cornerRadius = 7.0
+//        youButton.layer.cornerRadius = 7.0
     }
     
+}
+
+
+
+extension PTCWorksheetViewController: UIPopoverPresentationControllerDelegate {
+
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+
+    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
+
+    }
+
+    func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
+        return true
+    }
 }

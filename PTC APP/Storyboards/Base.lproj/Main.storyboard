@@ -1731,10 +1731,10 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uuz-LC-eZf">
-                                <rect key="frame" x="0.0" y="88" width="428" height="838"/>
+                                <rect key="frame" x="0.0" y="140" width="428" height="786"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwB-Ne-6zU">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1188"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1136"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date and Time Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="3j1-PF-am1">
                                                 <rect key="frame" x="8" y="5" width="412" height="25"/>
@@ -1808,7 +1808,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <state key="normal" image="questionmark.circle" catalog="system"/>
                                                                                 <connections>
-                                                                                    <action selector="themButtonTapped:" destination="YLV-FL-w6Q" eventType="touchUpInside" id="A6g-ox-DWe"/>
+                                                                                    <action selector="questionMarkTapped:" destination="YLV-FL-w6Q" eventType="touchUpInside" id="zgj-kw-c8O"/>
                                                                                 </connections>
                                                                             </button>
                                                                         </subviews>
@@ -1915,7 +1915,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnW-fV-VJ1">
+                                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnW-fV-VJ1">
                                                                                 <rect key="frame" x="169.33333333333334" y="0.0" width="34" height="34"/>
                                                                                 <color key="backgroundColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <constraints>
@@ -1924,7 +1924,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <state key="normal" image="questionmark.circle" catalog="system"/>
                                                                                 <connections>
-                                                                                    <action selector="appreciateButtonTapped:" destination="YLV-FL-w6Q" eventType="touchUpInside" id="LUC-FM-IiR"/>
+                                                                                    <action selector="questionMarkTapped:" destination="YLV-FL-w6Q" eventType="touchUpInside" id="VEg-dU-Nra"/>
                                                                                 </connections>
                                                                             </button>
                                                                         </subviews>
@@ -2033,7 +2033,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68i-uN-PGR">
+                                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68i-uN-PGR">
                                                                                 <rect key="frame" x="169.66666666666666" y="0.0" width="34" height="34"/>
                                                                                 <color key="backgroundColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <constraints>
@@ -2042,7 +2042,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <state key="normal" image="questionmark.circle" catalog="system"/>
                                                                                 <connections>
-                                                                                    <action selector="rememberButtonTapped:" destination="YLV-FL-w6Q" eventType="touchUpInside" id="7Vx-j5-8TW"/>
+                                                                                    <action selector="questionMarkTapped:" destination="YLV-FL-w6Q" eventType="touchUpInside" id="84y-t2-lRM"/>
                                                                                 </connections>
                                                                             </button>
                                                                         </subviews>
@@ -2146,7 +2146,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pg-tn-7wW">
+                                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pg-tn-7wW">
                                                                                 <rect key="frame" x="169.33333333333334" y="0.0" width="34" height="34"/>
                                                                                 <color key="backgroundColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <constraints>
@@ -2155,7 +2155,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <state key="normal" image="questionmark.circle" catalog="system"/>
                                                                                 <connections>
-                                                                                    <action selector="obstaclesButtonTapped:" destination="YLV-FL-w6Q" eventType="touchUpInside" id="jD3-t1-Buq"/>
+                                                                                    <action selector="questionMarkTapped:" destination="YLV-FL-w6Q" eventType="touchUpInside" id="4eq-BW-XKK"/>
                                                                                 </connections>
                                                                             </button>
                                                                         </subviews>
@@ -2264,7 +2264,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRw-uS-IGQ">
+                                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRw-uS-IGQ">
                                                                                 <rect key="frame" x="169.66666666666666" y="0.0" width="34" height="34"/>
                                                                                 <color key="backgroundColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <constraints>
@@ -2273,7 +2273,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <state key="normal" image="questionmark.circle" catalog="system"/>
                                                                                 <connections>
-                                                                                    <action selector="feelButtonTapped:" destination="YLV-FL-w6Q" eventType="touchUpInside" id="Okj-rM-4Ah"/>
+                                                                                    <action selector="questionMarkTapped:" destination="YLV-FL-w6Q" eventType="touchUpInside" id="lDd-Cx-7xa"/>
                                                                                 </connections>
                                                                             </button>
                                                                         </subviews>
@@ -2377,7 +2377,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-gc-JHg">
+                                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-gc-JHg">
                                                                                 <rect key="frame" x="169.33333333333334" y="0.0" width="34" height="34"/>
                                                                                 <color key="backgroundColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <constraints>
@@ -2386,7 +2386,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <state key="normal" image="questionmark.circle" catalog="system"/>
                                                                                 <connections>
-                                                                                    <action selector="valueButtonTapped:" destination="YLV-FL-w6Q" eventType="touchUpInside" id="ux1-9P-MKH"/>
+                                                                                    <action selector="questionMarkTapped:" destination="YLV-FL-w6Q" eventType="touchUpInside" id="SMq-sl-XDB"/>
                                                                                 </connections>
                                                                             </button>
                                                                         </subviews>
@@ -2495,7 +2495,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bw-Hh-AiG">
+                                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bw-Hh-AiG">
                                                                                 <rect key="frame" x="169.66666666666666" y="0.0" width="34" height="34"/>
                                                                                 <color key="backgroundColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <constraints>
@@ -2504,7 +2504,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <state key="normal" image="questionmark.circle" catalog="system"/>
                                                                                 <connections>
-                                                                                    <action selector="doButtonTapped:" destination="YLV-FL-w6Q" eventType="touchUpInside" id="LOD-gL-eLr"/>
+                                                                                    <action selector="questionMarkTapped:" destination="YLV-FL-w6Q" eventType="touchUpInside" id="R9w-g2-lR1"/>
                                                                                 </connections>
                                                                             </button>
                                                                         </subviews>
@@ -2608,7 +2608,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7PA-rA-b6K">
+                                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7PA-rA-b6K">
                                                                                 <rect key="frame" x="169.33333333333334" y="0.0" width="34" height="34"/>
                                                                                 <color key="backgroundColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <constraints>
@@ -2617,7 +2617,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <state key="normal" image="questionmark.circle" catalog="system"/>
                                                                                 <connections>
-                                                                                    <action selector="youButtonTapped:" destination="YLV-FL-w6Q" eventType="touchUpInside" id="oxx-qI-Rxw"/>
+                                                                                    <action selector="questionMarkTapped:" destination="YLV-FL-w6Q" eventType="touchUpInside" id="CS2-8u-55t"/>
                                                                                 </connections>
                                                                             </button>
                                                                         </subviews>
@@ -2744,7 +2744,6 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="appreciateButton" destination="wnW-fV-VJ1" id="rsq-Xg-qhc"/>
                         <outlet property="appreciateLabel" destination="aLf-09-Xnt" id="6hP-Aj-Wyh"/>
                         <outlet property="appreciateTextView1" destination="rsM-F9-lU4" id="Chc-kx-kJf"/>
                         <outlet property="appreciateTextView2" destination="hZX-bB-fuN" id="Wd6-zf-zZS"/>
@@ -2752,38 +2751,31 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                         <outlet property="communicationSituationLabel" destination="r6F-xG-qa6" id="lKx-ul-sZy"/>
                         <outlet property="communicationSituationTextField" destination="IGx-zK-zu3" id="dPA-LL-l7l"/>
                         <outlet property="dateAndTimeLabel" destination="3j1-PF-am1" id="gbS-gn-qOq"/>
-                        <outlet property="doButton" destination="2bw-Hh-AiG" id="FlL-Bh-xDj"/>
                         <outlet property="doLabel" destination="Yui-y6-PM6" id="b6W-7a-l1J"/>
                         <outlet property="doTextView1" destination="5bs-2C-lfw" id="hSI-qV-aA5"/>
                         <outlet property="doTextView2" destination="8rE-np-P7n" id="Gao-C4-szh"/>
                         <outlet property="doTextView3" destination="syQ-mk-kMv" id="DQU-xY-vbL"/>
-                        <outlet property="feelButton" destination="YRw-uS-IGQ" id="ezM-ZI-OgJ"/>
                         <outlet property="feelLabel" destination="XJN-A9-wJJ" id="g0Z-4a-REN"/>
                         <outlet property="feelTextView1" destination="bXJ-qh-2id" id="HZ4-Zn-ziF"/>
                         <outlet property="feelTextView2" destination="pLg-Ua-sae" id="HkN-32-FuD"/>
                         <outlet property="feelTextView3" destination="8ah-iK-cpf" id="hOW-kG-O7h"/>
-                        <outlet property="obstaclesButton" destination="0pg-tn-7wW" id="vhM-bb-4GH"/>
                         <outlet property="obstaclesLabel" destination="vkx-TU-lev" id="3tR-TH-4Nk"/>
                         <outlet property="obstaclesTextView1" destination="hIE-c7-Khc" id="o4T-VC-YKm"/>
                         <outlet property="obstaclesTextView2" destination="CxE-hb-e1X" id="z5w-WT-uM7"/>
                         <outlet property="obstaclesTextView3" destination="RkQ-a3-XuN" id="gZZ-BA-PYj"/>
-                        <outlet property="rememberButton" destination="68i-uN-PGR" id="s1g-1Y-xxB"/>
                         <outlet property="rememberLabel" destination="Owz-O4-fqB" id="9yY-it-kVI"/>
                         <outlet property="rememberTextView1" destination="0xS-79-7IL" id="YBG-1R-x5S"/>
                         <outlet property="rememberTextView2" destination="GYo-DK-j4Q" id="K3h-QU-7eW"/>
                         <outlet property="rememberTextView3" destination="maU-nC-hTk" id="Pc3-Qa-SMV"/>
                         <outlet property="saveButton" destination="lFE-hX-hvV" id="jnM-j8-gsn"/>
-                        <outlet property="themButton" destination="axq-DG-Kea" id="JSk-lo-jnz"/>
                         <outlet property="themLabel" destination="KaJ-GW-DVh" id="Ui8-Lr-oVw"/>
                         <outlet property="themTextView1" destination="dnZ-K3-7wG" id="QEH-lA-XNe"/>
                         <outlet property="themTextView2" destination="2Dl-Gr-Qrf" id="iuW-id-Stv"/>
                         <outlet property="themTextView3" destination="ndg-px-78z" id="3ug-SX-Guz"/>
-                        <outlet property="valueButton" destination="yEe-gc-JHg" id="1Pv-Ny-szE"/>
                         <outlet property="valueLabel" destination="FwP-df-xMf" id="jOt-M5-SZt"/>
                         <outlet property="valueTextView1" destination="ccm-iT-xfl" id="KJW-1J-w5D"/>
                         <outlet property="valueTextView2" destination="YFa-Ta-xSG" id="qkT-or-DpP"/>
                         <outlet property="valueTextView3" destination="jmn-by-eAK" id="3ka-BC-JtO"/>
-                        <outlet property="youButton" destination="7PA-rA-b6K" id="Zti-xo-Bim"/>
                         <outlet property="youLabel" destination="P89-1J-Pqy" id="750-Zt-Hrj"/>
                         <outlet property="youTextView1" destination="kGu-D5-GJg" id="wFC-4i-mhU"/>
                         <outlet property="youTextView2" destination="BMP-O7-tVM" id="Kvd-aA-fcu"/>
@@ -2793,6 +2785,41 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygu-2W-YYX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1637" y="1289"/>
+        </scene>
+        <!--New Paste Option View Controller-->
+        <scene sceneID="Atz-r6-xOW">
+            <objects>
+                <viewController storyboardIdentifier="PopoverContentController" id="8IV-g8-Q7p" customClass="NewPasteOptionViewController" customModule="PTC_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fQx-q7-Wqi">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H2P-pf-Du3">
+                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pPG-50-4yz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H2P-pf-Du3" firstAttribute="leading" secondItem="pPG-50-4yz" secondAttribute="leading" id="Dsd-GA-ctN"/>
+                            <constraint firstItem="H2P-pf-Du3" firstAttribute="top" secondItem="pPG-50-4yz" secondAttribute="top" id="FwK-AR-mSv"/>
+                            <constraint firstItem="pPG-50-4yz" firstAttribute="bottom" secondItem="H2P-pf-Du3" secondAttribute="bottom" id="IxT-E1-RRR"/>
+                            <constraint firstItem="pPG-50-4yz" firstAttribute="trailing" secondItem="H2P-pf-Du3" secondAttribute="trailing" id="g8s-f4-4Lz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Rkd-Ti-mR6"/>
+                    <connections>
+                        <outlet property="textview" destination="H2P-pf-Du3" id="9at-79-Rcg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mcX-ht-lBA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2381.7757009345792" y="1288.7688984881211"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -2835,6 +2862,9 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
         <namedColor name="BrandRedColor">
             <color red="0.90980392156862744" green="0.31764705882352939" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
