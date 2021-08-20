@@ -122,6 +122,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A53F02526D0423700593442 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				26B3504526BE3A940038A5E2 /* Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		1A66AEF826C2C5EB002BB556 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,7 +171,6 @@
 		260FA9F926BCFF530088184B /* Login VCs */ = {
 			isa = PBXGroup;
 			children = (
-				26B3504526BE3A940038A5E2 /* Extension.swift */,
 				E162574123E3304B00E84948 /* LoginViewController.swift */,
 				E15B0BAF23E9FA2B0014DBA1 /* SignUpViewController.swift */,
 				2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */,
@@ -245,6 +252,7 @@
 		E162573C23E3304B00E84948 /* PTC APP */ = {
 			isa = PBXGroup;
 			children = (
+				1A53F02526D0423700593442 /* Extension */,
 				1A66AEF826C2C5EB002BB556 /* Modal */,
 				E162573D23E3304B00E84948 /* AppDelegate.swift */,
 				E162573F23E3304B00E84948 /* SceneDelegate.swift */,
