@@ -1414,10 +1414,10 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uuz-LC-eZf">
-                                <rect key="frame" x="0.0" y="88" width="428" height="838"/>
+                                <rect key="frame" x="0.0" y="140" width="428" height="786"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwB-Ne-6zU">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1188"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1136"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date and Time Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="3j1-PF-am1">
                                                 <rect key="frame" x="8" y="5" width="412" height="25"/>
@@ -1433,7 +1433,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Communication Situation " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="r6F-xG-qa6">
                                                         <rect key="frame" x="0.0" y="0.0" width="203.66666666666666" height="34"/>
-                                                        <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" name="purple"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="Nw6-Lm-7s1"/>
                                                         </constraints>
@@ -1446,7 +1446,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                         <color key="tintColor" name="BrandColor"/>
                                                         <color key="textColor" name="BrandBlueColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -1464,7 +1464,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDU-yW-kfd">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="34"/>
-                                                                                <color key="backgroundColor" name="BrandPurpleColor"/>
+                                                                                <color key="backgroundColor" red="0.15686274509803921" green="0.062745098039215685" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="15" id="PxC-eV-8Uj"/>
                                                                                 </constraints>
@@ -1474,7 +1474,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Them" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KaJ-GW-DVh">
                                                                                 <rect key="frame" x="17" y="0.0" width="150.66666666666666" height="34"/>
-                                                                                <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="backgroundColor" name="purple"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="LxX-ZF-gOw"/>
                                                                                 </constraints>
@@ -1580,7 +1580,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8X-Tw-t3v">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="34"/>
-                                                                                <color key="backgroundColor" name="BrandPurpleColor"/>
+                                                                                <color key="backgroundColor" red="0.15686274509803921" green="0.062745098039215685" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="15" id="qun-4e-2cz"/>
                                                                                 </constraints>
@@ -1590,7 +1590,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appreciate" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="aLf-09-Xnt">
                                                                                 <rect key="frame" x="17" y="0.0" width="150.33333333333334" height="34"/>
-                                                                                <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="backgroundColor" name="purple"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="FyR-Us-9WY"/>
                                                                                 </constraints>
@@ -1698,7 +1698,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BG7-X5-hH0">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="34"/>
-                                                                                <color key="backgroundColor" name="BrandPurpleColor"/>
+                                                                                <color key="backgroundColor" red="0.15686274509803921" green="0.062745098039215685" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="15" id="S9s-4J-Ate"/>
                                                                                 </constraints>
@@ -1708,7 +1708,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Owz-O4-fqB">
                                                                                 <rect key="frame" x="17" y="0.0" width="150.66666666666666" height="34"/>
-                                                                                <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="backgroundColor" name="purple"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="unn-D5-T0y"/>
                                                                                 </constraints>
@@ -1811,7 +1811,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VT2-0G-oPr">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="34"/>
-                                                                                <color key="backgroundColor" name="BrandPurpleColor"/>
+                                                                                <color key="backgroundColor" red="0.15686274509803921" green="0.062745098039215685" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="15" id="Jat-6N-rG2"/>
                                                                                 </constraints>
@@ -1821,7 +1821,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Obstacles" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vkx-TU-lev">
                                                                                 <rect key="frame" x="17" y="0.0" width="150.33333333333334" height="34"/>
-                                                                                <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="backgroundColor" name="purple"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="bmr-Wm-HQr"/>
                                                                                 </constraints>
@@ -1939,7 +1939,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="XJN-A9-wJJ">
                                                                                 <rect key="frame" x="17" y="0.0" width="150.66666666666666" height="34"/>
-                                                                                <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="backgroundColor" name="purple"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="A9h-RF-s60"/>
                                                                                 </constraints>
@@ -2042,7 +2042,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd1-8z-N5E">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="34"/>
-                                                                                <color key="backgroundColor" name="BrandPurpleColor"/>
+                                                                                <color key="backgroundColor" red="0.15686274509803921" green="0.062745098039215685" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="15" id="8mV-ad-MZx"/>
                                                                                 </constraints>
@@ -2052,7 +2052,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="FwP-df-xMf">
                                                                                 <rect key="frame" x="17" y="0.0" width="150.33333333333334" height="34"/>
-                                                                                <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="backgroundColor" name="purple"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="JeP-TV-Wqy"/>
                                                                                 </constraints>
@@ -2160,7 +2160,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZP-Hj-6W0">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="34"/>
-                                                                                <color key="backgroundColor" name="BrandPurpleColor"/>
+                                                                                <color key="backgroundColor" red="0.15686274509803921" green="0.062745098039215685" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="15" id="jnh-2F-W91"/>
                                                                                 </constraints>
@@ -2170,7 +2170,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Yui-y6-PM6">
                                                                                 <rect key="frame" x="17" y="0.0" width="150.66666666666666" height="34"/>
-                                                                                <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="backgroundColor" name="purple"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="Fkh-hC-hf7"/>
                                                                                 </constraints>
@@ -2273,7 +2273,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdT-WW-gDI">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="34"/>
-                                                                                <color key="backgroundColor" name="BrandPurpleColor"/>
+                                                                                <color key="backgroundColor" red="0.15686274509803921" green="0.062745098039215685" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="15" id="eRY-9R-nhy"/>
                                                                                 </constraints>
@@ -2283,7 +2283,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="P89-1J-Pqy">
                                                                                 <rect key="frame" x="17" y="0.0" width="150.33333333333334" height="34"/>
-                                                                                <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="backgroundColor" name="purple"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="34" id="FN7-pS-FTW"/>
                                                                                 </constraints>
@@ -2477,27 +2477,47 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H2P-pf-Du3">
-                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mt-gc-52M">
+                                <rect key="frame" x="0.0" y="53.999999999999993" width="428" height="21.666666666666664"/>
+                                <color key="backgroundColor" name="purple"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DD3-gQ-ITe">
+                                <rect key="frame" x="0.0" y="80.666666666666686" width="428" height="811.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="instructionsCell" id="8Bp-bv-bQO">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Bp-bv-bQO" id="pNN-lo-2Vi">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8IV-g8-Q7p" id="nt0-bZ-tZr"/>
+                                    <outlet property="delegate" destination="8IV-g8-Q7p" id="7vi-Wy-rVC"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pPG-50-4yz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="H2P-pf-Du3" firstAttribute="leading" secondItem="pPG-50-4yz" secondAttribute="leading" id="Dsd-GA-ctN"/>
-                            <constraint firstItem="H2P-pf-Du3" firstAttribute="top" secondItem="pPG-50-4yz" secondAttribute="top" id="FwK-AR-mSv"/>
-                            <constraint firstItem="pPG-50-4yz" firstAttribute="bottom" secondItem="H2P-pf-Du3" secondAttribute="bottom" id="IxT-E1-RRR"/>
-                            <constraint firstItem="pPG-50-4yz" firstAttribute="trailing" secondItem="H2P-pf-Du3" secondAttribute="trailing" id="g8s-f4-4Lz"/>
+                            <constraint firstItem="DD3-gQ-ITe" firstAttribute="leading" secondItem="pPG-50-4yz" secondAttribute="leading" id="OgC-iv-Abj"/>
+                            <constraint firstItem="pPG-50-4yz" firstAttribute="trailing" secondItem="5mt-gc-52M" secondAttribute="trailing" id="YEp-Mn-Nlw"/>
+                            <constraint firstItem="DD3-gQ-ITe" firstAttribute="top" secondItem="5mt-gc-52M" secondAttribute="bottom" constant="5" id="cbR-WQ-kFI"/>
+                            <constraint firstItem="5mt-gc-52M" firstAttribute="leading" secondItem="pPG-50-4yz" secondAttribute="leading" id="dzP-lT-mTT"/>
+                            <constraint firstItem="DD3-gQ-ITe" firstAttribute="trailing" secondItem="pPG-50-4yz" secondAttribute="trailing" id="nhq-q4-L4b"/>
+                            <constraint firstItem="DD3-gQ-ITe" firstAttribute="bottom" secondItem="pPG-50-4yz" secondAttribute="bottom" id="rpl-7X-RDr"/>
+                            <constraint firstItem="5mt-gc-52M" firstAttribute="top" secondItem="pPG-50-4yz" secondAttribute="top" constant="10" id="wlE-s5-9Rf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Rkd-Ti-mR6"/>
                     <connections>
-                        <outlet property="textview" destination="H2P-pf-Du3" id="9at-79-Rcg"/>
+                        <outlet property="label" destination="5mt-gc-52M" id="das-nj-eTs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcX-ht-lBA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2545,9 +2565,9 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
         <namedColor name="BrandRedColor">
             <color red="0.90980392156862744" green="0.31764705882352939" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="purple">
+            <color red="0.15686274509803921" green="0.062745098039215685" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

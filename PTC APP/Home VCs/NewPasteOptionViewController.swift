@@ -8,10 +8,13 @@
 
 import UIKit
 
-class NewPasteOptionViewController: UIViewController {
+class NewPasteOptionViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
-    @IBOutlet weak var textview: UITextView!
-    var message : String?
+
+    @IBOutlet weak var label: UILabel!
+
+    var message : [String]?
+    var labelName: String?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.preferredContentSize = CGSize(width:200, height:200) // IMPORTANT
@@ -25,7 +28,9 @@ class NewPasteOptionViewController: UIViewController {
            self.view.layer.shadowOpacity = 0.5
            self.view.layer.shadowRadius = 20
         // Do any additional setup after loading the view.
-        textview.text = message ?? "hello"
+        
+        label.text = labelName ?? "label"
+        
     }
     
 
@@ -38,5 +43,17 @@ class NewPasteOptionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return message?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "instructionsCell", for: indexPath)
+        cell.textLabel?.font = UIFont(name: "system", size: 12.0)
+        cell.textLabel?.text = message![indexPath.row]
+        
+        return cell
+    }
+    
 
 }

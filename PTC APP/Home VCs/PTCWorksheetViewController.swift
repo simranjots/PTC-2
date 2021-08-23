@@ -128,29 +128,29 @@ class PTCWorksheetViewController: UIViewController {
         
         case 0:
         
-            showAlertforQuestionMark(vc: self, title: "How to write in Remember", message: " ", buttonTitle: "Dismiss", buttonType: sender)
+            showAlertforQuestionMark(vc: self, title: "Them", message: Instructions.them(), buttonTitle: "Dismiss", buttonType: sender)
              
             break
         case 1:
-            showAlertforQuestionMark(vc: self, title: "How to write in Remember", message: " ", buttonTitle: "Dismiss", buttonType: sender)
+            showAlertforQuestionMark(vc: self, title: "Appreciate", message: Instructions.appreciate(), buttonTitle: "Dismiss", buttonType: sender)
             break
         case 2:
-            showAlertforQuestionMark(vc: self, title: "How to write in Remember", message: " ", buttonTitle: "Dismiss", buttonType: sender)
+            showAlertforQuestionMark(vc: self, title: "Remember", message: Instructions.remember(), buttonTitle: "Dismiss", buttonType: sender)
             break
         case 3:
-            showAlertforQuestionMark(vc: self, title: "How to write in Obstacles", message: " ", buttonTitle: "Dismiss", buttonType: sender)
+            showAlertforQuestionMark(vc: self, title: "Obstacles", message: Instructions.obstacles(), buttonTitle: "Dismiss", buttonType: sender)
             break
         case 4:
-            showAlertforQuestionMark(vc: self, title: "How to write in Feel", message: " ", buttonTitle: "Dismiss", buttonType: sender)
+            showAlertforQuestionMark(vc: self, title: "Feel", message: Instructions.feel(), buttonTitle: "Dismiss", buttonType: sender)
             break
         case 5:
-            showAlertforQuestionMark(vc: self, title: "How to write in Value", message: " ", buttonTitle: "Dismiss", buttonType: sender)
+            showAlertforQuestionMark(vc: self, title: "Value", message: Instructions.values(), buttonTitle: "Dismiss", buttonType: sender)
             break
         case 6:
-            showAlertforQuestionMark(vc: self, title: "How to write in Do", message: " ", buttonTitle: "Dismiss", buttonType: sender)
+            showAlertforQuestionMark(vc: self, title: "Do", message: Instructions.Do(), buttonTitle: "Dismiss", buttonType: sender)
             break
         case 7:
-            showAlertforQuestionMark(vc: self, title: "How to write in You", message: " ", buttonTitle: "Dismiss", buttonType: sender)
+            showAlertforQuestionMark(vc: self, title: "You", message: Instructions.you(), buttonTitle: "Dismiss", buttonType: sender)
             break
             
         default:
@@ -369,6 +369,7 @@ class PTCWorksheetViewController: UIViewController {
         youTextView1.isEditable = false
         youTextView2.isEditable = false
         youTextView3.isEditable = false
+        
     }
     
     func styleElements() {

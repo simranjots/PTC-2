@@ -200,7 +200,7 @@ extension UIViewController {
         self.present(alert, animated: true, completion: nil)
         
     }
-    func showAlertforQuestionMark(vc: UIPopoverPresentationControllerDelegate,title:String, message: String, buttonTitle: String,buttonType: UIButton) {
+    func showAlertforQuestionMark(vc: UIPopoverPresentationControllerDelegate,title:String, message: [String], buttonTitle: String,buttonType: UIButton) {
         
         // get a reference to the view controller for the popover
                 let popController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PopoverContentController") as? NewPasteOptionViewController
@@ -214,7 +214,8 @@ extension UIViewController {
         popController?.popoverPresentationController?.sourceView = buttonType // button
         popController?.popoverPresentationController?.sourceRect = buttonType.bounds
      
-        popController?.message = title
+        popController?.message = message
+        popController?.labelName = title
                 // present the popover
         self.present(popController!, animated: true, completion: nil)
         

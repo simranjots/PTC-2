@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A53F02426CF86D600593442 /* NewPasteOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A53F02326CF86D600593442 /* NewPasteOptionViewController.swift */; };
+		1A53F02726D43D3400593442 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A53F02626D43D3400593442 /* Instructions.swift */; };
 		1A66AEEF26BDE4F7002BB556 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1A66AEEE26BDE4F7002BB556 /* Realm */; };
 		1A66AEF126BDE4F7002BB556 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1A66AEF026BDE4F7002BB556 /* RealmSwift */; };
 		1A66AEF326BDE532002BB556 /* SituationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A66AEF226BDE532002BB556 /* SituationData.swift */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		035C471E8BC5E8721724FA53 /* Pods-PTC APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTC APP.release.xcconfig"; path = "Target Support Files/Pods-PTC APP/Pods-PTC APP.release.xcconfig"; sourceTree = "<group>"; };
 		1A53F02326CF86D600593442 /* NewPasteOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasteOptionViewController.swift; sourceTree = "<group>"; };
+		1A53F02626D43D3400593442 /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Instructions.swift; path = "PTC APP/helpers/Instructions.swift"; sourceTree = SOURCE_ROOT; };
 		1A66AEF226BDE532002BB556 /* SituationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SituationData.swift; sourceTree = "<group>"; };
 		1A66AEF926C2C61F002BB556 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		1A66AEFB26C2C994002BB556 /* UserModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModal.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			children = (
 				26B3504726BE43AD0038A5E2 /* Utilities.swift */,
 				263C866726BA453300012F55 /* Constants.swift */,
+				1A53F02626D43D3400593442 /* Instructions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				263C866826BA453300012F55 /* Constants.swift in Sources */,
 				E159DD3F24185C2E00C4433F /* video.swift in Sources */,
 				1A53F02426CF86D600593442 /* NewPasteOptionViewController.swift in Sources */,
+				1A53F02726D43D3400593442 /* Instructions.swift in Sources */,
 				26C2FDCE26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift in Sources */,
 				2639EB1D26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift in Sources */,
 				260FA9EE26BCCE8D0088184B /* InstructionsViewController.swift in Sources */,
