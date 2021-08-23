@@ -405,15 +405,15 @@ class PTCWorksheetViewController: UIViewController {
         Utilities.addBottomLineToTextView(youTextView3)
         
         //Style Labels
-        Utilities.styleLabel(communicationSituationLabel)
-        Utilities.styleLabel(themLabel)
-        Utilities.styleLabel(appreciateLabel)
-        Utilities.styleLabel(rememberLabel)
-        Utilities.styleLabel(obstaclesLabel)
-        Utilities.styleLabel(feelLabel)
-        Utilities.styleLabel(valueLabel)
-        Utilities.styleLabel(doLabel)
-        Utilities.styleLabel(youLabel)
+   //     Utilities.styleLabel(communicationSituationLabel)
+//        Utilities.styleLabel(themLabel)
+//        Utilities.styleLabel(appreciateLabel)
+//        Utilities.styleLabel(rememberLabel)
+//        Utilities.styleLabel(obstaclesLabel)
+//        Utilities.styleLabel(feelLabel)
+//        Utilities.styleLabel(valueLabel)
+//        Utilities.styleLabel(doLabel)
+//        Utilities.styleLabel(youLabel)
         
         //Style Buttons
 //        themButton.layer.cornerRadius = 7.0
