@@ -8,7 +8,9 @@
 
 import UIKit
 
-class InstructionsViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+
+class InstructionsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+
     
     //MARK: - IBOutlet
     @IBOutlet var instructionCollectionView: UICollectionView!
@@ -18,8 +20,10 @@ class InstructionsViewController: UIViewController,UICollectionViewDelegate,UICo
     
     //Images Array
     let collectionViewImages = ["1", "2", "3"]
-    // MARK: - Properties
-      var currentPage = 0
+
+    var currentPage = 0
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,8 +55,6 @@ class InstructionsViewController: UIViewController,UICollectionViewDelegate,UICo
     }
 
     
-    //MARK: - Datasource and Delegate Methods
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collectionViewImages.count
     }
@@ -74,10 +76,13 @@ class InstructionsViewController: UIViewController,UICollectionViewDelegate,UICo
         
         return cell
     }
+
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let pageWidth = scrollView.frame.width
-        self.currentPage = Int((scrollView.contentOffset.x + pageWidth / 2) / pageWidth)
-        self.pageControl.currentPage = self.currentPage
-    }
-   
+            let pageWidth = scrollView.frame.width
+            self.currentPage = Int((scrollView.contentOffset.x + pageWidth / 2) / pageWidth)
+            self.pageControl.currentPage = self.currentPage
+        }
+    
+
 }
