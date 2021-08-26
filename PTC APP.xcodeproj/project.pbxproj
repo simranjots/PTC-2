@@ -139,8 +139,8 @@
 			children = (
 				1A66AEF926C2C61F002BB556 /* CurrentUser.swift */,
 				1A66AEF226BDE532002BB556 /* SituationData.swift */,
-				1A66AEFB26C2C994002BB556 /* UserModal.swift */,
 				26B3504726BE43AD0038A5E2 /* Utilities.swift */,
+				1A66AEFB26C2C994002BB556 /* UserModal.swift */,
 				263C866726BA453300012F55 /* Constants.swift */,
 			);
 			path = Modal;
