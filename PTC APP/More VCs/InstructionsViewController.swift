@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InstructionsViewController: UIViewController {
+class InstructionsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     //MARK: - IBOutlet
     @IBOutlet var instructionCollectionView: UICollectionView!
@@ -18,6 +18,7 @@ class InstructionsViewController: UIViewController {
     
     //Images Array
     let collectionViewImages = ["1", "2", "3"]
+    var currentPage = 0
     
     
     override func viewDidLoad() {
@@ -48,9 +49,6 @@ class InstructionsViewController: UIViewController {
         pageControl.currentPage = nextIndex
         instructionCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
-}
-
-extension InstructionsViewController: UICollectionViewDataSource {
     
     //MARK: - Datasource and Delegate Methods
     
@@ -75,13 +73,12 @@ extension InstructionsViewController: UICollectionViewDataSource {
         
         return cell
     }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+            let pageWidth = scrollView.frame.width
+            self.currentPage = Int((scrollView.contentOffset.x + pageWidth / 2) / pageWidth)
+            self.pageControl.currentPage = self.currentPage
+        }
     
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-//        let x = targetContentOffset.pointee.x
-//        pageControl.currentPage = Int(x / instructionCollectionView.frame.width)
-        
-        let xCoordinate = targetContentOffset.pointee.x
-        let pageNumber = xCoordinate / scrollView.frame.width
-        pageControl.currentPage = Int(pageNumber)
-    }
+    
 }
