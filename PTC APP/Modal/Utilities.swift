@@ -177,7 +177,7 @@ class Utilities {
     
     static func isStringValid(_ charString: String) -> Bool {
         
-        let testString = NSPredicate(format:"SELF MATCHES %@", ".*[^A-Za-z ].*")
+        let testString = NSPredicate(format:"SELF MATCHES %@", ".*[^A-Za-z. ].*")
         return testString.evaluate(with: charString)
     }
     

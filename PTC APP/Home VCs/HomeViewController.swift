@@ -127,6 +127,7 @@ class HomeViewController: UIViewController {
             swipedView.isHidden = true
             self.navigationItem.largeTitleDisplayMode = .automatic
             mainTableView.isUserInteractionEnabled = true
+            isSideViewOpened = false
         }
     }
     
@@ -226,6 +227,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 menubarView.isHidden = true
                 menubarTableView.isHidden = true
                 isSideViewOpened = false
+                mainTableView.isUserInteractionEnabled = true
                 self.navigationItem.largeTitleDisplayMode = .always
                 
                 break
@@ -247,7 +249,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 break
                 
             case "Sign Out":
-                print("Sign Out")
                 if (userObject != nil) {
     
                     let resultFlag = currentUser.updateLoginStatus(status: false, email: (userObject?.email)!)
