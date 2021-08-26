@@ -8,7 +8,9 @@
 
 import UIKit
 
+
 class InstructionsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+
     
     //MARK: - IBOutlet
     @IBOutlet var instructionCollectionView: UICollectionView!
@@ -18,16 +20,18 @@ class InstructionsViewController: UIViewController, UICollectionViewDelegate, UI
     
     //Images Array
     let collectionViewImages = ["1", "2", "3"]
+
     var currentPage = 0
     
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Utilities.addShadowToButton(previousButtonOutlet)
         Utilities.addShadowToButton(nextButtonOutlet)
-        
-        pageControl.numberOfPages = collectionViewImages.count
         pageControl.currentPage = 0
+        pageControl.numberOfPages = collectionViewImages.count
+      
         
         //pageControl.isHidden = true
         
@@ -49,8 +53,7 @@ class InstructionsViewController: UIViewController, UICollectionViewDelegate, UI
         pageControl.currentPage = nextIndex
         instructionCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
-    
-    //MARK: - Datasource and Delegate Methods
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collectionViewImages.count
@@ -74,11 +77,12 @@ class InstructionsViewController: UIViewController, UICollectionViewDelegate, UI
         return cell
     }
 
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
             let pageWidth = scrollView.frame.width
             self.currentPage = Int((scrollView.contentOffset.x + pageWidth / 2) / pageWidth)
             self.pageControl.currentPage = self.currentPage
         }
     
-    
+
 }
