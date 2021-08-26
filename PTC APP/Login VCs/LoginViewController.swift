@@ -229,7 +229,7 @@ class LoginViewController: UIViewController {
         
         
         //Add color to textField Image
-        textFieldImageView.tintColor = UIColor(named: "BrandColor")
+        textFieldImageView.tintColor = UIColor(named: Constants.Colors.brandColor)
         
         //Add Tap Gesture
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(eyeImageTapped(tapGestureRecognizer: )))

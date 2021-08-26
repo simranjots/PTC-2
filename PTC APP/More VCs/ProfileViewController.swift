@@ -55,7 +55,7 @@ class ProfileViewController: UIViewController {
         //Style ImageView
         profileImageView.layer.cornerRadius = 60
         profileImageView.layer.borderWidth = 3
-        profileImageView.layer.borderColor = Utilities.secondaryTextColor.cgColor
+        profileImageView.layer.borderColor = Utilities.brandRedColor.cgColor
         
         //Style Button
         Utilities.styleButton(updateProfileButtonOutlet)
@@ -167,7 +167,7 @@ class ProfileViewController: UIViewController {
         
         
         //Add color to textField Image
-        textFieldImageView.tintColor = UIColor(named: "BrandColor")
+        textFieldImageView.tintColor = UIColor(named: Constants.Colors.brandColor)
         
         //Add Tap Gesture
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(eyeImageTapped(tapGestureRecognizer: )))

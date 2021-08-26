@@ -201,7 +201,7 @@
                         <outlet property="passWordTextField" destination="kee-eN-Xie" id="oRX-Wh-vLG"/>
                         <outlet property="signInButtonOutlet" destination="gMH-D2-F6U" id="jAy-Mu-5bX"/>
                         <outlet property="tagLineLabel" destination="M8g-3F-bJt" id="CoT-uV-Qlm"/>
-                        <segue destination="aDZ-b1-ky8" kind="show" identifier="navigateToHome" id="Pjb-sT-qN8"/>
+                        <segue destination="UyD-sb-iVC" kind="show" identifier="navigateToHome" id="r2l-ME-5ZM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -285,13 +285,14 @@
             <point key="canvasLocation" x="45" y="-229"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="m5Y-mj-UFm">
+        <scene sceneID="Ctn-kV-607">
             <objects>
-                <navigationController storyboardIdentifier="HomeVC" modalPresentationStyle="fullScreen" id="aDZ-b1-ky8" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="ejt-uw-b1S"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="KM3-0E-8x7">
+                <navigationController storyboardIdentifier="HomeVC" modalPresentationStyle="fullScreen" id="UyD-sb-iVC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="VV4-D7-PxF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2Dj-TK-rQi">
                         <rect key="frame" x="0.0" y="44" width="428" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="BrandBlueColor"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                             <color key="textColor" name="BrandBlueColor"/>
@@ -302,12 +303,12 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="ueN-yH-roO" kind="relationship" relationship="rootViewController" id="Bxb-Ek-PRf"/>
+                        <segue destination="ueN-yH-roO" kind="relationship" relationship="rootViewController" id="ncU-vE-KC5"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JB2-Zx-N3l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZS-br-RCh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="486"/>
+            <point key="canvasLocation" x="125" y="466"/>
         </scene>
         <!--Home-->
         <scene sceneID="cPK-RY-3IR">
@@ -718,7 +719,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="fMp-8c-mJO"/>
                                                 </constraints>
-                                                <color key="textColor" name="BrandColor"/>
+                                                <color key="textColor" name="BrandRedColor"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -747,7 +748,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="PXs-5V-uPX"/>
                                                 </constraints>
-                                                <color key="textColor" name="BrandColor"/>
+                                                <color key="textColor" name="BrandRedColor"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
@@ -964,7 +965,7 @@
                                     <constraint firstAttribute="width" constant="30" id="7th-7W-kfF"/>
                                     <constraint firstAttribute="height" constant="30" id="wUt-CN-BF1"/>
                                 </constraints>
-                                <color key="tintColor" name="BrandPurpleColor"/>
+                                <color key="tintColor" name="BrandRedColor"/>
                                 <state key="normal" title="Button" image="previous"/>
                                 <connections>
                                     <action selector="previousButtonTapped:" destination="gq2-ms-KGu" eventType="touchUpInside" id="LBs-LC-K68"/>
@@ -976,7 +977,7 @@
                                     <constraint firstAttribute="width" constant="30" id="A3j-Nt-SsA"/>
                                     <constraint firstAttribute="height" constant="30" id="VSV-oR-cRi"/>
                                 </constraints>
-                                <color key="tintColor" name="BrandPurpleColor"/>
+                                <color key="tintColor" name="BrandRedColor"/>
                                 <state key="normal" image="next"/>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="gq2-ms-KGu" eventType="touchUpInside" id="x4Y-mX-pbx"/>
@@ -1929,7 +1930,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ol-sg-CKr">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="34"/>
-                                                                                <color key="backgroundColor" name="BrandPurpleColor"/>
+                                                                                <color key="backgroundColor" name="purple"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="15" id="rMl-Mb-V1h"/>
                                                                                 </constraints>
@@ -2475,7 +2476,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygu-2W-YYX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1637" y="1289"/>
+            <point key="canvasLocation" x="1326" y="1289"/>
         </scene>
         <!--New Paste Option View Controller-->
         <scene sceneID="Atz-r6-xOW">
@@ -2506,11 +2507,9 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="66"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cj3-MB-zMl">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cj3-MB-zMl">
                                                     <rect key="frame" x="20" y="11.000000000000004" width="388" height="49.333333333333343"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="2mq-SV-FIh"/>
-                                                    </constraints>
+                                                    <color key="tintColor" name="BrandPurpleColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" name="BrandPurpleColor"/>
                                                     <nil key="highlightedColor"/>
@@ -2565,7 +2564,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcX-ht-lBA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2381.7757009345792" y="1288.7688984881211"/>
+            <point key="canvasLocation" x="2005" y="1308"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

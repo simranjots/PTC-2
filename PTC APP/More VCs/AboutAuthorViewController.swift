@@ -20,7 +20,7 @@ class AboutAuthorViewController: UIViewController {
         
         authorImage.image = UIImage(named: "teresa")
         authorImage.layer.cornerRadius = 70
-        authorImage.layer.borderColor = Utilities.secondaryTextColor.cgColor
+        authorImage.layer.borderColor = Utilities.brandRedColor.cgColor
         authorImage.layer.borderWidth = 2
         authorNameLabel.text = "Teresa B. Easler"
         //aboutAuthorLabel.text = ""

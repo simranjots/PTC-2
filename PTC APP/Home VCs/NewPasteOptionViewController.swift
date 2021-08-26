@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewPasteOptionViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class NewPasteOptionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 
     @IBOutlet var instructionsTableView: UITableView!
@@ -20,19 +20,22 @@ class NewPasteOptionViewController: UIViewController,UITableViewDelegate,UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.preferredContentSize = CGSize(width:300, height:200) // IMPORTANT
+        self.preferredContentSize = CGSize(width:250, height:200) // IMPORTANT
 
            // REST ARE COSMETIC CHANGES
            self.view.backgroundColor = UIColor.clear
            self.view.isOpaque = true
            self.view.layer.masksToBounds = false
            self.view.layer.shadowOffset = CGSize(width: 0, height: 5)
-           self.view.layer.shadowColor = UIColor(red:0, green:0, blue:0, alpha:1).cgColor
+           self.view.layer.shadowColor = UIColor.black.cgColor
            self.view.layer.shadowOpacity = 0.5
            self.view.layer.shadowRadius = 20
-        // Do any additional setup after loading the view.
-        
+       
         label.text = labelName ?? "label"
+       
+        //Set dynamic cell height
+        instructionsTableView.estimatedRowHeight = 49.33
+        instructionsTableView.rowHeight = UITableView.automaticDimension
         
     }
     
@@ -51,11 +54,14 @@ class NewPasteOptionViewController: UIViewController,UITableViewDelegate,UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: "instructionsCell", for: indexPath) as! instuctionsTableViewCell
-
+        
+        let cell =  tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.instructionTableViewCell, for: indexPath) as! instuctionsTableViewCell
+        
         cell.instuctionLabel.text = message![indexPath.row]
+        
+        if indexPath.row == message!.count - 1  {
+            cell.instuctionLabel.textColor = UIColor(named: Constants.Colors.brandBlueColor)
+        }
         return cell
     }
-    
-
 }
