@@ -20,7 +20,7 @@ class SideMenuTableViewCell: UITableViewCell {
         
         menuIconView.layer.borderWidth = 1
         menuIconView.layer.cornerRadius = 25
-        menuIconView.layer.borderColor = Utilities.secondaryTextColor.cgColor
+        menuIconView.layer.borderColor = Utilities.brandRedColor.cgColor
         
     }
 

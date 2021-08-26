@@ -69,7 +69,7 @@ class ContactUsViewController: UIViewController, CLLocationManagerDelegate {
         Utilities.styleButton(knowMoreAboutUsButton)
         
         //Style mapView
-        mapView.layer.borderColor = Utilities.secondaryTextColor.cgColor
+        mapView.layer.borderColor = Utilities.brandRedColor.cgColor
         mapView.layer.borderWidth = 1
     }
     

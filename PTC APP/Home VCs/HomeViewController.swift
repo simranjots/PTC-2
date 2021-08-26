@@ -139,7 +139,7 @@ class HomeViewController: UIViewController {
         menubarView.layer.borderWidth = 0
         profileImageView.layer.cornerRadius = 40
         profileImageView.layer.borderWidth = 2
-        profileImageView.layer.borderColor = Utilities.secondaryTextColor.cgColor
+        profileImageView.layer.borderColor = Utilities.brandRedColor.cgColor
         
         //Add tapgesture to ProfileImage View
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(gestureFired(_:)))
