@@ -22,6 +22,7 @@ struct Constants {
         static let homeScreenMenuBarCell = "menubarTableViewCell"
         static let privacyPolicyTableViewCell = "privacyPolicyVCResudableCell"
         static let instructionCollectionViewCell = "instructionsScreenCollectionViewCell"
+        static let instructionTableViewCell = "instructionsCell"
     }
     
     //MARK: - Segue identifiers
@@ -35,5 +36,15 @@ struct Constants {
         static let homeToAboutAuthor = "navigateToAboutAuthorScreen"
         static let homeToPrivacyPolicySegue = "navigateToPrivacyPolicyScreen"
         static let homeToContactUsSegue = "navigateToContactUsScreen"
-        static let homeToSituationSegue = "situationView"    }
+        static let homeToSituationSegue = "situationView"
+    }
+    
+    struct Colors {
+        static let brandBlueColor = "BrandBlueColor"
+        static let brandPurpleColor = "BrandPurpleColor"
+        static let brandRedColor = "BrandRedColor"
+        static let brandColor = "BrandColor"
+        static let purple = "purple"
+        
+    }
 }
