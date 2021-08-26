@@ -45,7 +45,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PTC Logo 2" translatesAutoresizingMaskIntoConstraints="NO" id="PhS-bj-vIB">
-                                <rect key="frame" x="114" y="140" width="200" height="250"/>
+                                <rect key="frame" x="114" y="44" width="200" height="250"/>
                                 <color key="tintColor" name="BrandColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="EyV-rl-SZw"/>
@@ -53,7 +53,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="96L-ze-Nv3">
-                                <rect key="frame" x="0.0" y="390" width="428" height="283"/>
+                                <rect key="frame" x="0.0" y="294" width="428" height="283"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zLK-dJ-Fre">
                                         <rect key="frame" x="16" y="8" width="396" height="22"/>
@@ -315,11 +315,11 @@
             <objects>
                 <viewController storyboardIdentifier="HomeScreen" modalPresentationStyle="fullScreen" id="ueN-yH-roO" customClass="HomeViewController" customModule="PTC_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zPM-E4-ou3">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYJ-Mp-zqu" userLabel="Menubar View">
-                                <rect key="frame" x="0.0" y="140" width="320" height="786"/>
+                                <rect key="frame" x="0.0" y="108" width="320" height="764"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwu-Kt-vDu">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
@@ -338,7 +338,7 @@
                                                     <constraint firstAttribute="width" constant="20" id="4Tl-z8-nHw"/>
                                                     <constraint firstAttribute="height" constant="20" id="I67-lL-DeF"/>
                                                 </constraints>
-                                                <color key="tintColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" name="BrandPurpleColor"/>
                                                 <state key="normal" title="Button" image="edit"/>
                                                 <connections>
                                                     <action selector="profileEditButtonTapped:" destination="ueN-yH-roO" eventType="touchUpInside" id="wYU-hI-ANd"/>
@@ -392,7 +392,7 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7r8-DZ-aQb" userLabel="Menubar TableView">
-                                        <rect key="frame" x="0.0" y="102" width="320" height="684"/>
+                                        <rect key="frame" x="0.0" y="102" width="320" height="662"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menubarTableViewCell" rowHeight="70" id="de2-of-Hhs" customClass="SideMenuTableViewCell" customModule="PTC_APP" customModuleProvider="target">
@@ -483,10 +483,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q24-KQ-g6R" userLabel="Main View">
-                                <rect key="frame" x="0.0" y="140" width="428" height="786"/>
+                                <rect key="frame" x="0.0" y="108" width="428" height="764"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zoc-pA-1MG" userLabel="Main TableView">
-                                        <rect key="frame" x="0.0" y="5" width="428" height="781"/>
+                                        <rect key="frame" x="0.0" y="5" width="428" height="759"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="homeScreenMainTableViewCell" rowHeight="95" id="Kod-ok-7KF" customClass="HomeVCMainTableViewCell" customModule="PTC_APP" customModuleProvider="target">
@@ -661,11 +661,11 @@
             <objects>
                 <viewController id="egG-6v-3jz" customClass="ProfileViewController" customModule="PTC_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pnv-4K-Mbj">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="xPZ-LD-ona">
-                                <rect key="frame" x="154" y="145" width="120" height="120"/>
+                                <rect key="frame" x="154" y="113" width="120" height="120"/>
                                 <color key="tintColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="7l9-Yh-h0N">
@@ -677,7 +677,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btT-vW-WOK">
-                                <rect key="frame" x="244" y="245" width="25" height="25"/>
+                                <rect key="frame" x="244" y="213" width="25" height="25"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Jnv-Ba-Ew9">
@@ -687,14 +687,14 @@
                                         <variation key="heightClass=regular-widthClass=regular" constant="40"/>
                                     </constraint>
                                 </constraints>
-                                <color key="tintColor" name="BrandRedColor"/>
+                                <color key="tintColor" name="BrandPurpleColor"/>
                                 <state key="normal" title="Edit Button" image="camera"/>
                                 <connections>
                                     <action selector="profileImageEditButtonTapped:" destination="egG-6v-3jz" eventType="touchUpInside" id="16x-eQ-A5Q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bp-vT-Avq">
-                                <rect key="frame" x="16" y="470" width="396" height="50"/>
+                                <rect key="frame" x="16" y="438" width="396" height="50"/>
                                 <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="tjN-gE-yxZ"/>
@@ -708,7 +708,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="alF-bT-GP6">
-                                <rect key="frame" x="16" y="275" width="396" height="180"/>
+                                <rect key="frame" x="16" y="243" width="396" height="180"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IOg-2f-rel">
                                         <rect key="frame" x="0.0" y="0.0" width="396" height="50"/>
@@ -795,35 +795,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Nri-pH-Z5a">
-                                <rect key="frame" x="16" y="190" width="396" height="294"/>
+                                <rect key="frame" x="16" y="94" width="396" height="294"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="v9x-jR-qx6">
                                         <rect key="frame" x="0.0" y="0.0" width="396" height="245"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pLj-gC-Z5f">
                                                 <rect key="frame" x="0.0" y="0.0" width="396" height="50"/>
+                                                <color key="tintColor" name="BrandPurpleColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Xk1-dZ-VMU"/>
                                                 </constraints>
-                                                <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" name="BrandPurpleColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bui-QE-bY0">
                                                 <rect key="frame" x="0.0" y="65" width="396" height="50"/>
+                                                <color key="tintColor" name="BrandPurpleColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="TqG-3o-CaA"/>
                                                 </constraints>
-                                                <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" name="BrandPurpleColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBa-JE-OKN">
                                                 <rect key="frame" x="0.0" y="130" width="396" height="50"/>
+                                                <color key="tintColor" name="BrandPurpleColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="wCQ-Vc-0FH"/>
                                                 </constraints>
-                                                <color key="textColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" name="BrandPurpleColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
@@ -900,11 +903,11 @@
             <objects>
                 <viewController id="gq2-ms-KGu" customClass="InstructionsViewController" customModule="PTC_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ruS-5I-oA0">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PbL-yh-7ji">
-                                <rect key="frame" x="0.0" y="140" width="428" height="702"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PbL-yh-7ji">
+                                <rect key="frame" x="0.0" y="108" width="428" height="680"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RRV-Xe-pDJ">
                                     <size key="itemSize" width="345" height="518"/>
@@ -914,7 +917,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="instructionsScreenCollectionViewCell" id="88h-Gr-roA" customClass="InstructionsCollectionViewCell" customModule="PTC_APP" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="99.666666666666671" width="355" height="503"/>
+                                        <rect key="frame" x="0.0" y="88.666666666666671" width="355" height="503"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dGJ-TW-jAR">
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="503"/>
@@ -960,7 +963,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPK-ex-qyq">
-                                <rect key="frame" x="20" y="852" width="30" height="30"/>
+                                <rect key="frame" x="20" y="798" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="7th-7W-kfF"/>
                                     <constraint firstAttribute="height" constant="30" id="wUt-CN-BF1"/>
@@ -972,7 +975,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIz-js-Mui">
-                                <rect key="frame" x="382" y="852" width="30" height="30"/>
+                                <rect key="frame" x="382" y="798" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="A3j-Nt-SsA"/>
                                     <constraint firstAttribute="height" constant="30" id="VSV-oR-cRi"/>
@@ -984,7 +987,7 @@
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="ajd-Hr-v2M">
-                                <rect key="frame" x="135.66666666666666" y="855" width="156.99999999999997" height="27"/>
+                                <rect key="frame" x="135.66666666666666" y="801" width="156.99999999999997" height="27"/>
                                 <color key="pageIndicatorTintColor" systemColor="opaqueSeparatorColor"/>
                                 <color key="currentPageIndicatorTintColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pageControl>
@@ -1021,11 +1024,11 @@
             <objects>
                 <viewController id="OgP-fD-8hz" customClass="AboutAuthorViewController" customModule="PTC_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nXV-ku-yyC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teresa" translatesAutoresizingMaskIntoConstraints="NO" id="hX5-D2-fbP">
-                                <rect key="frame" x="144" y="145" width="140" height="140"/>
+                                <rect key="frame" x="144" y="113" width="140" height="140"/>
                                 <color key="tintColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="LqP-s9-u1F"/>
@@ -1033,7 +1036,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teresa" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="gor-rY-dhf">
-                                <rect key="frame" x="139.66666666666666" y="295" width="148.99999999999997" height="25"/>
+                                <rect key="frame" x="139.66666666666666" y="263" width="148.99999999999997" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="hBe-Bk-QIC"/>
                                     <constraint firstAttribute="width" constant="149" id="iaQ-tH-Yrm"/>
@@ -1043,13 +1046,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kle-k4-8Xh">
-                                <rect key="frame" x="0.0" y="330" width="428" height="596"/>
+                                <rect key="frame" x="0.0" y="298" width="428" height="574"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WcK-dw-V6S">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1276"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1254"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="dO0-Ik-cBY">
-                                                <rect key="frame" x="16" y="0.0" width="396" height="1276"/>
+                                                <rect key="frame" x="16" y="0.0" width="396" height="1254"/>
                                                 <string key="text">For as far back as she can remember Teresa has always been passionate about the power of good communication. In fact, it was an incident that happened in her formative years that truly shaped the trajectory of her life.
 
 When Teresa was in grade school in the late 1950s, she was punished for talking out of turn in class (I know we were shocked too!). The teacher decided that her “punishment” was to be seated next to the only African American child in the class. Teresa certainly didn’t see this as much of a punishment for herself, but even at that young age she was acutely aware of how humiliating this must have been for the other child. That incident was the beginning of her commitment to seeing things from other peoples’ perspectives, and the power of both verbal, and non-verbal communication.
@@ -1069,7 +1072,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                 <string key="userLabel">For as far back as she can remember Teresa has always been passionate about the power of good communication. In fact, it was an incident that happened in her formative years that truly shaped the trajectory of her life.  When Teresa was in grade school in the late 1950s, she was punished for talking out of turn in class (I know we were shocked too!). The teacher decided that her “punishment” was to be seated next to the only African American child in the class. Teresa certainly didn’t see this as much of a punishment for herself, but even at that young age she was acutely aware of how humiliating this must have been for the other child. That incident was the beginning of her commitment to seeing things from other peoples’ perspectives, and the power of both verbal, and non-verbal communication.  Whether guiding business leaders to reach new heights, coaching individuals to increase results by bettering their presentation skills or mentoring women of all ages, Teresa works with joyful determination to ensure her clients leave their time together challenged, and in an enhanced position to reach their goals. Teresa has found there are certain universal principles that work consistently. “When we communicate from the best of who we are,” she says, “from what’s most important to us, we inspire ourselves and we can inspire others. There’s communication, not just data exchange.”  When we look at the depth and diversity of Teresa’s entrepreneurial experiences, we often joke that it appears she has had many incarnations. She has done everything from running a successful gourmet cheesecake business from her home (yes, she was head baker too!), to running a company that offered high-end video production services to corporate clients. No matter what the business she quickly recognized that her success was rooted in good communication.  After many years of consulting with her corporate clients, Teresa realized companies needed help with their messaging, marketing and overall communication strategy, so she formed Connect To The Core Inc. because she truly believes at the core of all success is great communication, and at the core of all great communication is connection.  It is over 35 years since she started, and Teresa has helped thousands of individuals and hundreds of companies reach their goals. She is now in her element, creating original solutions to complex issues for her clients to become their best selves and achieve remarkable results.  Teresa was born and raised in Michigan and lived throughout the US for many years. She currently splits her time between her home in Toronto, Canada and her farm in Northern Michigan.</string>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXc-zc-Csz">
-                                                <rect key="frame" x="16" y="1281" width="396" height="0.66666666666674246"/>
+                                                <rect key="frame" x="16" y="1259" width="396" height="0.66666666666674246"/>
                                                 <color key="backgroundColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="0.67000000000000004" id="sK9-rv-Ihb"/>
@@ -1129,11 +1132,11 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
             <objects>
                 <viewController id="7q9-BJ-mnN" customClass="PrivacyPolicyViewController" customModule="PTC_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Zx-QF-gLx">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iCQ-I4-NNa">
-                                <rect key="frame" x="0.0" y="140" width="428" height="786"/>
+                                <rect key="frame" x="0.0" y="108" width="428" height="764"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" red="0.24313725489999999" green="0.69803921570000005" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
@@ -1213,11 +1216,11 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
             <objects>
                 <viewController id="G4b-CZ-zMx" customClass="ContactUsViewController" customModule="PTC_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uDj-ur-gN7">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rNx-7G-Jr9">
-                                <rect key="frame" x="16" y="145" width="396" height="180"/>
+                                <rect key="frame" x="16" y="113" width="396" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="6BZ-q5-kfA">
                                         <variation key="heightClass=regular-widthClass=regular" constant="400"/>
@@ -1225,7 +1228,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                 </constraints>
                             </mapView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="9IJ-Vx-Mo5">
-                                <rect key="frame" x="16" y="340" width="50" height="70"/>
+                                <rect key="frame" x="16" y="308" width="50" height="70"/>
                                 <color key="tintColor" red="0.24313725489999999" green="0.69803921570000005" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="MfM-dK-dKL"/>
@@ -1233,13 +1236,13 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Follow us on our other social platforms for updates!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mb4-W4-kJY">
-                                <rect key="frame" x="16" y="514.33333333333337" width="396" height="40.333333333333371"/>
+                                <rect key="frame" x="16" y="482.33333333333331" width="396" height="40.333333333333314"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
                                 <color key="textColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="byf-vp-hzD">
-                                <rect key="frame" x="74" y="340" width="338" height="69.666666666666686"/>
+                                <rect key="frame" x="74" y="308" width="338" height="69.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Connect To The Core" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHv-Qf-DzC">
                                         <rect key="frame" x="0.0" y="0.0" width="338" height="21.666666666666668"/>
@@ -1256,7 +1259,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="i0R-Ku-q5T">
-                                <rect key="frame" x="16" y="435.66666666666669" width="396" height="53.333333333333314"/>
+                                <rect key="frame" x="16" y="403.66666666666669" width="396" height="53.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call us at (416) 696-2020" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJx-P8-UeZ">
                                         <rect key="frame" x="0.0" y="0.0" width="396" height="21.666666666666668"/>
@@ -1273,7 +1276,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zjn-42-jNU">
-                                <rect key="frame" x="86.666666666666686" y="569.66666666666663" width="255" height="30"/>
+                                <rect key="frame" x="86.666666666666686" y="537.66666666666663" width="255" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cG7-ON-ql4">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -1281,7 +1284,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                             <constraint firstAttribute="width" constant="30" id="3GJ-bc-Td1"/>
                                             <constraint firstAttribute="height" constant="30" id="eem-mG-pFi"/>
                                         </constraints>
-                                        <color key="tintColor" name="BrandColor"/>
+                                        <color key="tintColor" name="BrandBlueColor"/>
                                         <state key="normal" image="instagram"/>
                                         <connections>
                                             <action selector="instagramButtontapped:" destination="G4b-CZ-zMx" eventType="touchUpInside" id="8YR-JV-Wx9"/>
@@ -1292,7 +1295,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="kB5-RC-ZnR"/>
                                         </constraints>
-                                        <color key="tintColor" name="BrandColor"/>
+                                        <color key="tintColor" name="BrandBlueColor"/>
                                         <state key="normal" title="Button" image="facebook"/>
                                         <connections>
                                             <action selector="facebookButtonTapped:" destination="G4b-CZ-zMx" eventType="touchUpInside" id="eyV-dL-xCX"/>
@@ -1300,7 +1303,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBj-CO-Qdt">
                                         <rect key="frame" x="89.999999999999986" y="0.0" width="30" height="30"/>
-                                        <color key="tintColor" name="BrandColor"/>
+                                        <color key="tintColor" name="BrandBlueColor"/>
                                         <state key="normal" image="twitter"/>
                                         <connections>
                                             <action selector="twitterButtonTapped:" destination="G4b-CZ-zMx" eventType="touchUpInside" id="dnj-rw-aj8"/>
@@ -1311,7 +1314,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="8uy-pA-I16"/>
                                         </constraints>
-                                        <color key="tintColor" name="BrandColor"/>
+                                        <color key="tintColor" name="BrandBlueColor"/>
                                         <state key="normal" title="Button" image="youtube"/>
                                         <connections>
                                             <action selector="youtubeButtonTapped:" destination="G4b-CZ-zMx" eventType="touchUpInside" id="dpf-DK-NG2"/>
@@ -1319,7 +1322,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZ0-RU-6fR">
                                         <rect key="frame" x="180" y="0.0" width="30" height="30"/>
-                                        <color key="tintColor" name="BrandColor"/>
+                                        <color key="tintColor" name="BrandBlueColor"/>
                                         <state key="normal" image="linkedin"/>
                                         <connections>
                                             <action selector="linkedInButtonTapped:" destination="G4b-CZ-zMx" eventType="touchUpInside" id="FYy-GV-Cd9"/>
@@ -1327,7 +1330,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpH-jH-rJl">
                                         <rect key="frame" x="225" y="0.0" width="30" height="30"/>
-                                        <color key="tintColor" name="BrandColor"/>
+                                        <color key="tintColor" name="BrandBlueColor"/>
                                         <state key="normal" title="Button" image="soundcloud"/>
                                         <connections>
                                             <action selector="soundCloudButtonTapped:" destination="G4b-CZ-zMx" eventType="touchUpInside" id="wQy-vu-8vD"/>
@@ -1336,7 +1339,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35T-u6-x4y">
-                                <rect key="frame" x="16" y="420" width="396" height="0.66666666666668561"/>
+                                <rect key="frame" x="16" y="388" width="396" height="0.66666666666668561"/>
                                 <color key="backgroundColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="pLv-Zb-334">
@@ -1345,14 +1348,14 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rlo-zH-Nb0">
-                                <rect key="frame" x="16" y="499" width="396" height="0.33333333333331439"/>
+                                <rect key="frame" x="16" y="467" width="396" height="0.33333333333331439"/>
                                 <color key="backgroundColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="rWZ-Do-muW"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wn5-62-mPv">
-                                <rect key="frame" x="16" y="614.66666666666663" width="396" height="50"/>
+                                <rect key="frame" x="16" y="582.66666666666663" width="396" height="50"/>
                                 <color key="backgroundColor" red="0.1529411765" green="0.094117647060000004" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Ig0-pY-yab"/>
@@ -1411,14 +1414,14 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="YLV-FL-w6Q" customClass="PTCWorksheetViewController" customModule="PTC_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JBv-Z2-662">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uuz-LC-eZf">
-                                <rect key="frame" x="0.0" y="140" width="428" height="786"/>
+                                <rect key="frame" x="0.0" y="108" width="428" height="764"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwB-Ne-6zU">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1136"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1114"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date and Time Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="3j1-PF-am1">
                                                 <rect key="frame" x="8" y="5" width="412" height="25"/>
@@ -2568,7 +2571,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LXk-Dy-10A"/>
+        <segue reference="hmZ-Pc-q4h"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="BrandColor"/>
     <resources>

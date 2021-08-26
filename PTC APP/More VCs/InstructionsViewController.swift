@@ -28,9 +28,12 @@ class InstructionsViewController: UIViewController {
         pageControl.numberOfPages = collectionViewImages.count
         pageControl.currentPage = 0
         
+        //pageControl.isHidden = true
+        
     }
     
     @IBAction func previousButtonTapped(_ sender: UIButton) {
+        
         let prevIndex = max(pageControl.currentPage - 1, 0)
         let indexPath = IndexPath(item: prevIndex, section: 0)
         pageControl.currentPage = prevIndex

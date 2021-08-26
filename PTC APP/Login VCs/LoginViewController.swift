@@ -68,7 +68,7 @@ class LoginViewController: UIViewController {
         
         if error != nil {
             
-            showToast(message: error!, duration: 2.0)
+            showToast(message: error!, duration: 2.0, height: 20)
             
         } else {
             
@@ -161,12 +161,12 @@ class LoginViewController: UIViewController {
                     
                     
                 } else {
-                    showToast(message: "Enter Valid Password", duration: 1.0)
+                    showToast(message: "Enter Valid Password", duration: 1.0, height: 30)
                     activityIndicator.stopAnimating()
                     activityIndicator.isHidden = true
                 }
             } else {
-                showToast(message: "Enter Valid Email", duration: 1.0)
+                showToast(message: "Enter Valid Email", duration: 1.0, height: 30)
                 activityIndicator.stopAnimating()
                 activityIndicator.isHidden = true
             }

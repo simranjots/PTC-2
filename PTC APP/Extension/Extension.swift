@@ -133,37 +133,36 @@ extension String{
 }
 extension UIViewController {
     
-    
-    func showToast(message : String, duration: Double) {
+    func showToast(message : String, duration: Double, height: Int) {
         let overlayView = UIView()
         let backView = UIView()
         let lbl = UILabel()
         
-        let white = UIColor ( red: 1/255, green: 0/255, blue:0/255, alpha: 0.0 )
-        
         backView.frame = CGRect(x: 0, y: 0, width: view.frame.width , height: view.frame.height)
-        backView.center = view.center
-        backView.backgroundColor = white
+        overlayView.backgroundColor = .white
+        overlayView.alpha = 0.0
+        overlayView.layer.cornerRadius = 10;
+        overlayView.clipsToBounds  =  true
         view.addSubview(backView)
         
-        overlayView.frame = CGRect(x: 0, y: 0, width: view.frame.width - 60  , height: 40)
+        overlayView.frame = CGRect(x: 0, y: 0, width: Int(view.frame.width) - 40, height: 70 - height)
         overlayView.center = CGPoint(x: view.bounds.width / 2, y: view.bounds.height - 150)
-        overlayView.backgroundColor = UIColor.black
-        overlayView.clipsToBounds = true
-        overlayView.layer.cornerRadius = 10
-        overlayView.alpha = 0
+        overlayView.backgroundColor = .black
+        overlayView.alpha = 0.0
+        overlayView.layer.cornerRadius = 10;
+        overlayView.clipsToBounds  =  true
         
-        lbl.frame = CGRect(x: 0, y: 0, width: overlayView.frame.width, height: 40)
+        lbl.frame = CGRect(x: 0, y: 0, width: overlayView.frame.width, height: 70)
         lbl.numberOfLines = 0
         lbl.textColor = UIColor.white
-        lbl.center = overlayView.center
+        lbl.textAlignment = .center;
+        lbl.font.withSize(12.0)
         lbl.text = message
-        lbl.textAlignment = .center
+        lbl.clipsToBounds  =  true
+        lbl.numberOfLines = 0
         lbl.center = CGPoint(x: overlayView.bounds.width / 2, y: overlayView.bounds.height / 2)
         overlayView.addSubview(lbl)
-        
         view.addSubview(overlayView)
-        
         
         UIView.animate(withDuration: 1, animations: {
             overlayView.alpha = 1
@@ -185,11 +184,9 @@ extension UIViewController {
                     })
                 }
             }
-            
-            
         }
-        
     }
+    
     
     func showAlert(title:String, message: String, buttonTitle: String) {
         

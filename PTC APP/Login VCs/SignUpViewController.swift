@@ -38,14 +38,21 @@ class SignUpViewController: UIViewController {
         
     }
     
+    //Check the fields and validate that the data is correct. If everything is correct, this method returns
+    // nil. Otherwise, it returns the error message
     func validateFields() -> String? {
         
         //Check that all the fields are filled
         if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""  ||
             emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             passWordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            
             return "Please fill all the fields."
+        }
+        
+        //Check Profile name is not containing any special characters.
+        let cleanedProfileName = nameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if Utilities.isStringValid(cleanedProfileName) == true {
+            return "Special characters or numbers are not allowed in Profile Name."
         }
         
         //Check email format is valid
@@ -111,7 +118,7 @@ class SignUpViewController: UIViewController {
         
         
         //Add color to textField Image
-        textFieldImageView.tintColor = Utilities.brandPurpleColor
+        textFieldImageView.tintColor = UIColor(named: Constants.Colors.brandPurpleColor)
         
         //Add Tap Gesture
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(eyeImageTapped(tapGestureRecognizer: )))
@@ -138,6 +145,7 @@ class SignUpViewController: UIViewController {
     
 
     @IBAction func signUpTapped(_ sender: UIButton) {
+        
         let error = validateFields()
         
         if error != nil {
@@ -164,7 +172,7 @@ class SignUpViewController: UIViewController {
                                 
                                 
                                 DispatchQueue.global().async {
-                                    let imagepath = "https://firebasestorage.googleapis.com/v0/b/dayachievementprinciple.appspot.com/o/Profile%2FprofileImage1-2.png?alt=media&token=58f52b23-2cf9-4558-81b0-3d8c9545622d"
+                                    let imagepath = "https://firebasestorage.googleapis.com/v0/b/ptc-worksheet.appspot.com/o/profile%2FuserImage.png?alt=media&token=f4f76c91-aa86-47cb-9372-93814d55e70c"
                                     let fileUrl = URL(string: imagepath)
                                     // Fetch Image Data
                                     if let data = try? Data(contentsOf: fileUrl!) {
@@ -230,10 +238,10 @@ class SignUpViewController: UIViewController {
                         
                         
                     }else{
-                        showToast(message: "Enter Valid Password", duration: 1.0)
+                        showToast(message: "Enter Valid Password", duration: 1.0, height: 30)
                     }
                 }else{
-                    showToast(message: "Enter Valid Email", duration: 1.0)
+                    showToast(message: "Enter Valid Email", duration: 1.0, height: 30)
                 }
                 
                 
