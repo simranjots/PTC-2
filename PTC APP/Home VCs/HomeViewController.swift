@@ -83,11 +83,13 @@ class HomeViewController: UIViewController {
                 self.separatorView.frame = CGRect(x: 20, y: 98.67, width: 280, height: 0.33)
                 
             }
+            mainTableView.isUserInteractionEnabled = false
         } else {
             menubarView.isHidden = true
             menubarTableView.isHidden = true
             isSideViewOpened = false
             self.navigationItem.largeTitleDisplayMode = .automatic
+            mainTableView.isUserInteractionEnabled = true
 
 //            menubarView.frame = CGRect(x: 0, y: 88, width: 320, height: 838)
 //            menubarTableView.frame = CGRect(x: 0, y: 0, width: 320 , height: 838)
@@ -124,6 +126,7 @@ class HomeViewController: UIViewController {
         if let swipedView = gesture.view {
             swipedView.isHidden = true
             self.navigationItem.largeTitleDisplayMode = .automatic
+            mainTableView.isUserInteractionEnabled = true
         }
     }
     
@@ -211,7 +214,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch tableView {
         
         case mainTableView:
-           
             value = "show"
             name = activityNameArray![indexPath.row].situationTitle
             index = indexPath.row

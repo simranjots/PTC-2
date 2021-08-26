@@ -140,6 +140,8 @@
 				1A66AEF926C2C61F002BB556 /* CurrentUser.swift */,
 				1A66AEF226BDE532002BB556 /* SituationData.swift */,
 				1A66AEFB26C2C994002BB556 /* UserModal.swift */,
+				26B3504726BE43AD0038A5E2 /* Utilities.swift */,
+				263C866726BA453300012F55 /* Constants.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -230,8 +232,6 @@
 		E15B0BB323E9FD100014DBA1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				26B3504726BE43AD0038A5E2 /* Utilities.swift */,
-				263C866726BA453300012F55 /* Constants.swift */,
 				1A53F02626D43D3400593442 /* Instructions.swift */,
 			);
 			path = Helpers;
