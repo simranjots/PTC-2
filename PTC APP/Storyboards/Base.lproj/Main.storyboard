@@ -2427,6 +2427,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="appreciateButton" destination="wnW-fV-VJ1" id="IOL-J1-2JQ"/>
                         <outlet property="appreciateLabel" destination="aLf-09-Xnt" id="6hP-Aj-Wyh"/>
                         <outlet property="appreciateTextView1" destination="rsM-F9-lU4" id="Chc-kx-kJf"/>
                         <outlet property="appreciateTextView2" destination="hZX-bB-fuN" id="Wd6-zf-zZS"/>
@@ -2434,31 +2435,38 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                         <outlet property="communicationSituationLabel" destination="r6F-xG-qa6" id="lKx-ul-sZy"/>
                         <outlet property="communicationSituationTextField" destination="IGx-zK-zu3" id="dPA-LL-l7l"/>
                         <outlet property="dateAndTimeLabel" destination="3j1-PF-am1" id="gbS-gn-qOq"/>
+                        <outlet property="doButton" destination="2bw-Hh-AiG" id="BZT-CP-Tic"/>
                         <outlet property="doLabel" destination="Yui-y6-PM6" id="b6W-7a-l1J"/>
                         <outlet property="doTextView1" destination="5bs-2C-lfw" id="hSI-qV-aA5"/>
                         <outlet property="doTextView2" destination="8rE-np-P7n" id="Gao-C4-szh"/>
                         <outlet property="doTextView3" destination="syQ-mk-kMv" id="DQU-xY-vbL"/>
+                        <outlet property="feelButton" destination="YRw-uS-IGQ" id="MVa-UR-ixb"/>
                         <outlet property="feelLabel" destination="XJN-A9-wJJ" id="g0Z-4a-REN"/>
                         <outlet property="feelTextView1" destination="bXJ-qh-2id" id="HZ4-Zn-ziF"/>
                         <outlet property="feelTextView2" destination="pLg-Ua-sae" id="HkN-32-FuD"/>
                         <outlet property="feelTextView3" destination="8ah-iK-cpf" id="hOW-kG-O7h"/>
+                        <outlet property="obstaclesButton" destination="0pg-tn-7wW" id="We2-wN-4Bb"/>
                         <outlet property="obstaclesLabel" destination="vkx-TU-lev" id="3tR-TH-4Nk"/>
                         <outlet property="obstaclesTextView1" destination="hIE-c7-Khc" id="o4T-VC-YKm"/>
                         <outlet property="obstaclesTextView2" destination="CxE-hb-e1X" id="z5w-WT-uM7"/>
                         <outlet property="obstaclesTextView3" destination="RkQ-a3-XuN" id="gZZ-BA-PYj"/>
+                        <outlet property="rememberButton" destination="68i-uN-PGR" id="fZ9-Xr-BlQ"/>
                         <outlet property="rememberLabel" destination="Owz-O4-fqB" id="9yY-it-kVI"/>
                         <outlet property="rememberTextView1" destination="0xS-79-7IL" id="YBG-1R-x5S"/>
                         <outlet property="rememberTextView2" destination="GYo-DK-j4Q" id="K3h-QU-7eW"/>
                         <outlet property="rememberTextView3" destination="maU-nC-hTk" id="Pc3-Qa-SMV"/>
                         <outlet property="saveButton" destination="lFE-hX-hvV" id="jnM-j8-gsn"/>
+                        <outlet property="themButton" destination="axq-DG-Kea" id="x61-VC-NTQ"/>
                         <outlet property="themLabel" destination="KaJ-GW-DVh" id="Ui8-Lr-oVw"/>
                         <outlet property="themTextView1" destination="dnZ-K3-7wG" id="QEH-lA-XNe"/>
                         <outlet property="themTextView2" destination="2Dl-Gr-Qrf" id="iuW-id-Stv"/>
                         <outlet property="themTextView3" destination="ndg-px-78z" id="3ug-SX-Guz"/>
+                        <outlet property="valueButton" destination="yEe-gc-JHg" id="oMS-Md-FSr"/>
                         <outlet property="valueLabel" destination="FwP-df-xMf" id="jOt-M5-SZt"/>
                         <outlet property="valueTextView1" destination="ccm-iT-xfl" id="KJW-1J-w5D"/>
                         <outlet property="valueTextView2" destination="YFa-Ta-xSG" id="qkT-or-DpP"/>
                         <outlet property="valueTextView3" destination="jmn-by-eAK" id="3ka-BC-JtO"/>
+                        <outlet property="youButton" destination="7PA-rA-b6K" id="1lB-4B-lhc"/>
                         <outlet property="youLabel" destination="P89-1J-Pqy" id="750-Zt-Hrj"/>
                         <outlet property="youTextView1" destination="kGu-D5-GJg" id="wFC-4i-mhU"/>
                         <outlet property="youTextView2" destination="BMP-O7-tVM" id="Kvd-aA-fcu"/>
@@ -2478,23 +2486,57 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mt-gc-52M">
-                                <rect key="frame" x="0.0" y="53.999999999999993" width="428" height="21.666666666666664"/>
+                                <rect key="frame" x="0.0" y="44" width="428" height="35"/>
                                 <color key="backgroundColor" name="purple"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="b2f-Vk-AQX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DD3-gQ-ITe">
-                                <rect key="frame" x="0.0" y="80.666666666666686" width="428" height="811.33333333333326"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DD3-gQ-ITe">
+                                <rect key="frame" x="0.0" y="79" width="428" height="813"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="instructionsCell" id="8Bp-bv-bQO">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="instructionsCell" rowHeight="66" id="8Bp-bv-bQO" customClass="instuctionsTableViewCell" customModule="PTC_APP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Bp-bv-bQO" id="pNN-lo-2Vi">
-                                            <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="66"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cj3-MB-zMl">
+                                                    <rect key="frame" x="20" y="11.000000000000004" width="388" height="49.333333333333343"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="2mq-SV-FIh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" name="BrandPurpleColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPM-ta-ayb">
+                                                    <rect key="frame" x="20" y="65.333333333333329" width="388" height="0.6666666666666714"/>
+                                                    <color key="backgroundColor" name="BrandRedColor"/>
+                                                    <color key="tintColor" name="AccentColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="0.67000000000000004" id="yjD-7X-dij"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QPM-ta-ayb" firstAttribute="leading" secondItem="pNN-lo-2Vi" secondAttribute="leadingMargin" id="2xx-6N-x7H"/>
+                                                <constraint firstItem="cj3-MB-zMl" firstAttribute="leading" secondItem="pNN-lo-2Vi" secondAttribute="leadingMargin" id="FW3-fI-uwJ"/>
+                                                <constraint firstItem="QPM-ta-ayb" firstAttribute="top" secondItem="cj3-MB-zMl" secondAttribute="bottom" constant="5" id="Jbc-Cd-Q5E"/>
+                                                <constraint firstAttribute="bottom" secondItem="QPM-ta-ayb" secondAttribute="bottom" id="hZX-QX-pQz"/>
+                                                <constraint firstItem="cj3-MB-zMl" firstAttribute="trailing" secondItem="pNN-lo-2Vi" secondAttribute="trailingMargin" id="kRb-OX-p4T"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="QPM-ta-ayb" secondAttribute="trailing" id="q9b-9E-UOw"/>
+                                                <constraint firstItem="cj3-MB-zMl" firstAttribute="top" secondItem="pNN-lo-2Vi" secondAttribute="topMargin" id="z91-AB-5xP"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="instuctionLabel" destination="cj3-MB-zMl" id="IeA-ha-Ja9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -2508,15 +2550,16 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                         <constraints>
                             <constraint firstItem="DD3-gQ-ITe" firstAttribute="leading" secondItem="pPG-50-4yz" secondAttribute="leading" id="OgC-iv-Abj"/>
                             <constraint firstItem="pPG-50-4yz" firstAttribute="trailing" secondItem="5mt-gc-52M" secondAttribute="trailing" id="YEp-Mn-Nlw"/>
-                            <constraint firstItem="DD3-gQ-ITe" firstAttribute="top" secondItem="5mt-gc-52M" secondAttribute="bottom" constant="5" id="cbR-WQ-kFI"/>
+                            <constraint firstItem="DD3-gQ-ITe" firstAttribute="top" secondItem="5mt-gc-52M" secondAttribute="bottom" id="cbR-WQ-kFI"/>
                             <constraint firstItem="5mt-gc-52M" firstAttribute="leading" secondItem="pPG-50-4yz" secondAttribute="leading" id="dzP-lT-mTT"/>
                             <constraint firstItem="DD3-gQ-ITe" firstAttribute="trailing" secondItem="pPG-50-4yz" secondAttribute="trailing" id="nhq-q4-L4b"/>
                             <constraint firstItem="DD3-gQ-ITe" firstAttribute="bottom" secondItem="pPG-50-4yz" secondAttribute="bottom" id="rpl-7X-RDr"/>
-                            <constraint firstItem="5mt-gc-52M" firstAttribute="top" secondItem="pPG-50-4yz" secondAttribute="top" constant="10" id="wlE-s5-9Rf"/>
+                            <constraint firstItem="5mt-gc-52M" firstAttribute="top" secondItem="pPG-50-4yz" secondAttribute="top" id="wlE-s5-9Rf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Rkd-Ti-mR6"/>
                     <connections>
+                        <outlet property="instructionsTableView" destination="DD3-gQ-ITe" id="SnC-0n-WY0"/>
                         <outlet property="label" destination="5mt-gc-52M" id="das-nj-eTs"/>
                     </connections>
                 </viewController>
@@ -2553,6 +2596,9 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
         <image name="twitter" width="170.66667175292969" height="170.66667175292969"/>
         <image name="uncheck" width="170.66667175292969" height="170.66667175292969"/>
         <image name="youtube" width="170.66667175292969" height="170.66667175292969"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BrandBlueColor">
             <color red="0.42745098039215684" green="0.80000000000000004" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -2566,7 +2612,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
             <color red="0.90980392156862744" green="0.31764705882352939" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="purple">
-            <color red="0.15686274509803921" green="0.062745098039215685" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.15700000524520874" green="0.063000001013278961" blue="0.3059999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -11,13 +11,16 @@ import UIKit
 class NewPasteOptionViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
 
+    @IBOutlet var instructionsTableView: UITableView!
     @IBOutlet weak var label: UILabel!
+    
 
     var message : [String]?
     var labelName: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.preferredContentSize = CGSize(width:200, height:200) // IMPORTANT
+        self.preferredContentSize = CGSize(width:300, height:200) // IMPORTANT
 
            // REST ARE COSMETIC CHANGES
            self.view.backgroundColor = UIColor.clear
@@ -48,10 +51,9 @@ class NewPasteOptionViewController: UIViewController,UITableViewDelegate,UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: "instructionsCell", for: indexPath)
-        cell.textLabel?.font = UIFont(name: "system", size: 12.0)
-        cell.textLabel?.text = message![indexPath.row]
-        
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "instructionsCell", for: indexPath) as! instuctionsTableViewCell
+
+        cell.instuctionLabel.text = message![indexPath.row]
         return cell
     }
     

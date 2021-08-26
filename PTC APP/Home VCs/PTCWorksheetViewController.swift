@@ -20,48 +20,53 @@ class PTCWorksheetViewController: UIViewController {
     @IBOutlet var themTextView1: UITextView!
     @IBOutlet var themTextView2: UITextView!
     @IBOutlet var themTextView3: UITextView!
+    @IBOutlet var themButton: UIButton!
     
     
     @IBOutlet var appreciateLabel: UILabel!
     @IBOutlet var appreciateTextView1: UITextView!
     @IBOutlet var appreciateTextView2: UITextView!
     @IBOutlet var appreciateTextView3: UITextView!
+    @IBOutlet var appreciateButton: UIButton!
     
     @IBOutlet var rememberLabel: UILabel!
     @IBOutlet var rememberTextView1: UITextView!
     @IBOutlet var rememberTextView2: UITextView!
     @IBOutlet var rememberTextView3: UITextView!
+    @IBOutlet var rememberButton: UIButton!
 
     
     @IBOutlet var obstaclesLabel: UILabel!
     @IBOutlet var obstaclesTextView1: UITextView!
     @IBOutlet var obstaclesTextView2: UITextView!
     @IBOutlet var obstaclesTextView3: UITextView!
+    @IBOutlet var obstaclesButton: UIButton!
  
-    
     @IBOutlet var feelLabel: UILabel!
     @IBOutlet var feelTextView1: UITextView!
     @IBOutlet var feelTextView2: UITextView!
     @IBOutlet var feelTextView3: UITextView!
-
+    @IBOutlet var feelButton: UIButton!
+ 
     
     @IBOutlet var valueLabel: UILabel!
     @IBOutlet var valueTextView1: UITextView!
     @IBOutlet var valueTextView2: UITextView!
     @IBOutlet var valueTextView3: UITextView!
+    @IBOutlet var valueButton: UIButton!
    
     
     @IBOutlet var doLabel: UILabel!
     @IBOutlet var doTextView1: UITextView!
     @IBOutlet var doTextView2: UITextView!
     @IBOutlet var doTextView3: UITextView!
-    
+    @IBOutlet var doButton: UIButton!
     
     @IBOutlet var youLabel: UILabel!
     @IBOutlet var youTextView1: UITextView!
     @IBOutlet var youTextView2: UITextView!
     @IBOutlet var youTextView3: UITextView!
-   
+    @IBOutlet var youButton: UIButton!
     
     @IBOutlet var saveButton: UIBarButtonItem!
     
@@ -370,6 +375,14 @@ class PTCWorksheetViewController: UIViewController {
         youTextView2.isEditable = false
         youTextView3.isEditable = false
         
+        themButton.isHidden = true
+        rememberButton.isHidden = true
+        obstaclesButton.isHidden = true
+        appreciateButton.isHidden = true
+        feelButton.isHidden = true
+        valueButton.isHidden = true
+        doButton.isHidden = true
+        youButton.isHidden = true
     }
     
     func styleElements() {

@@ -35,6 +35,7 @@
 		26D12A4B26CED6CA0039C495 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26D12A4826CED6CA0039C495 /* 1.png */; };
 		26D12A4C26CED6CA0039C495 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26D12A4926CED6CA0039C495 /* 2.png */; };
 		26D12A4D26CED6CA0039C495 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 26D12A4A26CED6CA0039C495 /* 3.png */; };
+		26DCA97026D44B2D006B4208 /* instuctionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DCA96F26D44B2D006B4208 /* instuctionsTableViewCell.swift */; };
 		DC87FAA1319C6B01861197AD /* Pods_PTC_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7E7A87D71B12D56F58F219 /* Pods_PTC_APP.framework */; };
 		E156D86624106E3D00AB52CB /* testTableVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156D86524106E3D00AB52CB /* testTableVIew.swift */; };
 		E159DD272418370800C4433F /* TaresaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E159DD262418370800C4433F /* TaresaViewController.swift */; };
@@ -84,6 +85,7 @@
 		26D12A4826CED6CA0039C495 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		26D12A4926CED6CA0039C495 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		26D12A4A26CED6CA0039C495 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		26DCA96F26D44B2D006B4208 /* instuctionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instuctionsTableViewCell.swift; sourceTree = "<group>"; };
 		8A7E7A87D71B12D56F58F219 /* Pods_PTC_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PTC_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E156D86524106E3D00AB52CB /* testTableVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTableVIew.swift; sourceTree = "<group>"; };
 		E159DD262418370800C4433F /* TaresaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaresaViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */,
 				26B3504326BDFBC80038A5E2 /* PTCWorksheetViewController.swift */,
 				1A53F02326CF86D600593442 /* NewPasteOptionViewController.swift */,
+				26DCA96F26D44B2D006B4208 /* instuctionsTableViewCell.swift */,
 			);
 			path = "Home VCs";
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E162574223E3304B00E84948 /* LoginViewController.swift in Sources */,
+				26DCA97026D44B2D006B4208 /* instuctionsTableViewCell.swift in Sources */,
 				1A66AEFC26C2C994002BB556 /* UserModal.swift in Sources */,
 				263C866826BA453300012F55 /* Constants.swift in Sources */,
 				E159DD3F24185C2E00C4433F /* video.swift in Sources */,
