@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yyf-Pw-zk9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yyf-Pw-zk9">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -284,6 +284,21 @@
             </objects>
             <point key="canvasLocation" x="45" y="-229"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="azk-jF-reA">
+            <objects>
+                <viewController id="6pO-Zz-suu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cd3-xX-u2N">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sib-tS-JRu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2S6-J3-P0w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="909" y="-207"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ctn-kV-607">
             <objects>
@@ -396,7 +411,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menubarTableViewCell" rowHeight="70" id="de2-of-Hhs" customClass="SideMenuTableViewCell" customModule="PTC_APP" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="24.333333969116211" width="320" height="70"/>
+                                                <rect key="frame" x="0.0" y="44.666666030883789" width="320" height="70"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="de2-of-Hhs" id="TK8-mp-Iog">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
@@ -490,7 +505,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="homeScreenMainTableViewCell" rowHeight="95" id="Kod-ok-7KF" customClass="HomeVCMainTableViewCell" customModule="PTC_APP" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="95"/>
+                                                <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="95"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kod-ok-7KF" id="1Of-3d-GGX">
                                                     <rect key="frame" x="0.0" y="0.0" width="428" height="95"/>
@@ -907,7 +922,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PbL-yh-7ji">
-                                <rect key="frame" x="0.0" y="108" width="428" height="660"/>
+                                <rect key="frame" x="0.0" y="108" width="428" height="694"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RRV-Xe-pDJ">
                                     <size key="itemSize" width="345" height="518"/>
@@ -917,7 +932,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="instructionsScreenCollectionViewCell" id="88h-Gr-roA" customClass="InstructionsCollectionViewCell" customModule="PTC_APP" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="78.666666666666671" width="355" height="503"/>
+                                        <rect key="frame" x="0.0" y="95.666666666666671" width="355" height="503"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dGJ-TW-jAR">
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="503"/>
@@ -963,7 +978,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPK-ex-qyq">
-                                <rect key="frame" x="20" y="778" width="50" height="50"/>
+                                <rect key="frame" x="20" y="812" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="7th-7W-kfF"/>
                                     <constraint firstAttribute="height" constant="50" id="wUt-CN-BF1"/>
@@ -975,7 +990,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIz-js-Mui">
-                                <rect key="frame" x="362" y="778" width="50" height="50"/>
+                                <rect key="frame" x="362" y="812" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="A3j-Nt-SsA"/>
                                     <constraint firstAttribute="height" constant="50" id="VSV-oR-cRi"/>
@@ -987,7 +1002,7 @@
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="ajd-Hr-v2M">
-                                <rect key="frame" x="135.66666666666666" y="801" width="156.99999999999997" height="27"/>
+                                <rect key="frame" x="140.66666666666669" y="837" width="146.66666666666669" height="25"/>
                                 <color key="pageIndicatorTintColor" systemColor="opaqueSeparatorColor"/>
                                 <color key="currentPageIndicatorTintColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pageControl>
@@ -1142,7 +1157,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                 <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="privacyPolicyVCResudableCell" rowHeight="200" id="RPc-f7-EwV" customClass="PrivacyPolicyTableViewCell" customModule="PTC_APP" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="200"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RPc-f7-EwV" id="V5z-YI-DFU">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="200"/>
@@ -2504,7 +2519,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="instructionsCell" rowHeight="66" id="8Bp-bv-bQO" customClass="instuctionsTableViewCell" customModule="PTC_APP" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="66"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Bp-bv-bQO" id="pNN-lo-2Vi">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="66"/>
