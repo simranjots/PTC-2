@@ -100,6 +100,11 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func addActivityButtonTapped(_ sender: UIBarButtonItem) {
+        menubarView.isHidden = true
+        menubarTableView.isHidden = true
+        isSideViewOpened = false
+        mainTableView.isUserInteractionEnabled = true
+        self.navigationItem.largeTitleDisplayMode = .always
         value = "add"
         performSegue(withIdentifier: Constants.Segues.homeToSituationSegue, sender: self)
     }
