@@ -31,6 +31,8 @@
 		26B3504426BDFBC80038A5E2 /* PTCWorksheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3504326BDFBC80038A5E2 /* PTCWorksheetViewController.swift */; };
 		26B3504626BE3A940038A5E2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3504526BE3A940038A5E2 /* Extension.swift */; };
 		26B3504826BE43AD0038A5E2 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3504726BE43AD0038A5E2 /* Utilities.swift */; };
+		26B3F9C126D867060076D8BD /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B3F9C026D867060076D8BD /* AuthenticationServices.framework */; };
+		26B3F9C326D867170076D8BD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B3F9C226D867170076D8BD /* MapKit.framework */; };
 		26C2FDCE26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C2FDCD26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift */; };
 		26D12A4B26CED6CA0039C495 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26D12A4826CED6CA0039C495 /* 1.png */; };
 		26D12A4C26CED6CA0039C495 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26D12A4926CED6CA0039C495 /* 2.png */; };
@@ -81,6 +83,9 @@
 		26B3504326BDFBC80038A5E2 /* PTCWorksheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTCWorksheetViewController.swift; sourceTree = "<group>"; };
 		26B3504526BE3A940038A5E2 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		26B3504726BE43AD0038A5E2 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		26B3F9BF26D867010076D8BD /* PTC APP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PTC APP.entitlements"; sourceTree = "<group>"; };
+		26B3F9C026D867060076D8BD /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		26B3F9C226D867170076D8BD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		26C2FDCD26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsCollectionViewCell.swift; sourceTree = "<group>"; };
 		26D12A4826CED6CA0039C495 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		26D12A4926CED6CA0039C495 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -117,8 +122,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A66AEF126BDE4F7002BB556 /* RealmSwift in Frameworks */,
+				26B3F9C126D867060076D8BD /* AuthenticationServices.framework in Frameworks */,
 				1A66AEEF26BDE4F7002BB556 /* Realm in Frameworks */,
 				DC87FAA1319C6B01861197AD /* Pods_PTC_APP.framework in Frameworks */,
+				26B3F9C326D867170076D8BD /* MapKit.framework in Frameworks */,
 				2639EB1726BB18B4006C1CF2 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +231,8 @@
 		4234677012C2F4B4A6091FDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				26B3F9C226D867170076D8BD /* MapKit.framework */,
+				26B3F9C026D867060076D8BD /* AuthenticationServices.framework */,
 				8A7E7A87D71B12D56F58F219 /* Pods_PTC_APP.framework */,
 			);
 			name = Frameworks;
@@ -258,6 +267,7 @@
 		E162573C23E3304B00E84948 /* PTC APP */ = {
 			isa = PBXGroup;
 			children = (
+				26B3F9BF26D867010076D8BD /* PTC APP.entitlements */,
 				1A53F02526D0423700593442 /* Extension */,
 				1A66AEF826C2C5EB002BB556 /* Modal */,
 				E162573D23E3304B00E84948 /* AppDelegate.swift */,
@@ -598,6 +608,7 @@
 			baseConfigurationReference = F487755962854DE61752D9CC /* Pods-PTC APP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "PTC APP/PTC APP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RP2W7V2ZKT;
 				INFOPLIST_FILE = "PTC APP/Info.plist";
@@ -605,7 +616,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+
 				MARKETING_VERSION = 0.02;
+
 				PRODUCT_BUNDLE_IDENTIFIER = com.PTCWorksheet.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -618,6 +631,7 @@
 			baseConfigurationReference = 035C471E8BC5E8721724FA53 /* Pods-PTC APP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "PTC APP/PTC APP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RP2W7V2ZKT;
 				INFOPLIST_FILE = "PTC APP/Info.plist";
@@ -625,7 +639,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+
 				MARKETING_VERSION = 0.02;
+
 				PRODUCT_BUNDLE_IDENTIFIER = com.PTCWorksheet.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

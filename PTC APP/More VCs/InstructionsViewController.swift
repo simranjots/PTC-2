@@ -19,7 +19,7 @@ class InstructionsViewController: UIViewController, UICollectionViewDelegate, UI
     @IBOutlet var nextButtonOutlet: UIButton!
     
     //Images Array
-    let collectionViewImages = ["1", "2", "3"]
+    let collectionViewImages = ["1", "3", "2"]
 
     var currentPage = 0
     

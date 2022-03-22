@@ -90,17 +90,8 @@ class HomeViewController: UIViewController {
             isSideViewOpened = false
             self.navigationItem.largeTitleDisplayMode = .automatic
             mainTableView.isUserInteractionEnabled = true
-
-//            menubarView.frame = CGRect(x: 0, y: 88, width: 320, height: 838)
-//            menubarTableView.frame = CGRect(x: 0, y: 0, width: 320 , height: 838)
-//            profileView.frame = CGRect(x: 0, y: 0, width: 320, height: 150)
-
-//            UIView.animate(withDuration: 0.3) {
-//                self.menubarView.frame = CGRect(x: 0, y: 88, width: 0, height: 838)
-//                self.menubarTableView.frame = CGRect(x: 0, y: 0, width: 0, height: 838)
-//                self.profileView.frame = CGRect(x: 0, y: 0, width: 0, height: 150)
-//            }
         }
+        
         let data = UIImage(named: "profileImage")?.jpegData(compressionQuality: 1.0)
         profileImageView.image = UIImage(data: (userObject.image ?? data)!)
         emailLabel.text = userObject.email
@@ -177,7 +168,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch tableView {
         case mainTableView:
+            if activityNameArray?.count == 0 {
+                mainTableView.setEmptyView(title: "You don't have any Worksheet.", message: "Tap the '➕' icon to add your first PTC Worksheet.", messageImage: UIImage(named: "add-1")!)
+            } else {
+                mainTableView.restore()
+            }
             numberOfRow = activityNameArray?.count ?? 0
+            
         case menubarTableView:
             numberOfRow = menuItems.count
         default:
@@ -347,4 +344,84 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
+
+
+
+//	Extension for TableView to add EmptyView when there's no data
+
+extension UITableView {
+        
+    func setEmptyView(title: String, message: String, messageImage: UIImage) {
+        
+        let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
+        
+        let messageImageView = UIImageView()
+        let titleLabel = UILabel()
+        let messageLabel = UILabel()
+        
+        messageImageView.backgroundColor = .clear
+        
+        messageImageView.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        titleLabel.textColor = UIColor(named: "BrandColor")
+        titleLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 20)
+        
+        messageLabel.textColor = UIColor(named: "BrandBlueColor")
+        messageLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 15)
+        
+        emptyView.addSubview(messageImageView)
+        emptyView.addSubview(titleLabel)
+        emptyView.addSubview(messageLabel)
+
+        
+        NSLayoutConstraint.activate([
+            messageImageView.topAnchor.constraint(equalTo: emptyView.safeAreaLayoutGuide.topAnchor, constant: 200),
+            messageImageView.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor),
+            messageImageView.heightAnchor.constraint(equalToConstant: 100),
+            messageImageView.widthAnchor.constraint(equalToConstant: 100)
+        ])
+        
+
+        messageImageView.tintColor = UIColor(named: "BrandRedColor")
+        
+        titleLabel.topAnchor.constraint(equalTo: messageImageView.bottomAnchor, constant: 5).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
+                
+        messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5).isActive = true
+        messageLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
+
+        messageImageView.image = messageImage
+        titleLabel.text = title
+        messageLabel.text = message
+        titleLabel.numberOfLines = 0
+        messageLabel.numberOfLines = 0
+        messageLabel.textAlignment = .center
+        
+        UIView.animate(withDuration: 1, animations: {
+                 
+                 messageImageView.transform = CGAffineTransform(rotationAngle: .pi / 10)
+             }, completion: { (finish) in
+                 UIView.animate(withDuration: 1, animations: {
+                     messageImageView.transform = CGAffineTransform(rotationAngle: -1 * (.pi / 10))
+                 }, completion: { (finishh) in
+                     UIView.animate(withDuration: 1, animations: {
+                         messageImageView.transform = CGAffineTransform.identity
+                     })
+                 })
+                 
+             })
+        
+        self.backgroundView = emptyView
+        separatorStyle = .none
+        
+    }
+    
+    
+    func restore() {
+        self.backgroundView = nil
+    }
+}
+
 
