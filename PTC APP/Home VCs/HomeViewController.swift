@@ -14,8 +14,8 @@ class HomeViewController: UIViewController {
     
     //MARK: - Variable
     let realm = try! Realm()
-    var value = ""
-    var name = ""
+    var Foldername = ""
+    var folderobject = FolderData()
     var index = 0
     var currentUser : CurrentUser!
     var userObject: userModel!
@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var profileEditButtonOutlet: UIButton!
     @IBOutlet var separatorView: UIView!
         //MARK: - MainView  Data
-    var activityNameArray : Results<SituationData>?
+    var FolderArray : Results<FolderData>?
     
     //MARK: - Menubar Outlets
     @IBOutlet var menubarTableView: UITableView!
@@ -45,7 +45,7 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         currentUser = CurrentUser()
         userObject = currentUser.checkLoggedIn()
-        activityNameArray = userObject.situationData.filter("user = %@",userObject.email as Any )
+        FolderArray = userObject.folderData.filter("user = %@",userObject.email as Any )
         mainTableView.reloadData()
     }
     
@@ -105,8 +105,8 @@ class HomeViewController: UIViewController {
         isSideViewOpened = false
         mainTableView.isUserInteractionEnabled = true
         self.navigationItem.largeTitleDisplayMode = .always
-        value = "add"
-        performSegue(withIdentifier: Constants.Segues.homeToSituationSegue, sender: self)
+        self.Alert(title: "Create Folder", message: "Enter the folder Name", buttonTitle: "Save", valueType: "add", index: 0)
+   
     }
     
     @IBAction func profileEditButtonTapped(_ sender: UIButton) {
@@ -168,6 +168,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch tableView {
         case mainTableView:
+<<<<<<< Updated upstream
             if activityNameArray?.count == 0 {
                 mainTableView.setEmptyView(title: "You don't have any Worksheet.", message: "Tap the '➕' icon to add your first PTC Worksheet.", messageImage: UIImage(named: "add-1")!)
             } else {
@@ -175,6 +176,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             }
             numberOfRow = activityNameArray?.count ?? 0
             
+=======
+            numberOfRow = FolderArray?.count ?? 0
+>>>>>>> Stashed changes
         case menubarTableView:
             numberOfRow = menuItems.count
         default:
@@ -190,13 +194,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch tableView {
         case mainTableView:
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.homeScreenMainTableViewCell, for: indexPath) as! HomeVCMainTableViewCell
-            cell.acitivityNameLabel.text = activityNameArray?[indexPath.row].situationTitle
-            if activityNameArray?[indexPath.row].prefix == true {
-                cell.prefixLabel.text = "Updated on :"
-            }
-            cell.dateLabel.text = activityNameArray?[indexPath.row].date
-            cell.timeLabel.text = activityNameArray?[indexPath.row].time
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FolderTableViewCell", for: indexPath) as! FolderTableViewCell
+            cell.folderNameLabel.text = FolderArray?[indexPath.row].folderName
             return cell
         case menubarTableView:
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.homeScreenMenuBarCell, for: indexPath) as! SideMenuTableViewCell
@@ -217,10 +216,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch tableView {
         
         case mainTableView:
-            value = "show"
-            name = activityNameArray![indexPath.row].situationTitle
+            Foldername = FolderArray![indexPath.row].folderName
+            folderobject = FolderArray![indexPath.row]
             index = indexPath.row
-            performSegue(withIdentifier: Constants.Segues.homeToSituationSegue, sender: self)
+            performSegue(withIdentifier: "foldertolist", sender: self)
             
         case menubarTableView:
             switch menuItems[indexPath.row] {
@@ -300,11 +299,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         if(editingStyle == .delete){
             
-            let title = self.activityNameArray![indexPath.row]
-            let alert = UIAlertController(title: "Warning", message: "Do you want to delete \(title.situationTitle)?", preferredStyle: .alert)
+            let title = self.FolderArray![indexPath.row]
+            let alert = UIAlertController(title: "Warning", message: "Do you want to delete \(title.folderName)?", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action:UIAlertAction) -> Void in
-                if let situationData = self.activityNameArray?[indexPath.row]{
+                if let situationData = self.FolderArray?[indexPath.row]{
                     do {
                         try self.realm.write {
                             self.realm.delete(situationData)
@@ -324,10 +323,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let editAction = UIContextualAction(style: .normal, title: "Edit") { (action, view, handler) in
-            self.value = "edit"
-            self.name = self.activityNameArray![indexPath.row].situationTitle
-            self.index = indexPath.row
-            self.performSegue(withIdentifier: Constants.Segues.homeToSituationSegue, sender: self)
+            
+            self.Alert(title: "Rename Folder", message: "Enter the folder Name", buttonTitle: "Save", valueType: "edit", index: indexPath.row)
+         
         }
         editAction.backgroundColor = .lightGray
         let configuration = UISwipeActionsConfiguration(actions: [editAction])
@@ -335,17 +333,95 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if segue.destination is PTCWorksheetViewController {
-            let vc = segue.destination as? PTCWorksheetViewController
-            vc?.viewType = value
-            vc?.situationName = name
-            vc?.myIndex = index
-            vc?.selectedUser = userObject
+        if segue.destination is DetailTableViewController {
+            let vc = segue.destination as? DetailTableViewController
+            vc?.foldername = Foldername
+            vc?.name = folderobject
+            vc?.index = index
+            vc?.userObject = userObject
         }
+    }
+    func save(folderdata: FolderData)  {
+        
+        if let currentU = self.userObject {
+        do {
+            try realm.write {
+                currentU.folderData.append(folderdata)
+               // realm.add(situationData)
+            }
+        }catch {
+            print("Error saving situation Data\(error)")
+        }
+        }
+    }
+    func Alert(title: String, message: String, buttonTitle: String,valueType: String,index: Int) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                //2. Add the text field. You can configure it however you need.
+                alert.addTextField { (textField) in
+                    textField.placeholder = "Enter the name"
+                }
+        
+                // 3. Grab the value from the text field, and print it when the user clicks OK.
+                alert.addAction(UIAlertAction(title: buttonTitle, style: .default, handler: { [weak alert] (_) in
+                    let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+                    if valueType == "add"{
+                        if let foldername = textField?.text{
+                            if index != 0 {
+                                if self.FolderArray?[index].folderName == foldername {
+                                    self.showToast(message: "Folder with same name already exist", duration: 2, height: 3)
+                                }else{
+                                    let todo = FolderData()
+                                    todo.folderName = foldername
+                                    todo.user = (self.userObject?.email)!
+                                    self.save(folderdata: todo)
+                                }
+                            }else{
+                                let todo = FolderData()
+                                todo.folderName = foldername
+                                todo.user = (self.userObject?.email)!
+                                self.save(folderdata: todo)
+                            }
+                        
+                        }else{
+                            self.dismiss(animated: true, completion: nil)
+                        }
+                    }else{
+                        if let foldername = textField?.text{
+                            if self.FolderArray?[index].folderName == foldername {
+                                self.showToast(message: "Folder with same name already exist", duration: 2, height: 3)
+                            }else{
+                                if let folderData = self.FolderArray?[index]{
+                                    do {
+                                        try self.realm.write {
+                                            for data in folderData.situationData{
+                                                if data.folderName == folderData.folderName{
+                                                    data.folderName = foldername
+                                                }
+                                            }
+                                            folderData.folderName = foldername
+                                            folderData.user = (self.userObject?.email)!
+                                           
+                                        }
+                                    } catch {
+                                        print("Error saving done status \(error)")
+                                    }
+                                }
+                            }
+                        }else{
+                            self.dismiss(animated: true, completion: nil)
+                        }
+                    }
+              
+                    self.mainTableView.reloadData()
+                }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { [weak alert] (_) in
+                }))
+               self.present(alert, animated: true, completion: nil)
     }
 }
 
 
+<<<<<<< Updated upstream
 
 //	Extension for TableView to add EmptyView when there's no data
 
@@ -425,3 +501,5 @@ extension UITableView {
 }
 
 
+=======
+>>>>>>> Stashed changes

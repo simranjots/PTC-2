@@ -11,6 +11,7 @@ import RealmSwift
 
 class PTCWorksheetViewController: UIViewController {
 
+    @IBOutlet var pdfView: UIView!
     //MARK: - IBOutlets
     @IBOutlet var dateAndTimeLabel: UILabel!
     @IBOutlet var communicationSituationLabel: UILabel!
@@ -73,7 +74,8 @@ class PTCWorksheetViewController: UIViewController {
     //MARK: -  Variable
     let realm = try! Realm()
     var viewType: String = ""
-    var situationName: String = ""
+    var FolderName: String = ""
+    var folderobject: FolderData?
     var myIndex = 0
     var activityNameArray : Results<SituationData>?
     var selectedUser: userModel?
@@ -82,6 +84,8 @@ class PTCWorksheetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         styleElements()
+        
+        createPdfFromView(aView: pdfView, saveToDocumentsWithFileName: "Abc")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -196,13 +200,13 @@ class PTCWorksheetViewController: UIViewController {
         todo.you1 = youTextView1.text!
         todo.you2 = youTextView2.text!
         todo.you3 = youTextView3.text!
-        todo.user = (selectedUser?.email)!
+        todo.folderName = FolderName
         save(situationData: todo)
         
     }
     
     func updateData() {
-        if let situationData = activityNameArray?[myIndex]{
+        if let situationData = folderobject?.situationData[myIndex]{
             do {
                 try realm.write {
                     situationData.situationTitle = communicationSituationTextField.text!
@@ -232,6 +236,7 @@ class PTCWorksheetViewController: UIViewController {
                     situationData.you2 = youTextView2.text!
                     situationData.you3 = youTextView3.text!
                     situationData.prefix = true
+                    
                 }
             } catch {
                 print("Error saving done status \(error)")
@@ -244,9 +249,10 @@ class PTCWorksheetViewController: UIViewController {
         if let currentU = self.selectedUser {
         do {
             try realm.write {
-                currentU.situationData.append(situationData)
+                folderobject?.situationData.append(situationData)
                // realm.add(situationData)
             }
+           
         }catch {
             print("Error saving situation Data\(error)")
         }
@@ -261,36 +267,37 @@ class PTCWorksheetViewController: UIViewController {
         dateAndTimeLabel.text = dt
         
         activityNameArray = realm.objects(SituationData.self)
+        let data = folderobject!.situationData[myIndex]
         
         if viewType == "show" {
             saveButton.isEnabled = false
             saveButton.image = UIImage(named: "")
-            communicationSituationTextField.text = activityNameArray![self.myIndex].situationTitle
-            dateAndTimeLabel.text =   "\(activityNameArray![self.myIndex].date ) | " + "\( activityNameArray![self.myIndex].time)"
-            valueTextView1.text = activityNameArray![self.myIndex].value1
-            valueTextView2.text = activityNameArray![self.myIndex].value2
-            valueTextView3.text = activityNameArray![self.myIndex].value3
-            feelTextView1.text = activityNameArray![self.myIndex].feel1
-            feelTextView2.text = activityNameArray![self.myIndex].feel2
-            feelTextView3.text = activityNameArray![self.myIndex].feel3
-            obstaclesTextView1.text = activityNameArray![self.myIndex].obstacle1
-            obstaclesTextView2.text = activityNameArray![self.myIndex].obstacle2
-            obstaclesTextView3.text = activityNameArray![self.myIndex].obstacle3
-            rememberTextView1.text = activityNameArray![self.myIndex].remember1
-            rememberTextView2.text = activityNameArray![self.myIndex].remember2
-            rememberTextView3.text = activityNameArray![self.myIndex].remember3
-            themTextView1.text = activityNameArray![self.myIndex].them1
-            themTextView2.text = activityNameArray![self.myIndex].them2
-            themTextView3.text = activityNameArray![self.myIndex].them3
-            appreciateTextView1.text = activityNameArray![self.myIndex].appreciate1
-            appreciateTextView2.text = activityNameArray![self.myIndex].appreciate2
-            appreciateTextView3.text = activityNameArray![self.myIndex].appreciate3
-            doTextView1.text =  activityNameArray![self.myIndex].doitem1
-            doTextView2.text =  activityNameArray![self.myIndex].doitem2
-            doTextView3.text =  activityNameArray![self.myIndex].doitem3
-            youTextView1.text =  activityNameArray![self.myIndex].you1
-            youTextView2.text =  activityNameArray![self.myIndex].you2
-            youTextView3.text =  activityNameArray![self.myIndex].you3
+            communicationSituationTextField.text = data.situationTitle
+            dateAndTimeLabel.text =   "\(folderobject?.situationData[myIndex].date ?? "" ) | " + "\( activityNameArray![self.myIndex].time)"
+            valueTextView1.text = data.value1
+            valueTextView2.text = data.value2
+            valueTextView3.text = data.value3
+            feelTextView1.text = data.feel1
+            feelTextView2.text = data.feel2
+            feelTextView3.text = data.feel3
+            obstaclesTextView1.text = data.obstacle1
+            obstaclesTextView2.text = data.obstacle2
+            obstaclesTextView3.text = data.obstacle3
+            rememberTextView1.text = data.remember1
+            rememberTextView2.text = data.remember2
+            rememberTextView3.text = data.remember3
+            themTextView1.text = data.them1
+            themTextView2.text = data.them2
+            themTextView3.text = data.them3
+            appreciateTextView1.text = data.appreciate1
+            appreciateTextView2.text = data.appreciate2
+            appreciateTextView3.text = data.appreciate3
+            doTextView1.text =  data.doitem1
+            doTextView2.text =  data.doitem2
+            doTextView3.text =  data.doitem3
+            youTextView1.text =  data.you1
+            youTextView2.text =  data.you2
+            youTextView3.text = data.you3
             userInteractionDisabled()
         }else if viewType == "add" {
             communicationSituationTextField.text = ""
@@ -319,31 +326,31 @@ class PTCWorksheetViewController: UIViewController {
             youTextView2.text = ""
             youTextView3.text = ""
         }else if viewType == "edit" {
-            communicationSituationTextField.text = activityNameArray![self.myIndex].situationTitle
-            valueTextView1.text = activityNameArray![self.myIndex].value1
-            valueTextView2.text = activityNameArray![self.myIndex].value2
-            valueTextView3.text = activityNameArray![self.myIndex].value3
-            feelTextView1.text = activityNameArray![self.myIndex].feel1
-            feelTextView2.text = activityNameArray![self.myIndex].feel2
-            feelTextView3.text = activityNameArray![self.myIndex].feel3
-            obstaclesTextView1.text = activityNameArray![self.myIndex].obstacle1
-            obstaclesTextView2.text = activityNameArray![self.myIndex].obstacle2
-            obstaclesTextView3.text = activityNameArray![self.myIndex].obstacle3
-            rememberTextView1.text = activityNameArray![self.myIndex].remember1
-            rememberTextView2.text = activityNameArray![self.myIndex].remember2
-            rememberTextView3.text = activityNameArray![self.myIndex].remember3
-            themTextView1.text = activityNameArray![self.myIndex].them1
-            themTextView2.text = activityNameArray![self.myIndex].them2
-            themTextView3.text = activityNameArray![self.myIndex].them3
-            appreciateTextView1.text = activityNameArray![self.myIndex].appreciate1
-            appreciateTextView2.text = activityNameArray![self.myIndex].appreciate2
-            appreciateTextView3.text = activityNameArray![self.myIndex].appreciate3
-            doTextView1.text =  activityNameArray![self.myIndex].doitem1
-            doTextView2.text =  activityNameArray![self.myIndex].doitem2
-            doTextView3.text =  activityNameArray![self.myIndex].doitem3
-            youTextView1.text =  activityNameArray![self.myIndex].you1
-            youTextView2.text =  activityNameArray![self.myIndex].you2
-            youTextView3.text =  activityNameArray![self.myIndex].you3
+            communicationSituationTextField.text = data.situationTitle
+            valueTextView1.text = data.value1
+            valueTextView2.text = data.value2
+            valueTextView3.text = data.value3
+            feelTextView1.text = data.feel1
+            feelTextView2.text = data.feel2
+            feelTextView3.text = data.feel3
+            obstaclesTextView1.text = data.obstacle1
+            obstaclesTextView2.text = data.obstacle2
+            obstaclesTextView3.text = data.obstacle3
+            rememberTextView1.text = data.remember1
+            rememberTextView2.text = data.remember2
+            rememberTextView3.text = data.remember3
+            themTextView1.text = data.them1
+            themTextView2.text = data.them2
+            themTextView3.text = data.them3
+            appreciateTextView1.text = data.appreciate1
+            appreciateTextView2.text = data.appreciate2
+            appreciateTextView3.text = data.appreciate3
+            doTextView1.text =  data.doitem1
+            doTextView2.text =  data.doitem2
+            doTextView3.text =  data.doitem3
+            youTextView1.text =  data.you1
+            youTextView2.text =  data.you2
+            youTextView3.text = data.you3
         }
     }
     
@@ -456,5 +463,52 @@ extension PTCWorksheetViewController: UIPopoverPresentationControllerDelegate {
 
     func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
         return true
+    }
+    
+    
+    
+    func createPdfFromView(aView: UIView, saveToDocumentsWithFileName fileName: String)
+    {
+        let pdfTitle = "Swift-Generated PDF"
+        let pdfMetadata = [
+            // The name of the application creating the PDF.
+            kCGPDFContextCreator: "Power TO Connect",
+
+            // The name of the PDF's author.
+            kCGPDFContextAuthor: "Connect to the core",
+
+            // The title of the PDF.
+            kCGPDFContextTitle: "PDF",
+        ]
+        let pdfData = NSMutableData()
+        UIGraphicsBeginPDFContextToData(pdfData, aView.bounds, pdfMetadata)
+        UIGraphicsBeginPDFPage()
+        
+        
+        // Default size of the page is 612x72.
+        let pageSize = UIGraphicsGetPDFContextBounds().size
+        let font = UIFont.preferredFont(forTextStyle: .largeTitle)
+
+        // Let's draw the title of the PDF on top of the page.
+        let attributedPDFTitle = NSAttributedString(string: pdfTitle, attributes: [NSAttributedString.Key.font: font])
+        let stringSize = attributedPDFTitle.size()
+        let stringRect = CGRect(x: (pageSize.width / 2 - stringSize.width / 2), y: 20, width: stringSize.width, height: stringSize.height)
+        attributedPDFTitle.draw(in: stringRect)
+
+        
+        guard let pdfContext = UIGraphicsGetCurrentContext() else { return }
+        
+
+        aView.layer.render(in: pdfContext)
+        // Closes the current PDF context and ends writing to the file.
+        UIGraphicsEndPDFContext()
+        
+        
+
+        if let documentDirectories = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first {
+            let documentsFileName = documentDirectories + "/" + fileName + ".pdf"
+            debugPrint(documentsFileName)
+            pdfData.write(toFile: documentsFileName, atomically: true)
+        }
     }
 }

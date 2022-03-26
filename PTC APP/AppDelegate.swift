@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        print("User Realm User file location: \( Realm.Configuration.defaultConfiguration.fileURL!.path)")
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
