@@ -168,13 +168,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch tableView {
         case mainTableView:
-            if    FolderArray?.count  == 0 {
-                mainTableView.setEmptyView(title: "You don't have any Worksheet.", message: "Tap the '➕' icon to add your first PTC Worksheet.", messageImage: UIImage(named: "add-1")!)
-            } else {
-                mainTableView.restore()
-            }
-            numberOfRow = activityNameArray?.count ?? 0
-            
+            numberOfRow = FolderArray?.count ?? 0
         case menubarTableView:
             numberOfRow = menuItems.count
         default:
@@ -494,5 +488,6 @@ extension UITableView {
         self.backgroundView = nil
     }
 }
+
 
 
