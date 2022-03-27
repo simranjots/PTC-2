@@ -18,5 +18,5 @@ class userModel: Object  {
     @objc dynamic var isloggedin: Bool = false
     @objc dynamic var imageLink : String?
     @objc dynamic var verified : String?
-    let situationData = List<SituationData>()
+    let folderData = List<FolderData>()
  }

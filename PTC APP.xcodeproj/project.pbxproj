@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A43708227F055FC00511176 /* FolderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43708127F055FC00511176 /* FolderTableViewCell.swift */; };
+		1A43708427F0568500511176 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43708327F0568500511176 /* DetailTableViewController.swift */; };
+		1A43708627F0577000511176 /* FolderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43708527F0577000511176 /* FolderData.swift */; };
 		1A53F02426CF86D600593442 /* NewPasteOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A53F02326CF86D600593442 /* NewPasteOptionViewController.swift */; };
 		1A53F02726D43D3400593442 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A53F02626D43D3400593442 /* Instructions.swift */; };
 		1A66AEEF26BDE4F7002BB556 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1A66AEEE26BDE4F7002BB556 /* Realm */; };
@@ -60,6 +63,9 @@
 
 /* Begin PBXFileReference section */
 		035C471E8BC5E8721724FA53 /* Pods-PTC APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTC APP.release.xcconfig"; path = "Target Support Files/Pods-PTC APP/Pods-PTC APP.release.xcconfig"; sourceTree = "<group>"; };
+		1A43708127F055FC00511176 /* FolderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderTableViewCell.swift; sourceTree = "<group>"; };
+		1A43708327F0568500511176 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		1A43708527F0577000511176 /* FolderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderData.swift; sourceTree = "<group>"; };
 		1A53F02326CF86D600593442 /* NewPasteOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasteOptionViewController.swift; sourceTree = "<group>"; };
 		1A53F02626D43D3400593442 /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Instructions.swift; path = "PTC APP/helpers/Instructions.swift"; sourceTree = SOURCE_ROOT; };
 		1A66AEF226BDE532002BB556 /* SituationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SituationData.swift; sourceTree = "<group>"; };
@@ -142,6 +148,7 @@
 				26B3504726BE43AD0038A5E2 /* Utilities.swift */,
 				1A66AEFB26C2C994002BB556 /* UserModal.swift */,
 				263C866726BA453300012F55 /* Constants.swift */,
+				1A43708527F0577000511176 /* FolderData.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -193,6 +200,8 @@
 				26B3504326BDFBC80038A5E2 /* PTCWorksheetViewController.swift */,
 				1A53F02326CF86D600593442 /* NewPasteOptionViewController.swift */,
 				26DCA96F26D44B2D006B4208 /* instuctionsTableViewCell.swift */,
+				1A43708127F055FC00511176 /* FolderTableViewCell.swift */,
+				1A43708327F0568500511176 /* DetailTableViewController.swift */,
 			);
 			path = "Home VCs";
 			sourceTree = "<group>";
@@ -419,6 +428,7 @@
 				1A66AEFC26C2C994002BB556 /* UserModal.swift in Sources */,
 				263C866826BA453300012F55 /* Constants.swift in Sources */,
 				E159DD3F24185C2E00C4433F /* video.swift in Sources */,
+				1A43708627F0577000511176 /* FolderData.swift in Sources */,
 				1A53F02426CF86D600593442 /* NewPasteOptionViewController.swift in Sources */,
 				1A53F02726D43D3400593442 /* Instructions.swift in Sources */,
 				26C2FDCE26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift in Sources */,
@@ -434,6 +444,7 @@
 				2639EB1426BAE9B3006C1CF2 /* ResetPasswordViewController.swift in Sources */,
 				26B3504626BE3A940038A5E2 /* Extension.swift in Sources */,
 				E18E82D723FD9F5600F35982 /* introductionViewController.swift in Sources */,
+				1A43708227F055FC00511176 /* FolderTableViewCell.swift in Sources */,
 				260FA9F426BCCECA0088184B /* PrivacyPolicyViewController.swift in Sources */,
 				E19F7A8C23FCC21B00E718B8 /* ToDoItemCell.swift in Sources */,
 				E159DD272418370800C4433F /* TaresaViewController.swift in Sources */,
@@ -449,6 +460,7 @@
 				1A66AEFA26C2C61F002BB556 /* CurrentUser.swift in Sources */,
 				1A66AEF326BDE532002BB556 /* SituationData.swift in Sources */,
 				E1A022F123F31F4E0093FED2 /* homePage.swift in Sources */,
+				1A43708427F0568500511176 /* DetailTableViewController.swift in Sources */,
 				2639EB1926BB459D006C1CF2 /* SideMenuTableViewCell.swift in Sources */,
 				E19F7A8A23FC7AC400E718B8 /* ToDoParent.swift in Sources */,
 				E159DD3B2418597A00C4433F /* historyViewController.swift in Sources */,
