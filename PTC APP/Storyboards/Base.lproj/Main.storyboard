@@ -499,7 +499,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fyH-7w-C1J">
                                                             <rect key="frame" x="10" y="5" width="408" height="85"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="document" translatesAutoresizingMaskIntoConstraints="NO" id="Srv-q9-B7f">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder" translatesAutoresizingMaskIntoConstraints="NO" id="Srv-q9-B7f">
                                                                     <rect key="frame" x="10" y="17.666666666666671" width="50" height="50"/>
                                                                     <color key="tintColor" red="0.82745099070000006" green="0.36470589040000001" blue="0.3686274886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <constraints>
@@ -2705,6 +2705,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
         <image name="document" width="170.66667175292969" height="170.66667175292969"/>
         <image name="edit" width="170.66667175292969" height="170.66667175292969"/>
         <image name="facebook" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="folder" width="512" height="512"/>
         <image name="forgotPassword" width="170.66667175292969" height="170.66667175292969"/>
         <image name="home" width="170.66667175292969" height="170.66667175292969"/>
         <image name="instagram" width="170.66667175292969" height="170.66667175292969"/>

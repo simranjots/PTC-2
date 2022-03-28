@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     
     //MARK: - Variable
     let realm = try! Realm()
-    var Foldername = ""
+    var folderName = ""
     var folderobject = FolderData()
     var index = 0
     var currentUser : CurrentUser!
@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var profileEditButtonOutlet: UIButton!
     @IBOutlet var separatorView: UIView!
         //MARK: - MainView  Data
-    var FolderArray : Results<FolderData>?
+    var folderArray : Results<FolderData>?
     
     //MARK: - Menubar Outlets
     @IBOutlet var menubarTableView: UITableView!
@@ -45,7 +45,7 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         currentUser = CurrentUser()
         userObject = currentUser.checkLoggedIn()
-        FolderArray = userObject.folderData.filter("user = %@",userObject.email as Any )
+        folderArray = userObject.folderData.filter("user = %@",userObject.email as Any )
         mainTableView.reloadData()
     }
     
@@ -171,13 +171,36 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 1
     }
     
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//
+//        var numberOfRow = 0
+//
+//        switch tableView {
+//        case mainTableView:
+//            numberOfRow = FolderArray?.count ?? 0
+//        case menubarTableView:
+//            numberOfRow = menuItems.count
+//        default:
+//            print("Something's wrong!")
+//        }
+//
+//        return numberOfRow
+//    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         var numberOfRow = 0
         
         switch tableView {
         case mainTableView:
-            numberOfRow = FolderArray?.count ?? 0
+            if folderArray?.count == 0 {
+                mainTableView.setEmptyView(title: "Create Folder", message: "Tap the '➕' icon to create a folder.", messageImage: UIImage(named: "folder-2")!)
+            } else {
+                mainTableView.restore()
+            }
+            numberOfRow = folderArray?.count ?? 0
+            
         case menubarTableView:
             numberOfRow = menuItems.count
         default:
@@ -194,7 +217,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch tableView {
         case mainTableView:
             let cell = tableView.dequeueReusableCell(withIdentifier: "FolderTableViewCell", for: indexPath) as! FolderTableViewCell
-            cell.folderNameLabel.text = FolderArray?[indexPath.row].folderName
+            cell.folderNameLabel.text = folderArray?[indexPath.row].folderName
             return cell
         case menubarTableView:
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.homeScreenMenuBarCell, for: indexPath) as! SideMenuTableViewCell
@@ -215,8 +238,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch tableView {
         
         case mainTableView:
-            Foldername = FolderArray![indexPath.row].folderName
-            folderobject = FolderArray![indexPath.row]
+            folderName = folderArray![indexPath.row].folderName
+            folderobject = folderArray![indexPath.row]
             index = indexPath.row
             performSegue(withIdentifier: "foldertolist", sender: self)
             
@@ -298,11 +321,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         if(editingStyle == .delete){
             
-            let title = self.FolderArray![indexPath.row]
+            let title = self.folderArray![indexPath.row]
             let alert = UIAlertController(title: "Warning", message: "Do you want to delete \(title.folderName)?", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action:UIAlertAction) -> Void in
-                if let situationData = self.FolderArray?[indexPath.row]{
+                if let situationData = self.folderArray?[indexPath.row]{
                     do {
                         try self.realm.write {
                             self.realm.delete(situationData)
@@ -334,7 +357,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.destination is DetailTableViewController {
             let vc = segue.destination as? DetailTableViewController
-            vc?.foldername = Foldername
+            vc?.foldername = folderName
             vc?.name = folderobject
             vc?.index = index
             vc?.userObject = userObject
@@ -365,8 +388,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                     let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
                     if valueType == "add"{
                         if let foldername = textField?.text{
-                            if index != 0 {
-                                if self.FolderArray?[index].folderName == foldername {
+                            if index != 0  && self.folderArray?[index].folderName == foldername {
                                     self.showToast(message: "Folder with same name already exist", duration: 2, height: 3)
                                 }else{
                                     let todo = FolderData()
@@ -374,22 +396,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                                     todo.user = (self.userObject?.email)!
                                     self.save(folderdata: todo)
                                 }
-                            }else{
-                                let todo = FolderData()
-                                todo.folderName = foldername
-                                todo.user = (self.userObject?.email)!
-                                self.save(folderdata: todo)
-                            }
+                         
                         
                         }else{
                             self.dismiss(animated: true, completion: nil)
                         }
                     }else{
                         if let foldername = textField?.text{
-                            if self.FolderArray?[index].folderName == foldername {
+                            if self.folderArray?[index].folderName == foldername {
                                 self.showToast(message: "Folder with same name already exist", duration: 2, height: 3)
                             }else{
-                                if let folderData = self.FolderArray?[index]{
+                                if let folderData = self.folderArray?[index]{
                                     do {
                                         try self.realm.write {
                                             for data in folderData.situationData{
@@ -421,7 +438,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
 
 
-//	Extension for TableView to add EmptyView when there's no data
+//MARK: - Extension for TableView to add EmptyView when there's no data
 
 extension UITableView {
         
