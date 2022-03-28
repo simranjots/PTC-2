@@ -30,6 +30,6 @@ class SituationData: Object {
     @objc dynamic var you2: String  = ""
     @objc dynamic var you3: String  = ""
     @objc dynamic var prefix: Bool  = false
-    @objc dynamic var user: String  = ""
+    @objc dynamic var folderName: String  = ""
     
 }
