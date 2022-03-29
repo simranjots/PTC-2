@@ -30,6 +30,8 @@
 		2639EB1B26BB45DE006C1CF2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */; };
 		2639EB1D26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1C26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift */; };
 		263C866826BA453300012F55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C866726BA453300012F55 /* Constants.swift */; };
+		26ABCF4B27F21EE200F90C9F /* PTC_Worksheet.html in Resources */ = {isa = PBXBuildFile; fileRef = 26ABCF4A27F21EE200F90C9F /* PTC_Worksheet.html */; };
+		26ABCF4D27F21F1200F90C9F /* WorksheetComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ABCF4C27F21F1200F90C9F /* WorksheetComposer.swift */; };
 		26B3504226BDEA870038A5E2 /* saveFileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3504126BDEA870038A5E2 /* saveFileController.swift */; };
 		26B3504426BDFBC80038A5E2 /* PTCWorksheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3504326BDFBC80038A5E2 /* PTCWorksheetViewController.swift */; };
 		26B3504626BE3A940038A5E2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3504526BE3A940038A5E2 /* Extension.swift */; };
@@ -85,6 +87,8 @@
 		2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2639EB1C26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCMainTableViewCell.swift; sourceTree = "<group>"; };
 		263C866726BA453300012F55 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		26ABCF4A27F21EE200F90C9F /* PTC_Worksheet.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = PTC_Worksheet.html; sourceTree = "<group>"; };
+		26ABCF4C27F21F1200F90C9F /* WorksheetComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorksheetComposer.swift; path = "PTC APP/helpers/WorksheetComposer.swift"; sourceTree = SOURCE_ROOT; };
 		26B3504126BDEA870038A5E2 /* saveFileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = saveFileController.swift; sourceTree = "<group>"; };
 		26B3504326BDFBC80038A5E2 /* PTCWorksheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTCWorksheetViewController.swift; sourceTree = "<group>"; };
 		26B3504526BE3A940038A5E2 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -227,6 +231,14 @@
 			path = "More VCs";
 			sourceTree = "<group>";
 		};
+		26ABCF4927F21EBD00F90C9F /* HTMLTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				26ABCF4A27F21EE200F90C9F /* PTC_Worksheet.html */,
+			);
+			path = HTMLTemplate;
+			sourceTree = "<group>";
+		};
 		26C2FDC226BDA78200A53C75 /* Instruction Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				1A53F02626D43D3400593442 /* Instructions.swift */,
+				26ABCF4C27F21F1200F90C9F /* WorksheetComposer.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -258,6 +271,7 @@
 		E162573123E3304B00E84948 = {
 			isa = PBXGroup;
 			children = (
+				26ABCF4927F21EBD00F90C9F /* HTMLTemplate */,
 				E162573C23E3304B00E84948 /* PTC APP */,
 				E162573B23E3304B00E84948 /* Products */,
 				EC5B1A1377E404529A99948F /* Pods */,
@@ -381,6 +395,7 @@
 				E19F7A8E23FCDC3800E718B8 /* Assets.xcassets in Resources */,
 				26D12A4D26CED6CA0039C495 /* 3.png in Resources */,
 				26D12A4B26CED6CA0039C495 /* 1.png in Resources */,
+				26ABCF4B27F21EE200F90C9F /* PTC_Worksheet.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +456,7 @@
 				1A43708627F0577000511176 /* FolderData.swift in Sources */,
 				1A53F02426CF86D600593442 /* NewPasteOptionViewController.swift in Sources */,
 				1A53F02726D43D3400593442 /* Instructions.swift in Sources */,
+				26ABCF4D27F21F1200F90C9F /* WorksheetComposer.swift in Sources */,
 				26C2FDCE26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift in Sources */,
 				2639EB1D26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift in Sources */,
 				260FA9EE26BCCE8D0088184B /* InstructionsViewController.swift in Sources */,

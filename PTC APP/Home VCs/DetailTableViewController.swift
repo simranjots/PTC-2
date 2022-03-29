@@ -56,9 +56,16 @@ class DetailTableViewController: UIViewController,UITableViewDelegate, UITableVi
 
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+         
+         if activityNameArray?.count == 0 {
+             DetailTableView.setEmptyView(title: "You don't have any Worksheet.", message: "Tap the '➕' icon to add your first PTC Worksheet.", messageImage: UIImage(named: "add-1")!)
+         } else {
+             DetailTableView.restore()
+         }
+         
         return activityNameArray?.count ?? 0
     }
-
+    
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
                     let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.homeScreenMainTableViewCell, for: indexPath) as! HomeVCMainTableViewCell
@@ -149,3 +156,5 @@ class DetailTableViewController: UIViewController,UITableViewDelegate, UITableVi
             }
         }
     }
+
+
