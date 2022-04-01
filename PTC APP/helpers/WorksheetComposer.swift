@@ -100,8 +100,8 @@ class WorksheetComposer: NSObject {
             
             // Sender info.
             HTMLContent = HTMLContent.replacingOccurrences(of: "#DO_1#", with: do1)
-            HTMLContent = HTMLContent.replacingOccurrences(of: "#DO_1#", with: do2)
-            HTMLContent = HTMLContent.replacingOccurrences(of: "#DO_1#", with: do3)
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#DO_2#", with: do2)
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#DO_3#", with: do3)
      
             
             return HTMLContent
