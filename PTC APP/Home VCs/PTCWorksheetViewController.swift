@@ -79,6 +79,9 @@ class PTCWorksheetViewController: UIViewController {
     var myIndex = 0
     var activityNameArray : Results<SituationData>?
     var selectedUser: userModel?
+    var worksheetComposer: WorksheetComposer!
+    
+       var HTMLContent: String!
     
     //MARK: - Life Cycle Methods
     override func viewDidLoad() {
@@ -90,6 +93,10 @@ class PTCWorksheetViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         updateUI(type: viewType)
+        if myIndex != 0 {
+            createInvoiceAsHTML()
+        }
+        
     }
     
 
@@ -126,6 +133,9 @@ class PTCWorksheetViewController: UIViewController {
             }
             }else if viewType == "edit"{
                 updateData()
+            }else if viewType == "show"{
+                createInvoiceAsHTML()
+               
             }
             navigationController?.popViewController(animated: true)
             }
@@ -271,8 +281,8 @@ class PTCWorksheetViewController: UIViewController {
         
         if viewType == "show" {
             let data = folderobject!.situationData[myIndex]
-            saveButton.isEnabled = false
-            saveButton.image = UIImage(named: "")
+            saveButton.isEnabled = true
+            saveButton.image = UIImage(named: "add")
             communicationSituationTextField.text = data.situationTitle
             dateAndTimeLabel.text =   "\(folderobject?.situationData[myIndex].date ?? "" ) | " + "\( activityNameArray![self.myIndex].time)"
             valueTextView1.text = data.value1
@@ -392,6 +402,17 @@ class PTCWorksheetViewController: UIViewController {
         valueButton.isHidden = true
         doButton.isHidden = true
         youButton.isHidden = true
+    }
+    
+    
+    func createInvoiceAsHTML() {
+        worksheetComposer = WorksheetComposer()
+        activityNameArray = realm.objects(SituationData.self)
+        let data = folderobject!.situationData[myIndex]
+        if let workSheetHTML = worksheetComposer.renderInvoice(communicationSituation: data.situationTitle, date: "\(folderobject?.situationData[myIndex].date ?? "" ) | " + "\( activityNameArray![self.myIndex].time)", them1: data.them1, them2: data.them2, them3: data.them3, appreciate1: data.appreciate1, appreciate2: data.appreciate2, appreciate3: data.appreciate3, remember1: data.remember1, remember2: data.remember2, remember3: data.remember3, obstacles1: data.obstacle1, obstacles2: data.obstacle2, obstacles3: data.obstacle3, feel1: data.feel1, feel2: data.feel2, feel3: data.feel3, value1: data.value1, value2: data.value2, value3: data.value3, do1: data.doitem1, do2: data.doitem2, do3: data.doitem3, you1: data.you1, you2: data.you2, you3: data.you3) {
+     
+            worksheetComposer.exportHTMLContentToPDF(HTMLContent: workSheetHTML)
+        }
     }
     
     func styleElements() {

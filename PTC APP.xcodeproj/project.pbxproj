@@ -10,6 +10,7 @@
 		1A43708227F055FC00511176 /* FolderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43708127F055FC00511176 /* FolderTableViewCell.swift */; };
 		1A43708427F0568500511176 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43708327F0568500511176 /* DetailTableViewController.swift */; };
 		1A43708627F0577000511176 /* FolderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43708527F0577000511176 /* FolderData.swift */; };
+		1A43708827F7111A00511176 /* CustomPrintPageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43708727F7111A00511176 /* CustomPrintPageRenderer.swift */; };
 		1A53F02426CF86D600593442 /* NewPasteOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A53F02326CF86D600593442 /* NewPasteOptionViewController.swift */; };
 		1A53F02726D43D3400593442 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A53F02626D43D3400593442 /* Instructions.swift */; };
 		1A66AEEF26BDE4F7002BB556 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1A66AEEE26BDE4F7002BB556 /* Realm */; };
@@ -70,6 +71,7 @@
 		1A43708127F055FC00511176 /* FolderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderTableViewCell.swift; sourceTree = "<group>"; };
 		1A43708327F0568500511176 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		1A43708527F0577000511176 /* FolderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderData.swift; sourceTree = "<group>"; };
+		1A43708727F7111A00511176 /* CustomPrintPageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomPrintPageRenderer.swift; path = "PTC APP/helpers/CustomPrintPageRenderer.swift"; sourceTree = SOURCE_ROOT; };
 		1A53F02326CF86D600593442 /* NewPasteOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasteOptionViewController.swift; sourceTree = "<group>"; };
 		1A53F02626D43D3400593442 /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Instructions.swift; path = "PTC APP/helpers/Instructions.swift"; sourceTree = SOURCE_ROOT; };
 		1A66AEF226BDE532002BB556 /* SituationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SituationData.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			children = (
 				1A53F02626D43D3400593442 /* Instructions.swift */,
 				26ABCF4C27F21F1200F90C9F /* WorksheetComposer.swift */,
+				1A43708727F7111A00511176 /* CustomPrintPageRenderer.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				26C2FDCE26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift in Sources */,
 				2639EB1D26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift in Sources */,
 				260FA9EE26BCCE8D0088184B /* InstructionsViewController.swift in Sources */,
+				1A43708827F7111A00511176 /* CustomPrintPageRenderer.swift in Sources */,
 				E159DD3D24185B5600C4433F /* videoCell.swift in Sources */,
 				260FA9F226BCCEB30088184B /* ProfileViewController.swift in Sources */,
 				E162573E23E3304B00E84948 /* AppDelegate.swift in Sources */,
@@ -640,13 +644,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RP2W7V2ZKT;
 				INFOPLIST_FILE = "PTC APP/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-
 				MARKETING_VERSION = 0.02;
-
 				PRODUCT_BUNDLE_IDENTIFIER = com.PTCWorksheet.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -663,13 +666,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RP2W7V2ZKT;
 				INFOPLIST_FILE = "PTC APP/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-
 				MARKETING_VERSION = 0.02;
-
 				PRODUCT_BUNDLE_IDENTIFIER = com.PTCWorksheet.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
