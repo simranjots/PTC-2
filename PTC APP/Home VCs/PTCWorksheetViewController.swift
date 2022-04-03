@@ -282,7 +282,7 @@ class PTCWorksheetViewController: UIViewController {
         if viewType == "show" {
             let data = folderobject!.situationData[myIndex]
             saveButton.isEnabled = true
-            saveButton.image = UIImage(named: "add")
+            saveButton.image = UIImage(named: "pdf")
             communicationSituationTextField.text = data.situationTitle
             dateAndTimeLabel.text =   "\(folderobject?.situationData[myIndex].date ?? "" ) | " + "\( activityNameArray![self.myIndex].time)"
             valueTextView1.text = data.value1

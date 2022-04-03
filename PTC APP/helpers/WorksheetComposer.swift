@@ -10,8 +10,12 @@ import UIKit
 
 class WorksheetComposer: NSObject {
 
-    let pathToWorksheetHTMLTemplate = Bundle.main.path(forResource: "PTC_Worksheet", ofType: "html")
+     let pathToWorksheetHTMLTemplate = Bundle.main.path(forResource: "PTC_Worksheet-2", ofType: "html")
     
+     let logo = Bundle.main.path(forResource: "PTC_Logo1", ofType: "jpg")
+     let titleImage = Bundle.main.path(forResource: "PTC-cover", ofType: "jpg")
+       
+   
        let communicationSituation: String! = ""
        let date: String! = ""
        let them1: String! = ""
@@ -45,7 +49,7 @@ class WorksheetComposer: NSObject {
     }
    
  
-    func renderInvoice( communicationSituation: String,
+    func renderInvoice(communicationSituation: String,
     date: String,them1: String,them2: String,them3: String,appreciate1: String,appreciate2: String,appreciate3: String,remember1: String,remember2: String,remember3: String,obstacles1: String,obstacles2: String,obstacles3: String,feel1: String,feel2: String,feel3: String,value1: String,value2: String,value3: String,do1: String,do2: String,do3: String,you1: String,you2: String,you3: String) -> String! {
         
         
@@ -56,7 +60,9 @@ class WorksheetComposer: NSObject {
             // Replace all the placeholders with real values except for the items.
             // The logo image.
             //HTMLContent = HTMLContent.stringByReplacingOccurrencesOfString("#LOGO_IMAGE#", withString: logoImageURL)
-     
+             //  Logo
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#LOGO_IMG#", with:  "/Users/jaldeep_patel/Documents/PTC/HTMLTemplate/PTC_Logo1.jpg")
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#TITLE_IMG#", with: titleImage ?? "")
             // communicationSituation Name.
             HTMLContent = HTMLContent.replacingOccurrences(of: "#COMMUNICATION_SITUATION#", with: communicationSituation)
      

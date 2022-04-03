@@ -25,6 +25,9 @@
 		260FA9F226BCCEB30088184B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9F126BCCEB30088184B /* ProfileViewController.swift */; };
 		260FA9F426BCCECA0088184B /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9F326BCCECA0088184B /* PrivacyPolicyViewController.swift */; };
 		260FA9F626BCF9090088184B /* PrivacyPolicyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9F526BCF9090088184B /* PrivacyPolicyTableViewCell.swift */; };
+		26292A7727FA1072001E3EEE /* PTC_Worksheet-2.html in Resources */ = {isa = PBXBuildFile; fileRef = 26292A7627FA1072001E3EEE /* PTC_Worksheet-2.html */; };
+		26292A7C27FA1B4F001E3EEE /* PTC_Logo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26292A7B27FA1B4F001E3EEE /* PTC_Logo1.jpg */; };
+		26292A7E27FA1B57001E3EEE /* PTC_Title.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26292A7D27FA1B57001E3EEE /* PTC_Title.jpg */; };
 		2639EB1426BAE9B3006C1CF2 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */; };
 		2639EB1726BB18B4006C1CF2 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2639EB1626BB18B4006C1CF2 /* IQKeyboardManagerSwift */; };
 		2639EB1926BB459D006C1CF2 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */; };
@@ -84,6 +87,9 @@
 		260FA9F126BCCEB30088184B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		260FA9F326BCCECA0088184B /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		260FA9F526BCF9090088184B /* PrivacyPolicyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyTableViewCell.swift; sourceTree = "<group>"; };
+		26292A7627FA1072001E3EEE /* PTC_Worksheet-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "PTC_Worksheet-2.html"; sourceTree = "<group>"; };
+		26292A7B27FA1B4F001E3EEE /* PTC_Logo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PTC_Logo1.jpg; sourceTree = "<group>"; };
+		26292A7D27FA1B57001E3EEE /* PTC_Title.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PTC_Title.jpg; sourceTree = "<group>"; };
 		2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -233,10 +239,20 @@
 			path = "More VCs";
 			sourceTree = "<group>";
 		};
+		26292A7827FA182E001E3EEE /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		26ABCF4927F21EBD00F90C9F /* HTMLTemplate */ = {
 			isa = PBXGroup;
 			children = (
 				26ABCF4A27F21EE200F90C9F /* PTC_Worksheet.html */,
+				26292A7627FA1072001E3EEE /* PTC_Worksheet-2.html */,
+				26292A7B27FA1B4F001E3EEE /* PTC_Logo1.jpg */,
+				26292A7D27FA1B57001E3EEE /* PTC_Title.jpg */,
 			);
 			path = HTMLTemplate;
 			sourceTree = "<group>";
@@ -305,6 +321,7 @@
 				260FA9FB26BCFFD60088184B /* More VCs */,
 				26C2FDC226BDA78200A53C75 /* Instruction Images */,
 				E19F7A8D23FCDC3700E718B8 /* Assets.xcassets */,
+				26292A7827FA182E001E3EEE /* New Group */,
 				E162574E23E3304D00E84948 /* Info.plist */,
 				1A66AEFD26C2D614002BB556 /* GoogleService-Info.plist */,
 				E162574623E3304C00E84948 /* PTC_APP.xcdatamodeld */,
@@ -391,6 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26292A7C27FA1B4F001E3EEE /* PTC_Logo1.jpg in Resources */,
 				26D12A4C26CED6CA0039C495 /* 2.png in Resources */,
 				E162574D23E3304D00E84948 /* LaunchScreen.storyboard in Resources */,
 				E162574523E3304B00E84948 /* Main.storyboard in Resources */,
@@ -398,6 +416,8 @@
 				E19F7A8E23FCDC3800E718B8 /* Assets.xcassets in Resources */,
 				26D12A4D26CED6CA0039C495 /* 3.png in Resources */,
 				26D12A4B26CED6CA0039C495 /* 1.png in Resources */,
+				26292A7E27FA1B57001E3EEE /* PTC_Title.jpg in Resources */,
+				26292A7727FA1072001E3EEE /* PTC_Worksheet-2.html in Resources */,
 				26ABCF4B27F21EE200F90C9F /* PTC_Worksheet.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

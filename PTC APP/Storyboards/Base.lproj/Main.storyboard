@@ -515,10 +515,10 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="apv-K1-V1M">
-                                                                    <rect key="frame" x="68.000000000000014" y="15.000000000000004" width="143.33333333333337" height="50.333333333333343"/>
+                                                                    <rect key="frame" x="67.999999999999986" y="15.000000000000004" width="129.66666666666663" height="50.333333333333343"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Hvk-DF-zsZ">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="143.33333333333334" height="50.333333333333336"/>
+                                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Folder Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Hvk-DF-zsZ">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="129.66666666666666" height="50.333333333333336"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                                             <color key="textColor" name="BrandColor"/>
                                                                             <nil key="highlightedColor"/>
