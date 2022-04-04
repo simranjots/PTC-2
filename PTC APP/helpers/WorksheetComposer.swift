@@ -121,7 +121,7 @@ class WorksheetComposer: NSObject {
      
     }
 
-    func exportHTMLContentToPDF(HTMLContent: String) {
+    func exportHTMLContentToPDF(HTMLContent: String,comunicationStituation: String) {
         let printPageRenderer = CustomPrintPageRenderer()
      
         let printFormatter = UIMarkupTextPrintFormatter(markupText: HTMLContent)
@@ -129,7 +129,7 @@ class WorksheetComposer: NSObject {
      
         let pdfData = drawPDFUsingPrintPageRenderer(printPageRenderer: printPageRenderer)
      
-        let pdfFilename = "\(AppDelegate.getAppDelegate().getDocDir())/Invoice\("invoiceNumber").pdf"
+        let pdfFilename = "\(AppDelegate.getAppDelegate().getDocDir())/Invoice\("\(comunicationStituation)").pdf"
         pdfData?.write(toFile: pdfFilename, atomically: true)
      
         print(pdfFilename)
