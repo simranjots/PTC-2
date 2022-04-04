@@ -129,7 +129,7 @@ class WorksheetComposer: NSObject {
      
         let pdfData = drawPDFUsingPrintPageRenderer(printPageRenderer: printPageRenderer)
      
-        let pdfFilename = "\(AppDelegate.getAppDelegate().getDocDir())/\("\(FolderName)")/\("\(comunicationStituation)").pdf"
+        let pdfFilename = "\(AppDelegate.getAppDelegate().getDocDir(folderName: FolderName))/\("\(comunicationStituation)").pdf"
         pdfData?.write(toFile: pdfFilename, atomically: true)
      
         print(pdfFilename)
