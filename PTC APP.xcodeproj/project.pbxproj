@@ -11,6 +11,7 @@
 		1A43708427F0568500511176 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43708327F0568500511176 /* DetailTableViewController.swift */; };
 		1A43708627F0577000511176 /* FolderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43708527F0577000511176 /* FolderData.swift */; };
 		1A43708827F7111A00511176 /* CustomPrintPageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43708727F7111A00511176 /* CustomPrintPageRenderer.swift */; };
+		1A53236627FC82A3005EE5AD /* PreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A53236527FC82A3005EE5AD /* PreViewController.swift */; };
 		1A53F02426CF86D600593442 /* NewPasteOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A53F02326CF86D600593442 /* NewPasteOptionViewController.swift */; };
 		1A53F02726D43D3400593442 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A53F02626D43D3400593442 /* Instructions.swift */; };
 		1A66AEEF26BDE4F7002BB556 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1A66AEEE26BDE4F7002BB556 /* Realm */; };
@@ -26,8 +27,6 @@
 		260FA9F426BCCECA0088184B /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9F326BCCECA0088184B /* PrivacyPolicyViewController.swift */; };
 		260FA9F626BCF9090088184B /* PrivacyPolicyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9F526BCF9090088184B /* PrivacyPolicyTableViewCell.swift */; };
 		26292A7727FA1072001E3EEE /* PTC_Worksheet-2.html in Resources */ = {isa = PBXBuildFile; fileRef = 26292A7627FA1072001E3EEE /* PTC_Worksheet-2.html */; };
-		26292A7C27FA1B4F001E3EEE /* PTC_Logo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26292A7B27FA1B4F001E3EEE /* PTC_Logo1.jpg */; };
-		26292A7E27FA1B57001E3EEE /* PTC_Title.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26292A7D27FA1B57001E3EEE /* PTC_Title.jpg */; };
 		2639EB1426BAE9B3006C1CF2 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */; };
 		2639EB1726BB18B4006C1CF2 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2639EB1626BB18B4006C1CF2 /* IQKeyboardManagerSwift */; };
 		2639EB1926BB459D006C1CF2 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */; };
@@ -75,6 +74,7 @@
 		1A43708327F0568500511176 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		1A43708527F0577000511176 /* FolderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderData.swift; sourceTree = "<group>"; };
 		1A43708727F7111A00511176 /* CustomPrintPageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomPrintPageRenderer.swift; path = "PTC APP/helpers/CustomPrintPageRenderer.swift"; sourceTree = SOURCE_ROOT; };
+		1A53236527FC82A3005EE5AD /* PreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreViewController.swift; sourceTree = "<group>"; };
 		1A53F02326CF86D600593442 /* NewPasteOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasteOptionViewController.swift; sourceTree = "<group>"; };
 		1A53F02626D43D3400593442 /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Instructions.swift; path = "PTC APP/helpers/Instructions.swift"; sourceTree = SOURCE_ROOT; };
 		1A66AEF226BDE532002BB556 /* SituationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SituationData.swift; sourceTree = "<group>"; };
@@ -88,8 +88,6 @@
 		260FA9F326BCCECA0088184B /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		260FA9F526BCF9090088184B /* PrivacyPolicyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyTableViewCell.swift; sourceTree = "<group>"; };
 		26292A7627FA1072001E3EEE /* PTC_Worksheet-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "PTC_Worksheet-2.html"; sourceTree = "<group>"; };
-		26292A7B27FA1B4F001E3EEE /* PTC_Logo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PTC_Logo1.jpg; sourceTree = "<group>"; };
-		26292A7D27FA1B57001E3EEE /* PTC_Title.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PTC_Title.jpg; sourceTree = "<group>"; };
 		2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +219,7 @@
 				26DCA96F26D44B2D006B4208 /* instuctionsTableViewCell.swift */,
 				1A43708127F055FC00511176 /* FolderTableViewCell.swift */,
 				1A43708327F0568500511176 /* DetailTableViewController.swift */,
+				1A53236527FC82A3005EE5AD /* PreViewController.swift */,
 			);
 			path = "Home VCs";
 			sourceTree = "<group>";
@@ -239,20 +238,11 @@
 			path = "More VCs";
 			sourceTree = "<group>";
 		};
-		26292A7827FA182E001E3EEE /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		26ABCF4927F21EBD00F90C9F /* HTMLTemplate */ = {
 			isa = PBXGroup;
 			children = (
 				26ABCF4A27F21EE200F90C9F /* PTC_Worksheet.html */,
 				26292A7627FA1072001E3EEE /* PTC_Worksheet-2.html */,
-				26292A7B27FA1B4F001E3EEE /* PTC_Logo1.jpg */,
-				26292A7D27FA1B57001E3EEE /* PTC_Title.jpg */,
 			);
 			path = HTMLTemplate;
 			sourceTree = "<group>";
@@ -321,7 +311,6 @@
 				260FA9FB26BCFFD60088184B /* More VCs */,
 				26C2FDC226BDA78200A53C75 /* Instruction Images */,
 				E19F7A8D23FCDC3700E718B8 /* Assets.xcassets */,
-				26292A7827FA182E001E3EEE /* New Group */,
 				E162574E23E3304D00E84948 /* Info.plist */,
 				1A66AEFD26C2D614002BB556 /* GoogleService-Info.plist */,
 				E162574623E3304C00E84948 /* PTC_APP.xcdatamodeld */,
@@ -408,7 +397,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26292A7C27FA1B4F001E3EEE /* PTC_Logo1.jpg in Resources */,
 				26D12A4C26CED6CA0039C495 /* 2.png in Resources */,
 				E162574D23E3304D00E84948 /* LaunchScreen.storyboard in Resources */,
 				E162574523E3304B00E84948 /* Main.storyboard in Resources */,
@@ -416,7 +404,6 @@
 				E19F7A8E23FCDC3800E718B8 /* Assets.xcassets in Resources */,
 				26D12A4D26CED6CA0039C495 /* 3.png in Resources */,
 				26D12A4B26CED6CA0039C495 /* 1.png in Resources */,
-				26292A7E27FA1B57001E3EEE /* PTC_Title.jpg in Resources */,
 				26292A7727FA1072001E3EEE /* PTC_Worksheet-2.html in Resources */,
 				26ABCF4B27F21EE200F90C9F /* PTC_Worksheet.html in Resources */,
 			);
@@ -483,6 +470,7 @@
 				26C2FDCE26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift in Sources */,
 				2639EB1D26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift in Sources */,
 				260FA9EE26BCCE8D0088184B /* InstructionsViewController.swift in Sources */,
+				1A53236627FC82A3005EE5AD /* PreViewController.swift in Sources */,
 				1A43708827F7111A00511176 /* CustomPrintPageRenderer.swift in Sources */,
 				E159DD3D24185B5600C4433F /* videoCell.swift in Sources */,
 				260FA9F226BCCEB30088184B /* ProfileViewController.swift in Sources */,

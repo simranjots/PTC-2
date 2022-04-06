@@ -979,7 +979,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qL-s5-Py8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2243" y="954"/>
+            <point key="canvasLocation" x="2561" y="954"/>
         </scene>
         <!--About Author-->
         <scene sceneID="kzz-6g-oXz">
@@ -1171,7 +1171,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cao-2g-G4V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3327" y="954"/>
+            <point key="canvasLocation" x="3421" y="954"/>
         </scene>
         <!--Contact Us-->
         <scene sceneID="UvM-Et-z1W">
@@ -2444,6 +2444,64 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
             </objects>
             <point key="canvasLocation" x="240" y="954"/>
         </scene>
+        <!--Pre View Controller-->
+        <scene sceneID="jcR-QQ-R9k">
+            <objects>
+                <viewController storyboardIdentifier="preview" id="n4X-Z1-jvC" customClass="PreViewController" customModule="PTC_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZVy-oQ-r6N">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Do3-zj-jlz">
+                                <rect key="frame" x="0.0" y="128" width="428" height="764"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Rl-CO-ESn">
+                                <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                                <items>
+                                    <navigationItem title="PDF file" id="JE5-gI-e9p">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Qfi-9v-d2Z">
+                                            <connections>
+                                                <action selector="cancelBtnPressed:" destination="n4X-Z1-jvC" id="Ahz-ep-FXk"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="pdf" id="qo5-eh-69t">
+                                            <connections>
+                                                <action selector="pdfBtnPressed:" destination="n4X-Z1-jvC" id="Md9-Ie-n3E"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iWo-fb-3dg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Rl-CO-ESn" firstAttribute="trailing" secondItem="Do3-zj-jlz" secondAttribute="trailing" id="4xb-3F-edP"/>
+                            <constraint firstItem="iWo-fb-3dg" firstAttribute="trailing" secondItem="Do3-zj-jlz" secondAttribute="trailing" id="Ekb-Nq-07w"/>
+                            <constraint firstItem="0Rl-CO-ESn" firstAttribute="leading" secondItem="Do3-zj-jlz" secondAttribute="leading" id="N8L-aA-nK9"/>
+                            <constraint firstItem="Do3-zj-jlz" firstAttribute="top" secondItem="0Rl-CO-ESn" secondAttribute="bottom" constant="40" id="bZ9-dG-iSp"/>
+                            <constraint firstItem="0Rl-CO-ESn" firstAttribute="top" secondItem="iWo-fb-3dg" secondAttribute="top" id="ijD-ba-g8e"/>
+                            <constraint firstItem="iWo-fb-3dg" firstAttribute="bottom" secondItem="Do3-zj-jlz" secondAttribute="bottom" id="kcE-dc-16Z"/>
+                            <constraint firstItem="Do3-zj-jlz" firstAttribute="leading" secondItem="iWo-fb-3dg" secondAttribute="leading" id="wn5-Sq-1QN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="W1O-6w-xCk">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="pdf" id="ZUv-WE-0FE"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pdfBtn" destination="qo5-eh-69t" id="rD2-sj-gHY"/>
+                        <outlet property="preview" destination="Do3-zj-jlz" id="6E3-36-HnJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qJP-aA-obb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090.6542056074766" y="953.77969762419013"/>
+        </scene>
         <!--New Paste Option View Controller-->
         <scene sceneID="Atz-r6-xOW">
             <objects>
@@ -2530,7 +2588,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcX-ht-lBA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1091" y="954"/>
+            <point key="canvasLocation" x="4137" y="954"/>
         </scene>
         <!--Files-->
         <scene sceneID="Hvj-y9-zLd">
@@ -2712,6 +2770,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
         <image name="linkedin" width="170.66667175292969" height="170.66667175292969"/>
         <image name="menu-bar" width="29" height="29"/>
         <image name="next" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="pdf" width="29" height="29"/>
         <image name="pin" width="170.66667175292969" height="170.66667175292969"/>
         <image name="previous" width="170.66667175292969" height="170.66667175292969"/>
         <image name="profile" width="170.66667175292969" height="170.66667175292969"/>
@@ -2738,7 +2797,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
             <color red="0.90980392156862744" green="0.31764705882352939" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="purple">
-            <color red="0.15700000524520874" green="0.063000001013278961" blue="0.3059999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.15686274509803921" green="0.062745098039215685" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
