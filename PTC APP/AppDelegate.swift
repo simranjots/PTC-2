@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           {
               print("Unable to create directory \(error.debugDescription)")
           }
-          return NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        return DirPath?.path ?? DocumentDirectory.path!
       }
 
     // MARK: UISceneSession Lifecycle
