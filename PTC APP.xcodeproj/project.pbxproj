@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A43708227F055FC00511176 /* FolderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43708127F055FC00511176 /* FolderTableViewCell.swift */; };
+		1A43708427F0568500511176 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43708327F0568500511176 /* DetailTableViewController.swift */; };
+		1A43708627F0577000511176 /* FolderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43708527F0577000511176 /* FolderData.swift */; };
+		1A43708827F7111A00511176 /* CustomPrintPageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A43708727F7111A00511176 /* CustomPrintPageRenderer.swift */; };
+		1A53236627FC82A3005EE5AD /* PreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A53236527FC82A3005EE5AD /* PreViewController.swift */; };
 		1A53F02426CF86D600593442 /* NewPasteOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A53F02326CF86D600593442 /* NewPasteOptionViewController.swift */; };
 		1A53F02726D43D3400593442 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A53F02626D43D3400593442 /* Instructions.swift */; };
 		1A66AEEF26BDE4F7002BB556 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 1A66AEEE26BDE4F7002BB556 /* Realm */; };
@@ -21,12 +26,15 @@
 		260FA9F226BCCEB30088184B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9F126BCCEB30088184B /* ProfileViewController.swift */; };
 		260FA9F426BCCECA0088184B /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9F326BCCECA0088184B /* PrivacyPolicyViewController.swift */; };
 		260FA9F626BCF9090088184B /* PrivacyPolicyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FA9F526BCF9090088184B /* PrivacyPolicyTableViewCell.swift */; };
+		26292A7727FA1072001E3EEE /* PTC_Worksheet-2.html in Resources */ = {isa = PBXBuildFile; fileRef = 26292A7627FA1072001E3EEE /* PTC_Worksheet-2.html */; };
 		2639EB1426BAE9B3006C1CF2 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */; };
 		2639EB1726BB18B4006C1CF2 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2639EB1626BB18B4006C1CF2 /* IQKeyboardManagerSwift */; };
 		2639EB1926BB459D006C1CF2 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */; };
 		2639EB1B26BB45DE006C1CF2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */; };
 		2639EB1D26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2639EB1C26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift */; };
 		263C866826BA453300012F55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C866726BA453300012F55 /* Constants.swift */; };
+		26ABCF4B27F21EE200F90C9F /* PTC_Worksheet.html in Resources */ = {isa = PBXBuildFile; fileRef = 26ABCF4A27F21EE200F90C9F /* PTC_Worksheet.html */; };
+		26ABCF4D27F21F1200F90C9F /* WorksheetComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ABCF4C27F21F1200F90C9F /* WorksheetComposer.swift */; };
 		26B3504226BDEA870038A5E2 /* saveFileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3504126BDEA870038A5E2 /* saveFileController.swift */; };
 		26B3504426BDFBC80038A5E2 /* PTCWorksheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3504326BDFBC80038A5E2 /* PTCWorksheetViewController.swift */; };
 		26B3504626BE3A940038A5E2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B3504526BE3A940038A5E2 /* Extension.swift */; };
@@ -62,6 +70,11 @@
 
 /* Begin PBXFileReference section */
 		035C471E8BC5E8721724FA53 /* Pods-PTC APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PTC APP.release.xcconfig"; path = "Target Support Files/Pods-PTC APP/Pods-PTC APP.release.xcconfig"; sourceTree = "<group>"; };
+		1A43708127F055FC00511176 /* FolderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderTableViewCell.swift; sourceTree = "<group>"; };
+		1A43708327F0568500511176 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		1A43708527F0577000511176 /* FolderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderData.swift; sourceTree = "<group>"; };
+		1A43708727F7111A00511176 /* CustomPrintPageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomPrintPageRenderer.swift; path = "PTC APP/helpers/CustomPrintPageRenderer.swift"; sourceTree = SOURCE_ROOT; };
+		1A53236527FC82A3005EE5AD /* PreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreViewController.swift; sourceTree = "<group>"; };
 		1A53F02326CF86D600593442 /* NewPasteOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasteOptionViewController.swift; sourceTree = "<group>"; };
 		1A53F02626D43D3400593442 /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Instructions.swift; path = "PTC APP/helpers/Instructions.swift"; sourceTree = SOURCE_ROOT; };
 		1A66AEF226BDE532002BB556 /* SituationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SituationData.swift; sourceTree = "<group>"; };
@@ -74,11 +87,14 @@
 		260FA9F126BCCEB30088184B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		260FA9F326BCCECA0088184B /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		260FA9F526BCF9090088184B /* PrivacyPolicyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyTableViewCell.swift; sourceTree = "<group>"; };
+		26292A7627FA1072001E3EEE /* PTC_Worksheet-2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "PTC_Worksheet-2.html"; sourceTree = "<group>"; };
 		2639EB1326BAE9B3006C1CF2 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		2639EB1826BB459C006C1CF2 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		2639EB1A26BB45DE006C1CF2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2639EB1C26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCMainTableViewCell.swift; sourceTree = "<group>"; };
 		263C866726BA453300012F55 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		26ABCF4A27F21EE200F90C9F /* PTC_Worksheet.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = PTC_Worksheet.html; sourceTree = "<group>"; };
+		26ABCF4C27F21F1200F90C9F /* WorksheetComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorksheetComposer.swift; path = "PTC APP/helpers/WorksheetComposer.swift"; sourceTree = SOURCE_ROOT; };
 		26B3504126BDEA870038A5E2 /* saveFileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = saveFileController.swift; sourceTree = "<group>"; };
 		26B3504326BDFBC80038A5E2 /* PTCWorksheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTCWorksheetViewController.swift; sourceTree = "<group>"; };
 		26B3504526BE3A940038A5E2 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -149,6 +165,7 @@
 				26B3504726BE43AD0038A5E2 /* Utilities.swift */,
 				1A66AEFB26C2C994002BB556 /* UserModal.swift */,
 				263C866726BA453300012F55 /* Constants.swift */,
+				1A43708527F0577000511176 /* FolderData.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -200,6 +217,9 @@
 				26B3504326BDFBC80038A5E2 /* PTCWorksheetViewController.swift */,
 				1A53F02326CF86D600593442 /* NewPasteOptionViewController.swift */,
 				26DCA96F26D44B2D006B4208 /* instuctionsTableViewCell.swift */,
+				1A43708127F055FC00511176 /* FolderTableViewCell.swift */,
+				1A43708327F0568500511176 /* DetailTableViewController.swift */,
+				1A53236527FC82A3005EE5AD /* PreViewController.swift */,
 			);
 			path = "Home VCs";
 			sourceTree = "<group>";
@@ -216,6 +236,15 @@
 				260FA9EF26BCCE980088184B /* ContactUsViewController.swift */,
 			);
 			path = "More VCs";
+			sourceTree = "<group>";
+		};
+		26ABCF4927F21EBD00F90C9F /* HTMLTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				26ABCF4A27F21EE200F90C9F /* PTC_Worksheet.html */,
+				26292A7627FA1072001E3EEE /* PTC_Worksheet-2.html */,
+			);
+			path = HTMLTemplate;
 			sourceTree = "<group>";
 		};
 		26C2FDC226BDA78200A53C75 /* Instruction Images */ = {
@@ -242,6 +271,8 @@
 			isa = PBXGroup;
 			children = (
 				1A53F02626D43D3400593442 /* Instructions.swift */,
+				26ABCF4C27F21F1200F90C9F /* WorksheetComposer.swift */,
+				1A43708727F7111A00511176 /* CustomPrintPageRenderer.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -249,6 +280,7 @@
 		E162573123E3304B00E84948 = {
 			isa = PBXGroup;
 			children = (
+				26ABCF4927F21EBD00F90C9F /* HTMLTemplate */,
 				E162573C23E3304B00E84948 /* PTC APP */,
 				E162573B23E3304B00E84948 /* Products */,
 				EC5B1A1377E404529A99948F /* Pods */,
@@ -372,6 +404,8 @@
 				E19F7A8E23FCDC3800E718B8 /* Assets.xcassets in Resources */,
 				26D12A4D26CED6CA0039C495 /* 3.png in Resources */,
 				26D12A4B26CED6CA0039C495 /* 1.png in Resources */,
+				26292A7727FA1072001E3EEE /* PTC_Worksheet-2.html in Resources */,
+				26ABCF4B27F21EE200F90C9F /* PTC_Worksheet.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,11 +463,15 @@
 				1A66AEFC26C2C994002BB556 /* UserModal.swift in Sources */,
 				263C866826BA453300012F55 /* Constants.swift in Sources */,
 				E159DD3F24185C2E00C4433F /* video.swift in Sources */,
+				1A43708627F0577000511176 /* FolderData.swift in Sources */,
 				1A53F02426CF86D600593442 /* NewPasteOptionViewController.swift in Sources */,
 				1A53F02726D43D3400593442 /* Instructions.swift in Sources */,
+				26ABCF4D27F21F1200F90C9F /* WorksheetComposer.swift in Sources */,
 				26C2FDCE26BDAC2600A53C75 /* InstructionsCollectionViewCell.swift in Sources */,
 				2639EB1D26BBA0E3006C1CF2 /* HomeVCMainTableViewCell.swift in Sources */,
 				260FA9EE26BCCE8D0088184B /* InstructionsViewController.swift in Sources */,
+				1A53236627FC82A3005EE5AD /* PreViewController.swift in Sources */,
+				1A43708827F7111A00511176 /* CustomPrintPageRenderer.swift in Sources */,
 				E159DD3D24185B5600C4433F /* videoCell.swift in Sources */,
 				260FA9F226BCCEB30088184B /* ProfileViewController.swift in Sources */,
 				E162573E23E3304B00E84948 /* AppDelegate.swift in Sources */,
@@ -444,6 +482,7 @@
 				2639EB1426BAE9B3006C1CF2 /* ResetPasswordViewController.swift in Sources */,
 				26B3504626BE3A940038A5E2 /* Extension.swift in Sources */,
 				E18E82D723FD9F5600F35982 /* introductionViewController.swift in Sources */,
+				1A43708227F055FC00511176 /* FolderTableViewCell.swift in Sources */,
 				260FA9F426BCCECA0088184B /* PrivacyPolicyViewController.swift in Sources */,
 				E19F7A8C23FCC21B00E718B8 /* ToDoItemCell.swift in Sources */,
 				E159DD272418370800C4433F /* TaresaViewController.swift in Sources */,
@@ -459,6 +498,7 @@
 				1A66AEFA26C2C61F002BB556 /* CurrentUser.swift in Sources */,
 				1A66AEF326BDE532002BB556 /* SituationData.swift in Sources */,
 				E1A022F123F31F4E0093FED2 /* homePage.swift in Sources */,
+				1A43708427F0568500511176 /* DetailTableViewController.swift in Sources */,
 				2639EB1926BB459D006C1CF2 /* SideMenuTableViewCell.swift in Sources */,
 				E19F7A8A23FC7AC400E718B8 /* ToDoParent.swift in Sources */,
 				E159DD3B2418597A00C4433F /* historyViewController.swift in Sources */,
@@ -612,13 +652,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RP2W7V2ZKT;
 				INFOPLIST_FILE = "PTC APP/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-
 				MARKETING_VERSION = 0.02;
-
 				PRODUCT_BUNDLE_IDENTIFIER = com.PTCWorksheet.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -635,13 +674,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RP2W7V2ZKT;
 				INFOPLIST_FILE = "PTC APP/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-
 				MARKETING_VERSION = 0.02;
-
 				PRODUCT_BUNDLE_IDENTIFIER = com.PTCWorksheet.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -35,6 +35,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                
         return true
     }
+    
+    class func getAppDelegate() -> AppDelegate {
+          return UIApplication.shared.delegate as! AppDelegate
+      }
+      
+  
+    
+      
+    func getDocDir(folderName: String) -> String {
+          let DocumentDirectory = NSURL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
+          let DirPath = DocumentDirectory.appendingPathComponent(folderName)
+          do
+          {
+              try FileManager.default.createDirectory(atPath: DirPath!.path, withIntermediateDirectories: true, attributes: nil)
+          }
+          catch let error as NSError
+          {
+              print("Unable to create directory \(error.debugDescription)")
+          }
+        return DirPath?.path ?? DocumentDirectory.path!
+      }
 
     // MARK: UISceneSession Lifecycle
 

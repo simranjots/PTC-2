@@ -11,6 +11,7 @@ import RealmSwift
 
 class PTCWorksheetViewController: UIViewController {
 
+    @IBOutlet var pdfView: UIView!
     //MARK: - IBOutlets
     @IBOutlet var dateAndTimeLabel: UILabel!
     @IBOutlet var communicationSituationLabel: UILabel!
@@ -73,19 +74,23 @@ class PTCWorksheetViewController: UIViewController {
     //MARK: -  Variable
     let realm = try! Realm()
     var viewType: String = ""
-    var situationName: String = ""
+    var FolderName: String = ""
+    var folderobject: FolderData?
     var myIndex = 0
     var activityNameArray : Results<SituationData>?
     var selectedUser: userModel?
-    
+  
     //MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         styleElements()
+        
+      //  createPdfFromView(aView: pdfView, saveToDocumentsWithFileName: "Abc")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         updateUI(type: viewType)
+     
     }
     
 
@@ -114,14 +119,29 @@ class PTCWorksheetViewController: UIViewController {
             showAlert(title: "Warning", message: error!, buttonTitle: "OK")
         } else {
             if viewType == "add"{
-                
-            let title = communicationSituationTextField.text
-            
-            if let title = title{
-                writeData(title: title)
-            }
+                let title = communicationSituationTextField.text
+                if self.folderobject != nil {
+                    if folderobject?.situationData[myIndex].situationTitle == title{
+                showToast(message: "Communication situation with same name already exist", duration: 2, height: 3)
+                    }else{
+                        if let title = title{
+                            writeData(title: title)
+                        }
+                    }
+                }else{
+                    if let title = title{
+                        writeData(title: title)
+                    }
+                }
             }else if viewType == "edit"{
                 updateData()
+            }else if viewType == "show" {
+                let preview = storyboard?.instantiateViewController(withIdentifier: "preview") as! PreViewController
+                preview.FolderName = FolderName
+                preview.folderobject = folderobject
+                preview.myIndex = myIndex
+                self.present(preview, animated:true, completion:nil)
+                
             }
             navigationController?.popViewController(animated: true)
             }
@@ -196,13 +216,13 @@ class PTCWorksheetViewController: UIViewController {
         todo.you1 = youTextView1.text!
         todo.you2 = youTextView2.text!
         todo.you3 = youTextView3.text!
-        todo.user = (selectedUser?.email)!
+        todo.folderName = FolderName
         save(situationData: todo)
         
     }
     
     func updateData() {
-        if let situationData = activityNameArray?[myIndex]{
+        if let situationData = folderobject?.situationData[myIndex]{
             do {
                 try realm.write {
                     situationData.situationTitle = communicationSituationTextField.text!
@@ -232,6 +252,7 @@ class PTCWorksheetViewController: UIViewController {
                     situationData.you2 = youTextView2.text!
                     situationData.you3 = youTextView3.text!
                     situationData.prefix = true
+                    
                 }
             } catch {
                 print("Error saving done status \(error)")
@@ -244,9 +265,10 @@ class PTCWorksheetViewController: UIViewController {
         if let currentU = self.selectedUser {
         do {
             try realm.write {
-                currentU.situationData.append(situationData)
+                folderobject?.situationData.append(situationData)
                // realm.add(situationData)
             }
+           
         }catch {
             print("Error saving situation Data\(error)")
         }
@@ -255,42 +277,45 @@ class PTCWorksheetViewController: UIViewController {
     
     
     func updateUI(type: String) {
-        
-        let dt =  "\(Date().shortdateToString() ?? "Aug 6, 2021") | " + "\(Date().currentTime())"
+        //| " + "\(Date().currentTime())
+        let dt =  "\(Date().shortdateToString() ?? "Aug 6, 2021") "
         
         dateAndTimeLabel.text = dt
         
         activityNameArray = realm.objects(SituationData.self)
+       
         
         if viewType == "show" {
-            saveButton.isEnabled = false
-            saveButton.image = UIImage(named: "")
-            communicationSituationTextField.text = activityNameArray![self.myIndex].situationTitle
-            dateAndTimeLabel.text =   "\(activityNameArray![self.myIndex].date ) | " + "\( activityNameArray![self.myIndex].time)"
-            valueTextView1.text = activityNameArray![self.myIndex].value1
-            valueTextView2.text = activityNameArray![self.myIndex].value2
-            valueTextView3.text = activityNameArray![self.myIndex].value3
-            feelTextView1.text = activityNameArray![self.myIndex].feel1
-            feelTextView2.text = activityNameArray![self.myIndex].feel2
-            feelTextView3.text = activityNameArray![self.myIndex].feel3
-            obstaclesTextView1.text = activityNameArray![self.myIndex].obstacle1
-            obstaclesTextView2.text = activityNameArray![self.myIndex].obstacle2
-            obstaclesTextView3.text = activityNameArray![self.myIndex].obstacle3
-            rememberTextView1.text = activityNameArray![self.myIndex].remember1
-            rememberTextView2.text = activityNameArray![self.myIndex].remember2
-            rememberTextView3.text = activityNameArray![self.myIndex].remember3
-            themTextView1.text = activityNameArray![self.myIndex].them1
-            themTextView2.text = activityNameArray![self.myIndex].them2
-            themTextView3.text = activityNameArray![self.myIndex].them3
-            appreciateTextView1.text = activityNameArray![self.myIndex].appreciate1
-            appreciateTextView2.text = activityNameArray![self.myIndex].appreciate2
-            appreciateTextView3.text = activityNameArray![self.myIndex].appreciate3
-            doTextView1.text =  activityNameArray![self.myIndex].doitem1
-            doTextView2.text =  activityNameArray![self.myIndex].doitem2
-            doTextView3.text =  activityNameArray![self.myIndex].doitem3
-            youTextView1.text =  activityNameArray![self.myIndex].you1
-            youTextView2.text =  activityNameArray![self.myIndex].you2
-            youTextView3.text =  activityNameArray![self.myIndex].you3
+            let data = folderobject!.situationData[myIndex]
+            saveButton.isEnabled = true
+            saveButton.image = UIImage(named: "pdf")
+            communicationSituationTextField.text = data.situationTitle
+            // | " + "\( activityNameArray![self.myIndex].time)
+            dateAndTimeLabel.text =   "\(folderobject?.situationData[myIndex].date ?? "" ) "
+            valueTextView1.text = data.value1
+            valueTextView2.text = data.value2
+            valueTextView3.text = data.value3
+            feelTextView1.text = data.feel1
+            feelTextView2.text = data.feel2
+            feelTextView3.text = data.feel3
+            obstaclesTextView1.text = data.obstacle1
+            obstaclesTextView2.text = data.obstacle2
+            obstaclesTextView3.text = data.obstacle3
+            rememberTextView1.text = data.remember1
+            rememberTextView2.text = data.remember2
+            rememberTextView3.text = data.remember3
+            themTextView1.text = data.them1
+            themTextView2.text = data.them2
+            themTextView3.text = data.them3
+            appreciateTextView1.text = data.appreciate1
+            appreciateTextView2.text = data.appreciate2
+            appreciateTextView3.text = data.appreciate3
+            doTextView1.text =  data.doitem1
+            doTextView2.text =  data.doitem2
+            doTextView3.text =  data.doitem3
+            youTextView1.text =  data.you1
+            youTextView2.text =  data.you2
+            youTextView3.text = data.you3
             userInteractionDisabled()
         }else if viewType == "add" {
             communicationSituationTextField.text = ""
@@ -319,31 +344,32 @@ class PTCWorksheetViewController: UIViewController {
             youTextView2.text = ""
             youTextView3.text = ""
         }else if viewType == "edit" {
-            communicationSituationTextField.text = activityNameArray![self.myIndex].situationTitle
-            valueTextView1.text = activityNameArray![self.myIndex].value1
-            valueTextView2.text = activityNameArray![self.myIndex].value2
-            valueTextView3.text = activityNameArray![self.myIndex].value3
-            feelTextView1.text = activityNameArray![self.myIndex].feel1
-            feelTextView2.text = activityNameArray![self.myIndex].feel2
-            feelTextView3.text = activityNameArray![self.myIndex].feel3
-            obstaclesTextView1.text = activityNameArray![self.myIndex].obstacle1
-            obstaclesTextView2.text = activityNameArray![self.myIndex].obstacle2
-            obstaclesTextView3.text = activityNameArray![self.myIndex].obstacle3
-            rememberTextView1.text = activityNameArray![self.myIndex].remember1
-            rememberTextView2.text = activityNameArray![self.myIndex].remember2
-            rememberTextView3.text = activityNameArray![self.myIndex].remember3
-            themTextView1.text = activityNameArray![self.myIndex].them1
-            themTextView2.text = activityNameArray![self.myIndex].them2
-            themTextView3.text = activityNameArray![self.myIndex].them3
-            appreciateTextView1.text = activityNameArray![self.myIndex].appreciate1
-            appreciateTextView2.text = activityNameArray![self.myIndex].appreciate2
-            appreciateTextView3.text = activityNameArray![self.myIndex].appreciate3
-            doTextView1.text =  activityNameArray![self.myIndex].doitem1
-            doTextView2.text =  activityNameArray![self.myIndex].doitem2
-            doTextView3.text =  activityNameArray![self.myIndex].doitem3
-            youTextView1.text =  activityNameArray![self.myIndex].you1
-            youTextView2.text =  activityNameArray![self.myIndex].you2
-            youTextView3.text =  activityNameArray![self.myIndex].you3
+            let data = folderobject!.situationData[myIndex]
+            communicationSituationTextField.text = data.situationTitle
+            valueTextView1.text = data.value1
+            valueTextView2.text = data.value2
+            valueTextView3.text = data.value3
+            feelTextView1.text = data.feel1
+            feelTextView2.text = data.feel2
+            feelTextView3.text = data.feel3
+            obstaclesTextView1.text = data.obstacle1
+            obstaclesTextView2.text = data.obstacle2
+            obstaclesTextView3.text = data.obstacle3
+            rememberTextView1.text = data.remember1
+            rememberTextView2.text = data.remember2
+            rememberTextView3.text = data.remember3
+            themTextView1.text = data.them1
+            themTextView2.text = data.them2
+            themTextView3.text = data.them3
+            appreciateTextView1.text = data.appreciate1
+            appreciateTextView2.text = data.appreciate2
+            appreciateTextView3.text = data.appreciate3
+            doTextView1.text =  data.doitem1
+            doTextView2.text =  data.doitem2
+            doTextView3.text =  data.doitem3
+            youTextView1.text =  data.you1
+            youTextView2.text =  data.you2
+            youTextView3.text = data.you3
         }
     }
     
@@ -384,6 +410,9 @@ class PTCWorksheetViewController: UIViewController {
         doButton.isHidden = true
         youButton.isHidden = true
     }
+    
+    
+
     
     func styleElements() {
         
@@ -457,4 +486,7 @@ extension PTCWorksheetViewController: UIPopoverPresentationControllerDelegate {
     func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
         return true
     }
+    
+
+    
 }

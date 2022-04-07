@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type">
+            <title>PTC Worksheet</title>
+            <style>
+                body {
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                }
+                
+                .img_logo {
+                    width: 110px;
+                    height: 100px;
+                    margin: 10px 0 0 20px;
+                }
+                
+                .img_title {
+                    float: right;
+                    width: 450px;
+                    height: 60px;
+                    margin: 50px 20px 0 0;
+                }
+                
+                .comm_situation {
+                    height: 80px;
+                    margin: 0 20px 0 25px;
+                    background-color: #6DCCDC;
+                    padding: 5px 0 5px 0;
+                    border: 1px solid grey;
+                }
+                
+                .comm_situation_p {
+                    margin-left: 20px;
+                    color: #28104E;
+                }
+                
+                table,
+                th,
+                td {
+                    border: 2px solid grey;
+                    border-collapse: collapse;
+                    table-layout: fixed;
+                    width: 100%;
+                }
+                
+                td {
+                    text-align: justify;
+                }
+                
+                th {
+                    background-color: #28104E;
+                    color: white;
+                    font-size: 15px
+                }
+                
+                span {
+                    background-color: #E85151;
+                    color: #FFFFFF;
+                    margin: 0 2px 0 2px;
+                }
+            </style>
+    </head>
+    
+    <body>
+        <img src= "#LOGO_IMG#" alt="PTC Logo" class="img_logo">
+            <img src="#TITLE_IMG#" alt="PTC TItle" class="img_title">
+                <div class="comm_situation">
+                    <p class="comm_situation_p" style="font-size: 18px;">Communication Situation:
+                    #COMMUNICATION_SITUATION#</p>
+                    <p class="comm_situation_p" style="font-size: 15px;">Date: #DATE#</p>
+                </div>
+                <div style="margin: 0 20px 0 25px;">
+                    <table>
+                        <tr>
+                            <th>THEM</th>
+                            <th>APPRECIATE</th>
+                        </tr>
+                        <tr>
+                            <td><span> 1 </span>#THEM_1#</td>
+                            <td><span> 1 </span>#APPRECIATE_1#</td>
+                        </tr>
+                        <tr>
+                            <td><span> 2 </span>#THEM_2#</td>
+                            <td><span> 2 </span>#APPRECIATE_2#</td>
+                        </tr>
+                        <tr>
+                            <td><span> 3 </span>#THEM_3#</td>
+                            <td><span> 3 </span>#APPRECIATE_3#</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>REMEMBER</th>
+                            <th>OBSTACLES</th>
+                        </tr>
+                        <tr>
+                            <td><span> 1 </span>#REMEMBER_1#
+                            </td>
+                            <td>
+                                <span> 1 </span>#OBSTACLES_1#
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span> 2 </span>#REMEMBER_2#
+                            </td>
+                            <td>
+                                <span> 2 </span>#OBSTACLES_2#
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span> 3 </span>#REMEMBER_3#
+                            </td>
+                            <td>
+                                <span> 3 </span>#OBSTACLES_3#
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>FEEL</th>
+                            <th>VALUE</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span> 1 </span>#FEEL_1#
+                            </td>
+                            <td>
+                                <span> 1 </span>#VALUE_1#
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span> 2 </span>#FEEL_2#
+                            </td>
+                            <td>
+                                <span> 2 </span>#VALUE_2#
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span> 3 </span>#FEEL_3#
+                            </td>
+                            <td>
+                                <span> 3 </span>#VALUE_3#
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>DO</th>
+                            <th>YOU</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span> 1 </span>#DO_1#
+                            </td>
+                            <td>
+                                <span> 1 </span>#YOU_1#
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span> 2 </span>#DO_2#
+                            </td>
+                            <td>
+                                <span> 2 </span>#YOU_2#
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span> 3 </span>#DO_3#
+                            </td>
+                            <td>
+                                <span> 3 </span>#YOU_3#
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                
+                <!-- <p>1 #THEM_1#</p>
+                <p>2 #THEM_2#</p>
+                <p>3 #THEM_3#</p>
+                <p>1 #APPRECIATE_1#</p>
+                <p>2 #APPRECIATE_2#</p>
+                <p>3 #APPRECIATE_3#</p>
+                <p>1 #OBSTACLES_1#</p>
+                <p>2 #OBSTACLES_2#</p>
+                <p>3 #OBSTACLES_3#</p>
+                <p>1 #REMEMBER_1#</p>
+                <p>2 #REMEMBER_2#</p>
+                <p>3 #REMEMBER_3#</p>
+                <p>1 #VALUE_1#</p>
+                <p>2 #VALUE_2#</p>
+                <p>3 #VALUE_3#</p>
+                <p>1 #FEEL_1#</p>
+                <p>2 #VALUE_2#</p>
+                <p>3 #VALUE_3#</p>
+                <p>1 #DO_1#</p>
+                <p>2 #DO_2#</p>
+                <p>3 #DO_3#</p>
+                <p>1 #YOU_1#</p>
+                <p>2 #YOU_2#</p>
+                <p>3 #YOU_3#</p> -->
+    </body>
+</html>
