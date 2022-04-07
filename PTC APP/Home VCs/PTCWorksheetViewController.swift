@@ -79,10 +79,7 @@ class PTCWorksheetViewController: UIViewController {
     var myIndex = 0
     var activityNameArray : Results<SituationData>?
     var selectedUser: userModel?
-    var worksheetComposer: WorksheetComposer!
-    
-       var HTMLContent: String!
-    
+  
     //MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,17 +119,29 @@ class PTCWorksheetViewController: UIViewController {
             showAlert(title: "Warning", message: error!, buttonTitle: "OK")
         } else {
             if viewType == "add"{
-                
-            let title = communicationSituationTextField.text
-            
-            if let title = title{
-                writeData(title: title)
-            }
+                let title = communicationSituationTextField.text
+                if self.folderobject != nil {
+                    if folderobject?.situationData[myIndex].situationTitle == title{
+                showToast(message: "Communication situation with same name already exist", duration: 2, height: 3)
+                    }else{
+                        if let title = title{
+                            writeData(title: title)
+                        }
+                    }
+                }else{
+                    if let title = title{
+                        writeData(title: title)
+                    }
+                }
             }else if viewType == "edit"{
                 updateData()
             }else if viewType == "show" {
-                createInvoiceAsHTML()
-               
+                let preview = storyboard?.instantiateViewController(withIdentifier: "preview") as! PreViewController
+                preview.FolderName = FolderName
+                preview.folderobject = folderobject
+                preview.myIndex = myIndex
+                self.present(preview, animated:true, completion:nil)
+                
             }
             navigationController?.popViewController(animated: true)
             }
@@ -268,8 +277,8 @@ class PTCWorksheetViewController: UIViewController {
     
     
     func updateUI(type: String) {
-        
-        let dt =  "\(Date().shortdateToString() ?? "Aug 6, 2021") | " + "\(Date().currentTime())"
+        //| " + "\(Date().currentTime())
+        let dt =  "\(Date().shortdateToString() ?? "Aug 6, 2021") "
         
         dateAndTimeLabel.text = dt
         
@@ -281,7 +290,8 @@ class PTCWorksheetViewController: UIViewController {
             saveButton.isEnabled = true
             saveButton.image = UIImage(named: "pdf")
             communicationSituationTextField.text = data.situationTitle
-            dateAndTimeLabel.text =   "\(folderobject?.situationData[myIndex].date ?? "" ) | " + "\( activityNameArray![self.myIndex].time)"
+            // | " + "\( activityNameArray![self.myIndex].time)
+            dateAndTimeLabel.text =   "\(folderobject?.situationData[myIndex].date ?? "" ) "
             valueTextView1.text = data.value1
             valueTextView2.text = data.value2
             valueTextView3.text = data.value3
@@ -402,18 +412,7 @@ class PTCWorksheetViewController: UIViewController {
     }
     
     
-    func createInvoiceAsHTML() {
-        worksheetComposer = WorksheetComposer()
-        activityNameArray = realm.objects(SituationData.self)
-        if myIndex != nil {
-            let data = folderobject!.situationData[myIndex]
-            if let workSheetHTML = worksheetComposer.renderInvoice(communicationSituation: data.situationTitle, date: "\(folderobject?.situationData[myIndex].date ?? "" ) | " + "\( activityNameArray![self.myIndex].time)", them1: data.them1, them2: data.them2, them3: data.them3, appreciate1: data.appreciate1, appreciate2: data.appreciate2, appreciate3: data.appreciate3, remember1: data.remember1, remember2: data.remember2, remember3: data.remember3, obstacles1: data.obstacle1, obstacles2: data.obstacle2, obstacles3: data.obstacle3, feel1: data.feel1, feel2: data.feel2, feel3: data.feel3, value1: data.value1, value2: data.value2, value3: data.value3, do1: data.doitem1, do2: data.doitem2, do3: data.doitem3, you1: data.you1, you2: data.you2, you3: data.you3) {
-         
-                worksheetComposer.exportHTMLContentToPDF(HTMLContent: workSheetHTML, comunicationStituation: data.situationTitle, FolderName: FolderName)
-            }
-        }
-      
-    }
+
     
     func styleElements() {
         
@@ -488,50 +487,6 @@ extension PTCWorksheetViewController: UIPopoverPresentationControllerDelegate {
         return true
     }
     
+
     
-    
-    func createPdfFromView(aView: UIView, saveToDocumentsWithFileName fileName: String)
-    {
-        let pdfTitle = "Swift-Generated PDF"
-        let pdfMetadata = [
-            // The name of the application creating the PDF.
-            kCGPDFContextCreator: "Power TO Connect",
-
-            // The name of the PDF's author.
-            kCGPDFContextAuthor: "Connect to the core",
-
-            // The title of the PDF.
-            kCGPDFContextTitle: "PDF",
-        ]
-        let pdfData = NSMutableData()
-        UIGraphicsBeginPDFContextToData(pdfData, aView.bounds, pdfMetadata)
-        UIGraphicsBeginPDFPage()
-        
-        
-        // Default size of the page is 612x72.
-        let pageSize = UIGraphicsGetPDFContextBounds().size
-        let font = UIFont.preferredFont(forTextStyle: .largeTitle)
-
-        // Let's draw the title of the PDF on top of the page.
-        let attributedPDFTitle = NSAttributedString(string: pdfTitle, attributes: [NSAttributedString.Key.font: font])
-        let stringSize = attributedPDFTitle.size()
-        let stringRect = CGRect(x: (pageSize.width / 2 - stringSize.width / 2), y: 20, width: stringSize.width, height: stringSize.height)
-        attributedPDFTitle.draw(in: stringRect)
-
-        
-        guard let pdfContext = UIGraphicsGetCurrentContext() else { return }
-        
-
-        aView.layer.render(in: pdfContext)
-        // Closes the current PDF context and ends writing to the file.
-        UIGraphicsEndPDFContext()
-        
-        
-
-        if let documentDirectories = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first {
-            let documentsFileName = documentDirectories + "/" + fileName + ".pdf"
-            debugPrint(documentsFileName)
-            pdfData.write(toFile: documentsFileName, atomically: true)
-        }
-    }
 }

@@ -8,12 +8,12 @@
 
 import UIKit
 
-class WorksheetComposer: NSObject {
+class WorksheetComposer: NSObject, UIDocumentInteractionControllerDelegate {
 
      let pathToWorksheetHTMLTemplate = Bundle.main.path(forResource: "PTC_Worksheet-2", ofType: "html")
     
-     let logo = Bundle.main.path(forResource: "PTC_Logo1", ofType: "jpg")
-     let titleImage = Bundle.main.path(forResource: "PTC-cover", ofType: "jpg")
+     let logo = "https://firebasestorage.googleapis.com/v0/b/ptc-worksheet.appspot.com/o/logo%2FPTC_Logo1.jpg?alt=media&token=ca74b4e8-5b96-4c2c-86b5-b71c3fc62917"
+     let titleImage = "https://firebasestorage.googleapis.com/v0/b/ptc-worksheet.appspot.com/o/logo%2FPTC_Title.jpg?alt=media&token=049fd454-e1ae-4679-8203-2cc8d780a4a1"
        
    
        let communicationSituation: String! = ""
@@ -59,10 +59,8 @@ class WorksheetComposer: NSObject {
      
             // Replace all the placeholders with real values except for the items.
             // The logo image.
-            //HTMLContent = HTMLContent.stringByReplacingOccurrencesOfString("#LOGO_IMAGE#", withString: logoImageURL)
-             //  Logo
-            HTMLContent = HTMLContent.replacingOccurrences(of: "#LOGO_IMG#", with:  "/Users/jaldeep_patel/Documents/PTC/HTMLTemplate/PTC_Logo1.jpg")
-            HTMLContent = HTMLContent.replacingOccurrences(of: "#TITLE_IMG#", with: titleImage ?? "")
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#LOGO_IMG#", with:  logo)
+            HTMLContent = HTMLContent.replacingOccurrences(of: "#TITLE_IMG#", with: titleImage )
             // communicationSituation Name.
             HTMLContent = HTMLContent.replacingOccurrences(of: "#COMMUNICATION_SITUATION#", with: communicationSituation)
      
@@ -123,33 +121,42 @@ class WorksheetComposer: NSObject {
 
     func exportHTMLContentToPDF(HTMLContent: String,comunicationStituation: String,FolderName: String) {
         let printPageRenderer = CustomPrintPageRenderer()
-     
-        let printFormatter = UIMarkupTextPrintFormatter(markupText: HTMLContent)
-        printPageRenderer.addPrintFormatter(printFormatter, startingAtPageAt: 0)
-     
-        let pdfData = drawPDFUsingPrintPageRenderer(printPageRenderer: printPageRenderer)
+               
+               let printFormatter = UIMarkupTextPrintFormatter(markupText: HTMLContent)
+               printPageRenderer.addPrintFormatter(printFormatter, startingAtPageAt: 0)
+               
+               let pdfData = drawPDFUsingPrintPageRenderer(printPageRenderer: printPageRenderer)
      
         let pdfFilename = "\(AppDelegate.getAppDelegate().getDocDir(folderName: FolderName))/\("\(comunicationStituation)").pdf"
         pdfData?.write(toFile: pdfFilename, atomically: true)
-     
+
+        let isFileFound:Bool? = FileManager.default.fileExists(atPath: pdfFilename)
+           if isFileFound == true{
+               let viewer = UIDocumentInteractionController(url: NSURL(fileURLWithPath: pdfFilename) as URL)
+               viewer.delegate = self
+               viewer.presentPreview(animated: true)
+           }
         print(pdfFilename)
+        
+     
     }
   
     
     
     func drawPDFUsingPrintPageRenderer(printPageRenderer: UIPrintPageRenderer) -> NSData! {
-        let data = NSMutableData()
-     
-        UIGraphicsBeginPDFContextToData(data, CGRect.zero, nil)
-     
-        UIGraphicsBeginPDFPage()
-     
-        printPageRenderer.drawPage(at: 0, in: UIGraphicsGetPDFContextBounds())
-     
-        UIGraphicsEndPDFContext()
-     
-        return data
-    }
+           let data = NSMutableData()
+           
+           UIGraphicsBeginPDFContextToData(data, CGRect.zero, nil)
+           for i in 0..<printPageRenderer.numberOfPages {
+               UIGraphicsBeginPDFPage()
+               printPageRenderer.drawPage(at: i, in: UIGraphicsGetPDFContextBounds())
+           }
+           
+           UIGraphicsEndPDFContext()
+        
+           
+           return data
+       }
     
 }
 

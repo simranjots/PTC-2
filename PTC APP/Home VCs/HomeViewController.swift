@@ -379,14 +379,24 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                     let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
                     if valueType == "add"{
                         if let foldername = textField?.text{
-                            if index != 0  && self.folderArray?[index].folderName == foldername {
-                                    self.showToast(message: "Folder with same name already exist", duration: 2, height: 3)
+                           
+                            if self.folderArray?.first != nil {
+                                    if  self.folderArray?[index].folderName == foldername {
+                                            self.showToast(message: "Folder with same name already exist", duration: 2, height: 3)
+                                        }else{
+                                            let todo = FolderData()
+                                            todo.folderName = foldername
+                                            todo.user = (self.userObject?.email)!
+                                            self.save(folderdata: todo)
+                                        }
                                 }else{
                                     let todo = FolderData()
                                     todo.folderName = foldername
                                     todo.user = (self.userObject?.email)!
                                     self.save(folderdata: todo)
                                 }
+                            
+                           
                          
                         
                         }else{
