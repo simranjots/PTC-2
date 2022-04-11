@@ -120,7 +120,7 @@ class PTCWorksheetViewController: UIViewController {
         } else {
             if viewType == "add"{
                 let title = communicationSituationTextField.text
-                if self.folderobject != nil {
+                if self.folderobject?.situationData.first != nil {
                     if folderobject?.situationData[myIndex].situationTitle == title{
                 showToast(message: "Communication situation with same name already exist", duration: 2, height: 3)
                     }else{
@@ -288,7 +288,9 @@ class PTCWorksheetViewController: UIViewController {
         if viewType == "show" {
             let data = folderobject!.situationData[myIndex]
             saveButton.isEnabled = true
-            saveButton.image = UIImage(named: "pdf")
+            saveButton.image = .none
+            saveButton.tintColor = UIColor(named: "BrandRedColor")
+            saveButton.title = "Print Preview"
             communicationSituationTextField.text = data.situationTitle
             // | " + "\( activityNameArray![self.myIndex].time)
             dateAndTimeLabel.text =   "\(folderobject?.situationData[myIndex].date ?? "" ) "
