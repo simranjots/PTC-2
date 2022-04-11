@@ -382,7 +382,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                            
                             if self.folderArray?.first != nil {
                                     if  self.folderArray?[index].folderName == foldername {
-                                            self.showToast(message: "Folder with same name already exist", duration: 2, height: 3)
+                                            //self.showToast(message: "Folder with same name already exist", duration: 2, height: 3)
+                                        self.showAlert(title: "Warning🚫", message: "Folder with the name '\(foldername)' already exist. Try with the different name.", buttonTitle: "OK")
                                         }else{
                                             let todo = FolderData()
                                             todo.folderName = foldername
@@ -405,7 +406,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                     }else{
                         if let foldername = textField?.text{
                             if self.folderArray?[index].folderName == foldername {
-                                self.showToast(message: "Folder with same name already exist", duration: 2, height: 3)
+                                self.showToast(message: "Folder with the same name already exist. Try with the different name.", duration: 2, height: 3)
                             }else{
                                 if let folderData = self.folderArray?[index]{
                                     do {

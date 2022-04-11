@@ -121,8 +121,10 @@ class PTCWorksheetViewController: UIViewController {
             if viewType == "add"{
                 let title = communicationSituationTextField.text
                 if self.folderobject?.situationData.first != nil {
-                    if folderobject?.situationData[myIndex].situationTitle == title{
-                showToast(message: "Communication situation with same name already exist", duration: 2, height: 3)
+                    if folderobject?.situationData[myIndex].situationTitle == title {
+                        print("Communication situation with same name already exist")
+//                        showToast(message: "Communication situation with same name already exist", duration: 1.0, height: 30)
+                        showAlert(title: "Warning🚫", message: "Communication situation with title '\(title!)' already exist. Try with the different title.", buttonTitle: "OK")
                     }else{
                         if let title = title{
                             writeData(title: title)
