@@ -6,6 +6,7 @@
 //  Copyright © 2021 Gurlagan Bhullar. All rights reserved.
 //
 
+
 import UIKit
 import RealmSwift
 
@@ -120,12 +121,8 @@ class PTCWorksheetViewController: UIViewController {
         } else {
             if viewType == "add"{
                 let title = communicationSituationTextField.text
-                if self.folderobject?.situationData.first != nil {
-                    if folderobject?.situationData[myIndex].situationTitle == title {
-                        print("Communication situation with same name already exist")
-//                        showToast(message: "Communication situation with same name already exist", duration: 1.0, height: 30)
-                        showAlert(title: "Warning🚫", message: "Communication situation with title '\(title!)' already exist. Try with the different title.", buttonTitle: "OK")
-                    }else{
+                if self.folderobject?.situationData.isEmpty != true {
+                    if self.check(title: title ?? "") ==  false{
                         if let title = title{
                             writeData(title: title)
                         }
@@ -148,6 +145,15 @@ class PTCWorksheetViewController: UIViewController {
             navigationController?.popViewController(animated: true)
             }
         }
+    func check(title: String) ->Bool{
+        for element in self.folderobject!.situationData{
+           if element.situationTitle == title {
+               self.showToast(message: "Communication situation with same name already exist", duration: 2, height: 3)
+               return true
+            }
+        }
+        return false
+    }
     
     @IBAction func questionMarkTapped(_ sender: UIButton) {
         
