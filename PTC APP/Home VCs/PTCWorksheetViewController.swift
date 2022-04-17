@@ -133,6 +133,7 @@ class PTCWorksheetViewController: UIViewController {
                     }
                 }
             }else if viewType == "edit"{
+                
                 updateData()
             }else if viewType == "show" {
                 let preview = storyboard?.instantiateViewController(withIdentifier: "preview") as! PreViewController
@@ -142,16 +143,18 @@ class PTCWorksheetViewController: UIViewController {
                 self.present(preview, animated:true, completion:nil)
                 
             }
+            
             navigationController?.popViewController(animated: true)
             }
         }
     func check(title: String) ->Bool{
         for element in self.folderobject!.situationData{
            if element.situationTitle == title {
-               self.showToast(message: "Communication situation with same name already exist", duration: 2, height: 3)
+               DetailTableViewController.check = true
                return true
             }
         }
+        DetailTableViewController.check = false
         return false
     }
     
@@ -294,6 +297,7 @@ class PTCWorksheetViewController: UIViewController {
        
         
         if viewType == "show" {
+            DetailTableViewController.check = false
             let data = folderobject!.situationData[myIndex]
             saveButton.isEnabled = true
             saveButton.image = .none

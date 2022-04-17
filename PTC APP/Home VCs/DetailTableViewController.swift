@@ -15,6 +15,7 @@ class DetailTableViewController: UIViewController,UITableViewDelegate, UITableVi
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var DetailTableView: UITableView!
     let realm = try! Realm()
+    static var check: Bool? = false
     var value = ""
     var foldername = ""
     var index = 0
@@ -26,8 +27,9 @@ class DetailTableViewController: UIViewController,UITableViewDelegate, UITableVi
     override func viewWillAppear(_ animated: Bool) {
         currentUser = CurrentUser()
         userObject = currentUser.checkLoggedIn()
-        print("aaa\(name.folderName)")
-        print("aaa\(foldername)")
+        if DetailTableViewController.check == true {
+            self.showToast(message: "Communication situation with same name already exist", duration: 2, height: 3)
+        }
         activityNameArray = name.situationData.filter("folderName = %@",name.folderName as Any )
         DetailTableView.reloadData()
     }
