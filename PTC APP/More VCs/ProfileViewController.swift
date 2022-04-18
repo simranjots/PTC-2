@@ -253,14 +253,11 @@ class ProfileViewController: UIViewController {
     func openCamera() {
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            
-            let image = UIImagePickerController()
-            image.sourceType = .camera
-            image.allowsEditing = true
-            image.delegate = self
-            //image.mediaTypes = [kUTTypeImage as String]
-            present(image, animated: true)
-        }
+            let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = .camera;
+                imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)    }
     }
     
     func openGallery() {

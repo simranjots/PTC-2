@@ -379,16 +379,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                     let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
                     if valueType == "add"{
                         if let foldername = textField?.text{
-                           
-                            if self.folderArray?.first != nil {
-                                    if  self.folderArray?[index].folderName == foldername {
-                                            self.showToast(message: "Folder with same name already exist", duration: 2, height: 3)
-                                        }else{
-                                            let todo = FolderData()
-                                            todo.folderName = foldername
-                                            todo.user = (self.userObject?.email)!
-                                            self.save(folderdata: todo)
-                                        }
+                            if self.folderArray?.isEmpty != true {
+                                if self.check(foldername: foldername) == false{
+                                    let todo = FolderData()
+                                    todo.folderName = foldername
+                                    todo.user = (self.userObject?.email)!
+                                    self.save(folderdata: todo)
+                                }
                                 }else{
                                     let todo = FolderData()
                                     todo.folderName = foldername
@@ -396,33 +393,32 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                                     self.save(folderdata: todo)
                                 }
                             
-                           
-                         
-                        
                         }else{
                             self.dismiss(animated: true, completion: nil)
                         }
                     }else{
                         if let foldername = textField?.text{
-                            if self.folderArray?[index].folderName == foldername {
-                                self.showToast(message: "Folder with same name already exist", duration: 2, height: 3)
-                            }else{
-                                if let folderData = self.folderArray?[index]{
-                                    do {
-                                        try self.realm.write {
-                                            for data in folderData.situationData{
-                                                if data.folderName == folderData.folderName{
-                                                    data.folderName = foldername
+                            if self.check(foldername: foldername) == false {
+                                
+                                    if let folderData = self.folderArray?[index]{
+                                        do {
+                                            try self.realm.write {
+                                                for data in folderData.situationData{
+                                                    if data.folderName == folderData.folderName{
+                                                        data.folderName = foldername
+                                                    }
                                                 }
+                                                folderData.folderName = foldername
+                                                folderData.user = (self.userObject?.email)!
+                                               
                                             }
-                                            folderData.folderName = foldername
-                                            folderData.user = (self.userObject?.email)!
-                                           
+                                        } catch {
+                                            print("Error saving done status \(error)")
                                         }
-                                    } catch {
-                                        print("Error saving done status \(error)")
                                     }
-                                }
+                                
+                            }else{
+                                self.dismiss(animated: true)
                             }
                         }else{
                             self.dismiss(animated: true, completion: nil)
@@ -434,6 +430,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { [weak alert] (_) in
                 }))
                self.present(alert, animated: true, completion: nil)
+    }
+    
+    func check(foldername: String)-> Bool{
+        for element in self.folderArray! {
+            if element.folderName == foldername {
+                self.showToast(message: "Folder with same name already exist", duration: 2, height: 3)
+              return true
+            }
+        }
+        return false
     }
 }
 

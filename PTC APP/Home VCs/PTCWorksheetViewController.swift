@@ -6,6 +6,7 @@
 //  Copyright © 2021 Gurlagan Bhullar. All rights reserved.
 //
 
+
 import UIKit
 import RealmSwift
 
@@ -120,10 +121,8 @@ class PTCWorksheetViewController: UIViewController {
         } else {
             if viewType == "add"{
                 let title = communicationSituationTextField.text
-                if self.folderobject != nil {
-                    if folderobject?.situationData[myIndex].situationTitle == title{
-                showToast(message: "Communication situation with same name already exist", duration: 2, height: 3)
-                    }else{
+                if self.folderobject?.situationData.isEmpty != true {
+                    if self.check(title: title ?? "") ==  false{
                         if let title = title{
                             writeData(title: title)
                         }
@@ -134,6 +133,7 @@ class PTCWorksheetViewController: UIViewController {
                     }
                 }
             }else if viewType == "edit"{
+                
                 updateData()
             }else if viewType == "show" {
                 let preview = storyboard?.instantiateViewController(withIdentifier: "preview") as! PreViewController
@@ -143,9 +143,20 @@ class PTCWorksheetViewController: UIViewController {
                 self.present(preview, animated:true, completion:nil)
                 
             }
+            
             navigationController?.popViewController(animated: true)
             }
         }
+    func check(title: String) ->Bool{
+        for element in self.folderobject!.situationData{
+           if element.situationTitle == title {
+               DetailTableViewController.check = true
+               return true
+            }
+        }
+        DetailTableViewController.check = false
+        return false
+    }
     
     @IBAction func questionMarkTapped(_ sender: UIButton) {
         
@@ -225,7 +236,6 @@ class PTCWorksheetViewController: UIViewController {
         if let situationData = folderobject?.situationData[myIndex]{
             do {
                 try realm.write {
-                    situationData.situationTitle = communicationSituationTextField.text!
                     situationData.date =  Date().shortdateToString()!
                     situationData.value1 = valueTextView1.text!
                     situationData.value2 = valueTextView2.text!
@@ -286,9 +296,12 @@ class PTCWorksheetViewController: UIViewController {
        
         
         if viewType == "show" {
+            DetailTableViewController.check = false
             let data = folderobject!.situationData[myIndex]
             saveButton.isEnabled = true
-            saveButton.image = UIImage(named: "pdf")
+            saveButton.image = .none
+            saveButton.tintColor = UIColor(named: "BrandRedColor")
+            saveButton.title = "Print Preview"
             communicationSituationTextField.text = data.situationTitle
             // | " + "\( activityNameArray![self.myIndex].time)
             dateAndTimeLabel.text =   "\(folderobject?.situationData[myIndex].date ?? "" ) "
@@ -344,6 +357,9 @@ class PTCWorksheetViewController: UIViewController {
             youTextView2.text = ""
             youTextView3.text = ""
         }else if viewType == "edit" {
+            communicationSituationTextField.isUserInteractionEnabled = false
+            communicationSituationTextField.textColor = .darkGray
+          //  communicationSituationTextField.font = UIFont.boldSystemFont(ofSize: 15)
             let data = folderobject!.situationData[myIndex]
             communicationSituationTextField.text = data.situationTitle
             valueTextView1.text = data.value1
