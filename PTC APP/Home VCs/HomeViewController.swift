@@ -350,6 +350,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let vc = segue.destination as? DetailTableViewController
             vc?.foldername = folderName
             vc?.name = folderobject
+            DetailTableViewController.check = false
             vc?.index = index
             vc?.userObject = userObject
         }
