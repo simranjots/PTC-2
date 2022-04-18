@@ -90,6 +90,7 @@ class PTCWorksheetViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        DetailTableViewController.check = false
         updateUI(type: viewType)
      
     }
