@@ -399,24 +399,26 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                     }else{
                         if let foldername = textField?.text{
                             if self.check(foldername: foldername) == false {
-                                self.showToast(message: "Folder with same name already exist", duration: 2, height: 3)
-                            }else{
-                                if let folderData = self.folderArray?[index]{
-                                    do {
-                                        try self.realm.write {
-                                            for data in folderData.situationData{
-                                                if data.folderName == folderData.folderName{
-                                                    data.folderName = foldername
+                                
+                                    if let folderData = self.folderArray?[index]{
+                                        do {
+                                            try self.realm.write {
+                                                for data in folderData.situationData{
+                                                    if data.folderName == folderData.folderName{
+                                                        data.folderName = foldername
+                                                    }
                                                 }
+                                                folderData.folderName = foldername
+                                                folderData.user = (self.userObject?.email)!
+                                               
                                             }
-                                            folderData.folderName = foldername
-                                            folderData.user = (self.userObject?.email)!
-                                           
+                                        } catch {
+                                            print("Error saving done status \(error)")
                                         }
-                                    } catch {
-                                        print("Error saving done status \(error)")
                                     }
-                                }
+                                
+                            }else{
+                                self.dismiss(animated: true)
                             }
                         }else{
                             self.dismiss(animated: true, completion: nil)

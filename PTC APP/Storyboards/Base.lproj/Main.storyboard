@@ -1411,7 +1411,7 @@ Teresa was born and raised in Michigan and lived throughout the US for many year
                                                         <rect key="frame" x="208.66666666666663" y="0.0" width="203.33333333333337" height="34"/>
                                                         <color key="tintColor" name="BrandColor"/>
                                                         <color key="textColor" name="BrandBlueColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                     </textField>
                                                 </subviews>

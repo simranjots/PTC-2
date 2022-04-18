@@ -236,7 +236,6 @@ class PTCWorksheetViewController: UIViewController {
         if let situationData = folderobject?.situationData[myIndex]{
             do {
                 try realm.write {
-                    situationData.situationTitle = communicationSituationTextField.text!
                     situationData.date =  Date().shortdateToString()!
                     situationData.value1 = valueTextView1.text!
                     situationData.value2 = valueTextView2.text!
@@ -358,6 +357,9 @@ class PTCWorksheetViewController: UIViewController {
             youTextView2.text = ""
             youTextView3.text = ""
         }else if viewType == "edit" {
+            communicationSituationTextField.isUserInteractionEnabled = false
+            communicationSituationTextField.textColor = .darkGray
+          //  communicationSituationTextField.font = UIFont.boldSystemFont(ofSize: 15)
             let data = folderobject!.situationData[myIndex]
             communicationSituationTextField.text = data.situationTitle
             valueTextView1.text = data.value1
